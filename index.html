@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>APARTMENT RADAR — הדירה הראשונה של אביאל</title>
-<meta name="description" content="מעקב דירות במרכז עד 1.45M — מיון לפי מחיר למ״ר, כדאיות ופוטנציאל התחדשות עירונית">
+<meta name="description" content="מעקב דירות במרכז עד 1.45M — מחיר למ״ר מול ממוצע העיר, ציון כדאיות ופוטנציאל התחדשות עירונית">
 <meta name="theme-color" content="#0b0f14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +15,8 @@
   --line:#243043; --line2:#2f3d52;
   --tx:#e8eef7; --tx2:#9fb0c7; --tx3:#6b7f99;
   --acc:#ff6b35; --acc2:#ffa07a;
-  --ok:#22c55e; --warn:#fbbf24; --bad:#ef4444; --info:#38bdf8;
-  --radius:16px;
-  --shadow:0 4px 24px rgba(0,0,0,.35);
+  --ok:#22c55e; --warn:#fbbf24; --bad:#ef4444; --info:#38bdf8; --pur:#a78bfa;
+  --radius:16px; --shadow:0 4px 24px rgba(0,0,0,.35);
 }
 :root[data-theme="light"]{
   --bg:#f5f7fa; --bg2:#ffffff; --card:#ffffff; --card2:#f0f4f9;
@@ -36,120 +35,115 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family:'Heebo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  background:var(--bg); color:var(--tx);
-  line-height:1.55; -webkit-font-smoothing:antialiased;
-  padding:0 0 64px;
+  background:var(--bg); color:var(--tx); line-height:1.55;
+  -webkit-font-smoothing:antialiased; padding:0 0 64px;
 }
-.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px}
 
-/* ── HEADER ── */
-header{
-  background:linear-gradient(160deg,var(--bg2) 0%,var(--bg) 100%);
-  border-bottom:1px solid var(--line);
-  padding:28px 0 22px; margin-bottom:22px;
-}
+header{background:linear-gradient(160deg,var(--bg2) 0%,var(--bg) 100%);
+  border-bottom:1px solid var(--line);padding:26px 0 20px;margin-bottom:20px}
 .hrow{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
-h1{
-  font-size:clamp(22px,4.5vw,32px); font-weight:900; letter-spacing:-.02em;
-  display:flex;align-items:center;gap:10px;
-}
+h1{font-size:clamp(21px,4.5vw,31px);font-weight:900;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
 h1 .dot{width:11px;height:11px;border-radius:50%;background:var(--acc);
   box-shadow:0 0 0 5px color-mix(in srgb,var(--acc) 18%,transparent);
   animation:pulse 2.4s ease-in-out infinite;flex:none}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.82)}}
 .sub{color:var(--tx2);font-size:14px;margin-top:5px}
-.themebtn{
-  background:var(--card);border:1px solid var(--line);color:var(--tx2);
-  width:40px;height:40px;border-radius:11px;cursor:pointer;font-size:17px;
-  display:grid;place-items:center;transition:.16s;flex:none;
-}
-.themebtn:hover{border-color:var(--acc);color:var(--acc)}
+.hbtns{display:flex;gap:8px;flex:none}
+.iconbtn{background:var(--card);border:1px solid var(--line);color:var(--tx2);
+  height:40px;min-width:40px;padding:0 12px;border-radius:11px;cursor:pointer;font-size:14px;
+  display:grid;place-items:center;transition:.16s;font-family:inherit;font-weight:600}
+.iconbtn:hover{border-color:var(--acc);color:var(--acc)}
 
-/* ── KPI ── */
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-top:20px}
-.kpi{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:14px 15px;position:relative;overflow:hidden;
-}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:11px;margin-top:18px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:13px 15px;position:relative;overflow:hidden}
 .kpi::before{content:'';position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px;background:var(--acc);opacity:.75}
 .kpi .l{font-size:11.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
-.kpi .v{font-size:24px;font-weight:900;letter-spacing:-.02em;margin-top:3px;line-height:1.15}
+.kpi .v{font-size:23px;font-weight:900;letter-spacing:-.02em;margin-top:3px;line-height:1.15}
 .kpi .n{font-size:12px;color:var(--tx2);margin-top:2px}
-.kpi.ok::before{background:var(--ok)} .kpi.warn::before{background:var(--warn)} .kpi.info::before{background:var(--info)}
+.kpi.ok::before{background:var(--ok)}.kpi.warn::before{background:var(--warn)}
+.kpi.info::before{background:var(--info)}.kpi.pur::before{background:var(--pur)}
 
-/* ── CONTROLS ── */
-.controls{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:14px;margin:20px 0;display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;
-}
+/* ── city benchmark strip ── */
+.bench{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:12px 14px;margin-top:12px}
+.bench .bt{font-size:11.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;
+  font-weight:500;margin-bottom:9px}
+.benchrow{display:flex;gap:18px;flex-wrap:wrap}
+.bcity{display:flex;align-items:baseline;gap:7px;font-size:13px}
+.bcity b{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.bcity span{color:var(--tx3);font-size:12px}
+
+.controls{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px;margin:18px 0;display:flex;gap:15px;flex-wrap:wrap;align-items:flex-end}
 .cgroup{display:flex;flex-direction:column;gap:7px;min-width:0}
-.cgroup > label{font-size:11.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+.cgroup>label{font-size:11.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{
-  background:var(--card2);border:1px solid var(--line);color:var(--tx2);
+.chip{background:var(--card2);border:1px solid var(--line);color:var(--tx2);
   padding:6px 13px;border-radius:999px;font-size:13px;cursor:pointer;
-  font-family:inherit;font-weight:500;transition:.14s;white-space:nowrap;
-}
+  font-family:inherit;font-weight:500;transition:.14s;white-space:nowrap}
 .chip:hover{border-color:var(--line2);color:var(--tx)}
 .chip[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
-select{
-  background:var(--card2);border:1px solid var(--line);color:var(--tx);
-  padding:7px 12px;border-radius:10px;font-size:13.5px;font-family:inherit;
-  cursor:pointer;font-weight:500;
-}
-select:focus-visible,.chip:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+select,input[type="search"]{background:var(--card2);border:1px solid var(--line);color:var(--tx);
+  padding:7px 12px;border-radius:10px;font-size:13.5px;font-family:inherit;font-weight:500}
+select{cursor:pointer}
+input[type="search"]{min-width:170px}
+input[type="search"]::placeholder{color:var(--tx3)}
+select:focus-visible,.chip:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .spacer{flex:1 1 auto;min-width:0}
 .count{font-size:13px;color:var(--tx2);white-space:nowrap;align-self:flex-end;padding-bottom:6px}
 .count b{color:var(--tx);font-weight:700}
 
-/* ── CARDS ── */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
-.card{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   overflow:hidden;display:flex;flex-direction:column;
-  transition:transform .16s,border-color .16s,box-shadow .16s;
-}
+  transition:transform .16s,border-color .16s,box-shadow .16s,opacity .16s}
 .card:hover{transform:translateY(-2px);border-color:var(--line2);box-shadow:var(--shadow)}
 .card.hot{border-color:color-mix(in srgb,var(--acc) 45%,var(--line))}
-.chead{padding:15px 16px 12px;border-bottom:1px solid var(--line);position:relative}
+.card.st-fav{border-color:color-mix(in srgb,var(--pur) 55%,var(--line))}
+.card.st-out{opacity:.5}
+.chead{padding:14px 16px 12px;border-bottom:1px solid var(--line);position:relative}
 .card.hot .chead{background:linear-gradient(180deg,color-mix(in srgb,var(--acc) 9%,transparent),transparent)}
-.rank{
-  position:absolute;inset-block-start:15px;inset-inline-end:16px;
-  font-size:11px;font-weight:900;color:var(--tx3);letter-spacing:.04em;
-}
-.addr{font-size:17px;font-weight:700;letter-spacing:-.01em;padding-inline-end:36px;line-height:1.3}
-.loc{font-size:13px;color:var(--tx2);margin-top:2px}
-.price{font-size:27px;font-weight:900;letter-spacing:-.025em;margin-top:9px;line-height:1.1}
-.price small{font-size:14px;font-weight:500;color:var(--tx2);letter-spacing:0}
-.noprice{font-size:19px;font-weight:700;color:var(--warn);margin-top:9px}
+.card.st-fav .chead{background:linear-gradient(180deg,color-mix(in srgb,var(--pur) 10%,transparent),transparent)}
+.rank{position:absolute;inset-block-start:14px;inset-inline-end:16px;
+  font-size:11px;font-weight:900;color:var(--tx3);letter-spacing:.04em}
+.addr{font-size:17px;font-weight:700;letter-spacing:-.01em;padding-inline-end:38px;line-height:1.3}
+.loc{font-size:13px;color:var(--tx2);margin-top:2px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.newbadge{font-size:10px;font-weight:900;letter-spacing:.05em;background:var(--acc);color:#fff;
+  padding:1px 6px;border-radius:5px}
+.price{font-size:26px;font-weight:900;letter-spacing:-.025em;margin-top:8px;line-height:1.1}
+.price small{font-size:13.5px;font-weight:500;color:var(--tx2);letter-spacing:0}
+.noprice{font-size:18px;font-weight:700;color:var(--warn);margin-top:8px}
+.relbadge{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;
+  padding:3px 9px;border-radius:7px}
+.relbadge.good{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.relbadge.mid{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+.relbadge.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
 
-.specs{display:flex;gap:0;border-bottom:1px solid var(--line)}
-.spec{flex:1;padding:11px 8px;text-align:center;border-inline-start:1px solid var(--line)}
+.specs{display:flex;border-bottom:1px solid var(--line)}
+.spec{flex:1;padding:10px 6px;text-align:center;border-inline-start:1px solid var(--line)}
 .spec:first-child{border-inline-start:none}
-.spec .sv{font-size:16px;font-weight:800;letter-spacing:-.01em}
+.spec .sv{font-size:15.5px;font-weight:800;letter-spacing:-.01em}
 .spec .sl{font-size:10.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.05em;margin-top:1px}
 .spec.hl .sv{color:var(--acc)}
 
-.cbody{padding:13px 16px;flex:1;display:flex;flex-direction:column;gap:11px}
+.cbody{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
 .tags{display:flex;gap:5px;flex-wrap:wrap}
-.tag{
-  font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:500;
-  background:var(--card2);border:1px solid var(--line);color:var(--tx2);
-}
+.tag{font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:500;
+  background:var(--card2);border:1px solid var(--line);color:var(--tx2)}
 .tag.renew{background:color-mix(in srgb,var(--ok) 16%,transparent);border-color:color-mix(in srgb,var(--ok) 40%,transparent);color:var(--ok);font-weight:700}
 .tag.renewp{background:color-mix(in srgb,var(--info) 15%,transparent);border-color:color-mix(in srgb,var(--info) 38%,transparent);color:var(--info);font-weight:700}
 .tag.drop{background:color-mix(in srgb,var(--ok) 14%,transparent);border-color:color-mix(in srgb,var(--ok) 35%,transparent);color:var(--ok)}
 .tag.over{background:color-mix(in srgb,var(--bad) 14%,transparent);border-color:color-mix(in srgb,var(--bad) 35%,transparent);color:var(--bad)}
 .note{font-size:13px;color:var(--tx2);line-height:1.5}
-.rnote{
-  font-size:12.5px;color:var(--ok);line-height:1.5;
+.rnote{font-size:12.5px;color:var(--ok);line-height:1.5;
   background:color-mix(in srgb,var(--ok) 8%,transparent);
-  border-inline-start:2px solid var(--ok);padding:7px 10px;border-radius:0 8px 8px 0;
-}
+  border-inline-start:2px solid var(--ok);padding:7px 10px;border-radius:0 8px 8px 0}
 
-/* ── FINANCE ── */
 .fin{background:var(--card2);border-radius:11px;padding:11px 12px;font-size:13px}
-.fin summary{cursor:pointer;font-weight:700;font-size:12.5px;color:var(--tx2);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.fin summary{cursor:pointer;font-weight:700;font-size:12.5px;color:var(--tx2);
+  list-style:none;display:flex;justify-content:space-between;align-items:center}
 .fin summary::-webkit-details-marker{display:none}
 .fin summary::after{content:'▾';font-size:11px;transition:.2s;color:var(--tx3)}
 .fin[open] summary::after{transform:rotate(180deg)}
@@ -159,37 +153,56 @@ select:focus-visible,.chip:focus-visible,button:focus-visible{outline:2px solid 
 .frow span:last-child{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
 .frow.tot{border-top:1px dashed var(--line2);padding-top:6px;margin-top:2px}
 .frow.tot span{color:var(--tx);font-size:13px}
-.frow .g{color:var(--ok)} .frow .r{color:var(--bad)}
+.frow .g{color:var(--ok)}.frow .r{color:var(--bad)}
+.finnote{font-size:11px;color:var(--tx3);line-height:1.45;margin-top:4px}
 
-/* ── SCORE ── */
 .scorebar{display:flex;align-items:center;gap:9px}
 .sbtrack{flex:1;height:6px;background:var(--card2);border-radius:99px;overflow:hidden}
 .sbfill{height:100%;border-radius:99px;transition:width .4s ease}
 .sbnum{font-size:13px;font-weight:900;min-width:26px;text-align:center;font-variant-numeric:tabular-nums}
 
-.cfoot{padding:11px 16px;border-top:1px solid var(--line);display:flex;gap:8px;align-items:center}
-.btn{
-  flex:1;text-align:center;padding:8px 12px;border-radius:10px;font-size:13.5px;font-weight:700;
-  text-decoration:none;transition:.14s;border:1px solid transparent;font-family:inherit;cursor:pointer;
-}
+/* ── status ── */
+.statusrow{display:flex;gap:5px;flex-wrap:wrap}
+.sbtn{flex:1;min-width:0;background:var(--card2);border:1px solid var(--line);color:var(--tx3);
+  padding:5px 4px;border-radius:8px;font-size:11.5px;cursor:pointer;font-family:inherit;
+  font-weight:600;transition:.14s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sbtn:hover{border-color:var(--line2);color:var(--tx2)}
+.sbtn[aria-pressed="true"]{color:#fff;border-color:transparent}
+.sbtn[data-s="called"][aria-pressed="true"]{background:var(--info)}
+.sbtn[data-s="seen"][aria-pressed="true"]{background:var(--warn);color:#1a1a1a}
+.sbtn[data-s="fav"][aria-pressed="true"]{background:var(--pur)}
+.sbtn[data-s="out"][aria-pressed="true"]{background:var(--bad)}
+
+.cfoot{padding:10px 16px;border-top:1px solid var(--line);display:flex;gap:8px;align-items:center}
+.btn{flex:1;text-align:center;padding:8px 12px;border-radius:10px;font-size:13.5px;font-weight:700;
+  text-decoration:none;transition:.14s;border:1px solid transparent;font-family:inherit;cursor:pointer}
 .btn.pri{background:var(--acc);color:#fff}
 .btn.pri:hover{background:var(--acc2)}
-.btn.sec{background:transparent;border-color:var(--line2);color:var(--tx2)}
-.btn.sec:hover{border-color:var(--acc);color:var(--acc)}
 .btn.dis{background:var(--card2);color:var(--tx3);cursor:not-allowed;border-color:var(--line)}
 .src{font-size:11px;color:var(--tx3);white-space:nowrap;font-weight:500}
 
 .empty{text-align:center;padding:60px 20px;color:var(--tx3)}
-footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
   color:var(--tx3);font-size:12.5px;text-align:center;line-height:1.7}
 
-@media (max-width:600px){
+.toast{position:fixed;inset-block-end:20px;inset-inline-start:50%;transform:translateX(50%) translateY(80px);
+  background:var(--acc);color:#fff;padding:11px 20px;border-radius:11px;font-size:14px;font-weight:700;
+  box-shadow:var(--shadow);transition:transform .28s cubic-bezier(.2,.9,.3,1.2);z-index:99;pointer-events:none}
+.toast.show{transform:translateX(50%) translateY(0)}
+
+@media (max-width:640px){
   .grid{grid-template-columns:1fr}
   .controls{padding:12px;gap:13px}
   .kpis{grid-template-columns:repeat(2,1fr)}
   .count{width:100%;padding-bottom:0}
+  input[type="search"]{width:100%}
 }
-@media print{.controls,.themebtn,.cfoot{display:none}.card{break-inside:avoid}}
+@media print{
+  .controls,.hbtns,.cfoot,.statusrow,.toast{display:none}
+  body{background:#fff;color:#000;padding:0}
+  .card{break-inside:avoid;border:1px solid #ccc}
+  .fin{display:none}
+}
 </style>
 </head>
 <body>
@@ -201,9 +214,16 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
         <h1><span class="dot"></span>APARTMENT RADAR</h1>
         <p class="sub">הדירה הראשונה של אביאל · מרכז הארץ · עד <span id="budgetTxt"></span></p>
       </div>
-      <button class="themebtn" id="themeBtn" title="החלף מצב תצוגה" aria-label="החלף מצב תצוגה">◐</button>
+      <div class="hbtns">
+        <button class="iconbtn" id="shareBtn" title="העתק קישור לתצוגה הנוכחית">שתף</button>
+        <button class="iconbtn" id="themeBtn" title="החלף מצב תצוגה" aria-label="החלף מצב תצוגה">◐</button>
+      </div>
     </div>
     <div class="kpis" id="kpis"></div>
+    <div class="bench">
+      <div class="bt">מחיר ממוצע למ״ר לפי עיר — ההשוואה שקובעת אם דירה זולה באמת</div>
+      <div class="benchrow" id="bench"></div>
+    </div>
   </div>
 </header>
 
@@ -216,20 +236,30 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
     <div class="cgroup">
       <label>סינון</label>
       <div class="chips" id="filterChips">
-        <button class="chip" data-f="budget" aria-pressed="false">בתקציב בלבד</button>
-        <button class="chip" data-f="renewal" aria-pressed="false">התחדשות עירונית</button>
+        <button class="chip" data-f="budget" aria-pressed="false">בתקציב</button>
+        <button class="chip" data-f="renewal" aria-pressed="false">התחדשות</button>
         <button class="chip" data-f="priced" aria-pressed="false">עם מחיר</button>
+        <button class="chip" data-f="deal" aria-pressed="false">מתחת לממוצע</button>
         <button class="chip" data-f="hot" aria-pressed="false">🔥 חמות</button>
+        <button class="chip" data-f="fav" aria-pressed="false">⭐ מועדפות</button>
+        <button class="chip" data-f="untouched" aria-pressed="false">לא טופלו</button>
       </div>
+    </div>
+    <div class="cgroup">
+      <label>חיפוש</label>
+      <input type="search" id="q" placeholder="רחוב, שכונה, תגית…">
     </div>
     <div class="cgroup">
       <label>מיון</label>
       <select id="sortSel">
         <option value="score">ציון כדאיות</option>
+        <option value="rel">הכי מתחת לממוצע העיר</option>
         <option value="ppsqm">מחיר למ״ר — מהזול</option>
         <option value="price">מחיר — מהזול</option>
         <option value="priceDesc">מחיר — מהיקר</option>
         <option value="sqm">גודל — מהגדול</option>
+        <option value="yield">תשואת שכירות</option>
+        <option value="cash">הון עצמי נדרש — מהנמוך</option>
         <option value="newest">נוספו לאחרונה</option>
       </select>
     </div>
@@ -242,10 +272,12 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
 
   <footer>
     עודכן לאחרונה: <span id="updated"></span><br>
-    מתעדכן אוטומטית כל יום ב-09:30 · מקורות: יד2 · מדלן · פייסבוק מרקטפלייס<br>
-    <span style="opacity:.7">חישובי המימון והתשואה הם הערכה בלבד — לא ייעוץ פיננסי</span>
+    מתעדכן אוטומטית פעמיים ביום (09:30 · 19:30) · מקורות: יד2 · מדלן · פייסבוק מרקטפלייס<br>
+    <span style="opacity:.7">הסטטוסים שאתה מסמן נשמרים בדפדפן הזה בלבד · חישובי המימון והתשואה הם הערכה, לא ייעוץ פיננסי</span>
   </footer>
 </div>
+
+<div class="toast" id="toast"></div>
 
 <script src="data.js"></script>
 <script>
@@ -255,15 +287,10 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
   var APTS = D.apartments;
   var BUDGET = D.budget, EQUITY = D.equity, LEV = D.leverage;
 
-  // ── עלויות רכישה נלוות (הערכה) ──
-  var LAWYER_PCT = 0.006;        // עו"ד ~0.5% + מע"מ
-  var BROKER_PCT = 0.0;          // רוב המודעות תיווך — לא נכלל בברירת מחדל
-  var MOVE_FIXED = 15000;        // מעבר, שמאי, אגרות
-  var MORTGAGE_RATE = 0.052;     // ריבית משכנתא מוערכת
-  var MORTGAGE_YEARS = 30;
-
-  // שכ"ד מוערך לחודש למ"ר לפי עיר
+  var LAWYER_PCT = 0.006, MOVE_FIXED = 15000;
+  var MORTGAGE_RATE = 0.052, MORTGAGE_YEARS = 30;
   var RENT_PSQM = {'רמת גן':78,'בת ים':62,'חולון':60,'רחובות':48};
+  var NEW_DAYS = 3;
 
   var fmt = function(n){ return n==null ? '—' : new Intl.NumberFormat('he-IL').format(Math.round(n)); };
   var money = function(n){ return n==null ? '—' : '₪' + fmt(n); };
@@ -273,25 +300,35 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
     if(n>=1000) return Math.round(n/1000) + 'K';
     return String(n);
   };
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
 
-  // ── מס רכישה — דירה יחידה, מדרגות 2026 (הערכה) ──
   function purchaseTax(p){
     if(p==null) return 0;
-    var T1 = 1978745, T2 = 2347040;   // מדרגות מעודכנות
+    var T1 = 1978745, T2 = 2347040;
     if(p <= T1) return 0;
     if(p <= T2) return (p - T1) * 0.035;
     return (T2 - T1) * 0.035 + (p - T2) * 0.05;
   }
-
-  function monthlyPayment(principal, rate, years){
-    var r = rate/12, n = years*12;
-    if(r === 0) return principal/n;
-    return principal * r / (1 - Math.pow(1+r, -n));
+  function monthlyPayment(pr, rate, yrs){
+    var r = rate/12, n = yrs*12;
+    return r === 0 ? pr/n : pr * r / (1 - Math.pow(1+r, -n));
+  }
+  function daysSince(d){
+    if(!d) return null;
+    return Math.floor((new Date().setHours(0,0,0,0) - new Date(d).setHours(0,0,0,0)) / 86400000);
   }
 
-  // ── חישובים לכל דירה ──
+  // בדירות גן / קוטג' השטח המפורסם כולל אדמה — מחיר למ"ר יוצא נמוך באופן מטעה
+  // ואי אפשר להשוות אותו לדירות רגילות. מזהים לפי פער חריג מול מספר החדרים.
+  function sqmInflated(a){
+    if(!a.sqm || !a.rooms) return false;
+    return a.sqm > a.rooms * 32 + 20;
+  }
+
   function calc(a){
     var o = {};
+    o.inflated = sqmInflated(a);
     o.ppsqm = (a.price && a.sqm) ? a.price / a.sqm : null;
     o.tax = purchaseTax(a.price);
     o.lawyer = a.price ? a.price * LAWYER_PCT : 0;
@@ -301,8 +338,7 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
     o.down = a.price ? a.price * (1 - LEV) : null;
     o.cashNeeded = a.price ? o.down + o.closing : null;
     o.monthly = o.mortgage ? monthlyPayment(o.mortgage, MORTGAGE_RATE, MORTGAGE_YEARS) : null;
-    // שכ"ד לפי מ"ר, אבל חסום לפי מספר החדרים — בדירות גן השטח כולל אדמה
-    // ולא משקף שטח בנוי שאפשר להשכיר עליו
+
     var rentSqm = (a.sqm && a.rooms) ? Math.min(a.sqm, a.rooms * 32 + 20) : a.sqm;
     o.rentCapped = !!(a.sqm && rentSqm < a.sqm);
     o.rent = (rentSqm && RENT_PSQM[a.city]) ? rentSqm * RENT_PSQM[a.city] : null;
@@ -310,177 +346,248 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
     o.cashflow = (o.rent && o.monthly) ? o.rent - o.monthly : null;
     o.affordable = o.cashNeeded != null ? o.cashNeeded <= EQUITY : null;
     o.inBudget = a.price != null ? a.price <= BUDGET : null;
+    o.days = daysSince(a.firstSeen);
+    o.isNew = o.days != null && o.days <= NEW_DAYS;
     return o;
   }
 
-  // ── ציון כדאיות 0–100 (משקולות מהמשימה היומית) ──
-  // מחיר למ"ר 30% · גודל 20% · התחדשות 30% · מימון 20%
-  function score(a, c){
-    var s = 0, w = 0;
+  // ── ממוצע מחיר למ"ר לכל עיר — הבסיס להשוואה ──
+  var CITY_AVG = (function(){
+    var acc = {};
+    APTS.forEach(function(a){
+      // דירות גן מעוותות את הממוצע — השטח שלהן כולל אדמה
+      if(a.price && a.sqm && !sqmInflated(a)){
+        (acc[a.city] = acc[a.city] || []).push(a.price / a.sqm);
+      }
+    });
+    var out = {};
+    Object.keys(acc).forEach(function(c){
+      out[c] = { avg: acc[c].reduce(function(s,v){return s+v;},0) / acc[c].length, n: acc[c].length };
+    });
+    return out;
+  })();
 
-    if(c.ppsqm != null){
+  // כמה אחוז מתחת/מעל לממוצע העיר
+  function relToCity(a, c){
+    if(c.ppsqm == null || c.inflated || !CITY_AVG[a.city]) return null;
+    return (CITY_AVG[a.city].avg - c.ppsqm) / CITY_AVG[a.city].avg * 100;
+  }
+
+  // ── ציון 0–100 ──
+  // מחיר למ"ר מוחלט 15% · יחסי לעיר 15% · גודל 20% · התחדשות 30% · מימון 20%
+  function score(a, c, rel){
+    var s = 0, w = 0;
+    if(c.ppsqm != null && !c.inflated){
       var p = 1 - (c.ppsqm - 14000) / (40000 - 14000);
-      s += Math.max(0, Math.min(1, p)) * 30; w += 30;
+      s += Math.max(0, Math.min(1, p)) * 15; w += 15;
+    }
+    if(rel != null){
+      var rv = (rel + 25) / 50;                 // -25% → 0 ,‏ +25% → 1
+      s += Math.max(0, Math.min(1, rv)) * 15; w += 15;
     }
     if(a.sqm != null){
       var g = (a.sqm - 35) / (100 - 35);
       s += Math.max(0, Math.min(1, g)) * 20; w += 20;
     }
-    var r = a.renewal === 'verified' ? 1 : a.renewal === 'potential' ? 0.5 : 0;
-    s += r * 30; w += 30;
-
+    s += (a.renewal === 'verified' ? 1 : a.renewal === 'potential' ? 0.5 : 0) * 30; w += 30;
     if(c.cashNeeded != null){
       var f = 1 - (c.cashNeeded - 250000) / (EQUITY * 1.6 - 250000);
       s += Math.max(0, Math.min(1, f)) * 20; w += 20;
     }
     if(w === 0) return null;
     var base = s / w * 100;
-
-    // קנס על חריגה מהתקציב — דירה שאי אפשר לממן לא אמורה לעלות לראש
     if(a.price != null && a.price > BUDGET){
-      var over = (a.price - BUDGET) / BUDGET;        // 0.10 = 10% מעל
+      var over = (a.price - BUDGET) / BUDGET;
       base *= Math.max(0.35, 1 - over * 2.2);
     }
     return Math.round(base);
   }
-
   function scoreColor(s){
     if(s == null) return 'var(--tx3)';
-    if(s >= 72) return 'var(--ok)';
-    if(s >= 55) return 'var(--warn)';
-    return 'var(--bad)';
+    return s >= 72 ? 'var(--ok)' : s >= 55 ? 'var(--warn)' : 'var(--bad)';
   }
 
-  // ── הכנת הנתונים ──
   var ROWS = APTS.map(function(a){
     var c = calc(a);
-    return { a:a, c:c, score:score(a,c) };
+    var rel = relToCity(a, c);
+    return { a:a, c:c, rel:rel, score:score(a,c,rel) };
   });
 
-  // ── מצב ──
-  var state = { city:'הכל', filters:{}, sort:'score' };
+  // ── סטטוסים (localStorage) ──
+  var SKEY = 'ar-status-v1';
+  var STATUS = {};
+  try { STATUS = JSON.parse(localStorage.getItem(SKEY) || '{}'); } catch(e){ STATUS = {}; }
+  function saveStatus(){ try{ localStorage.setItem(SKEY, JSON.stringify(STATUS)); }catch(e){} }
+  var STATUS_LABELS = { called:'התקשרתי', seen:'ראיתי', fav:'מועדפת', out:'פסלתי' };
 
-  // ── KPI ──
+  var state = { city:'הכל', filters:{}, sort:'score', q:'' };
+
+  // ── קריאת מצב מה-URL (לשיתוף) ──
+  (function(){
+    var p = new URLSearchParams(location.search);
+    if(p.get('city')) state.city = p.get('city');
+    if(p.get('sort')) state.sort = p.get('sort');
+    if(p.get('q'))    state.q = p.get('q');
+    (p.get('f')||'').split(',').filter(Boolean).forEach(function(f){ state.filters[f] = true; });
+  })();
+
   function renderKPIs(){
     var priced = ROWS.filter(function(r){ return r.a.price != null; });
     var inBudget = priced.filter(function(r){ return r.c.inBudget; });
-    var withPsqm = priced.filter(function(r){ return r.c.ppsqm != null; });
-    var avgPsqm = withPsqm.length ? withPsqm.reduce(function(s,r){return s+r.c.ppsqm;},0)/withPsqm.length : null;
-    var best = withPsqm.slice().sort(function(x,y){ return x.c.ppsqm - y.c.ppsqm; })[0];
-    var renewals = ROWS.filter(function(r){ return r.a.renewal !== 'none'; });
-
-    var days = Math.ceil((new Date(D.deadline) - new Date()) / 86400000);
+    var withP = priced.filter(function(r){ return r.c.ppsqm != null; });
+    var avg = withP.length ? withP.reduce(function(s,r){return s+r.c.ppsqm;},0)/withP.length : null;
+    var best = withP.slice().sort(function(x,y){ return x.c.ppsqm - y.c.ppsqm; })[0];
+    var deals = ROWS.filter(function(r){ return r.rel != null && r.rel >= 10; });
+    var fresh = ROWS.filter(function(r){ return r.c.isNew; });
 
     var k = [
-      { l:'דירות במעקב', v:ROWS.length, n: inBudget.length + ' בתוך התקציב', cls:'' },
-      { l:'מחיר ממוצע למ״ר', v: avgPsqm ? '₪'+fmt(avgPsqm) : '—', n:'על ' + withPsqm.length + ' דירות מתומחרות', cls:'info' },
-      { l:'הכי זול למ״ר', v: best ? '₪'+fmt(best.c.ppsqm) : '—', n: best ? best.a.address + ', ' + best.a.city : '', cls:'ok' },
-      { l:'התחדשות עירונית', v: renewals.length, n:'עם פוטנציאל או מאושר', cls:'ok' },
-      days > 0
-        ? { l:'ימים לדדליין', v:days, n:'יעד: ' + new Date(D.deadline).toLocaleDateString('he-IL'), cls: days < 60 ? 'warn' : '' }
-        : { l:'הזדמנויות חמות', v:ROWS.filter(function(r){return r.a.hot;}).length, n:'דורשות בדיקה מיידית', cls:'warn' }
+      { l:'דירות במעקב', v:ROWS.length, n:inBudget.length + ' בתוך התקציב', cls:'' },
+      { l:'חדשות היום', v:fresh.length, n:'נוספו ב-' + NEW_DAYS + ' הימים האחרונים', cls:'warn' },
+      { l:'מתחת לממוצע העיר', v:deals.length, n:'ב-10% ומעלה — עסקאות אמיתיות', cls:'ok' },
+      { l:'התחדשות עירונית', v:ROWS.filter(function(r){return r.a.renewal!=='none';}).length, n:'מאושר או בפוטנציאל', cls:'pur' },
+      { l:'ממוצע כללי למ״ר', v: avg ? '₪'+fmt(avg) : '—', n:'על ' + withP.length + ' מתומחרות', cls:'info' }
     ];
-
     document.getElementById('kpis').innerHTML = k.map(function(x){
       return '<div class="kpi '+x.cls+'"><div class="l">'+x.l+'</div><div class="v">'+x.v+'</div><div class="n">'+x.n+'</div></div>';
     }).join('');
   }
 
-  // ── צ'יפים של ערים ──
+  function renderBench(){
+    var rows = Object.keys(CITY_AVG).sort(function(a,b){ return CITY_AVG[a].avg - CITY_AVG[b].avg; });
+    document.getElementById('bench').innerHTML = rows.map(function(c){
+      return '<div class="bcity">'+esc(c)+' <b>₪'+fmt(CITY_AVG[c].avg)+'</b> <span>('+CITY_AVG[c].n+' דירות)</span></div>';
+    }).join('');
+  }
+
   function renderCityChips(){
     var cities = ['הכל'].concat(Array.from(new Set(APTS.map(function(a){return a.city;}))).sort());
     document.getElementById('cityChips').innerHTML = cities.map(function(c){
       var n = c === 'הכל' ? ROWS.length : ROWS.filter(function(r){return r.a.city===c;}).length;
-      return '<button class="chip" data-city="'+c+'" aria-pressed="'+(state.city===c)+'">'+c+' <span style="opacity:.6">'+n+'</span></button>';
+      return '<button class="chip" data-city="'+esc(c)+'" aria-pressed="'+(state.city===c)+'">'+esc(c)+' <span style="opacity:.6">'+n+'</span></button>';
     }).join('');
   }
 
-  // ── סינון + מיון ──
   function getVisible(){
+    var q = state.q.trim().toLowerCase();
     var out = ROWS.filter(function(r){
-      var a = r.a, c = r.c;
+      var a = r.a, f = state.filters, st = STATUS[a.id];
       if(state.city !== 'הכל' && a.city !== state.city) return false;
-      if(state.filters.budget && !(a.price != null && a.price <= BUDGET)) return false;
-      if(state.filters.renewal && a.renewal === 'none') return false;
-      if(state.filters.priced && a.price == null) return false;
-      if(state.filters.hot && !a.hot) return false;
+      if(f.budget && !(a.price != null && a.price <= BUDGET)) return false;
+      if(f.renewal && a.renewal === 'none') return false;
+      if(f.priced && a.price == null) return false;
+      if(f.deal && !(r.rel != null && r.rel >= 10)) return false;
+      if(f.hot && !a.hot) return false;
+      if(f.fav && st !== 'fav') return false;
+      if(f.untouched && st) return false;
+      if(q){
+        var hay = [a.address, a.city, a.neighborhood, a.note, (a.tags||[]).join(' ')].join(' ').toLowerCase();
+        if(hay.indexOf(q) === -1) return false;
+      }
       return true;
     });
 
     var nul = function(v){ return v == null ? Infinity : v; };
     var s = state.sort;
     out.sort(function(x,y){
+      // פסולות תמיד בסוף
+      var xo = STATUS[x.a.id]==='out' ? 1:0, yo = STATUS[y.a.id]==='out' ? 1:0;
+      if(xo !== yo) return xo - yo;
       if(s === 'score')     return (y.score||0) - (x.score||0);
+      if(s === 'rel')       return (y.rel==null?-999:y.rel) - (x.rel==null?-999:x.rel);
       if(s === 'ppsqm')     return nul(x.c.ppsqm) - nul(y.c.ppsqm);
       if(s === 'price')     return nul(x.a.price) - nul(y.a.price);
       if(s === 'priceDesc') return (y.a.price||0) - (x.a.price||0);
       if(s === 'sqm')       return (y.a.sqm||0) - (x.a.sqm||0);
+      if(s === 'yield')     return (y.c.yield||0) - (x.c.yield||0);
+      if(s === 'cash')      return nul(x.c.cashNeeded) - nul(y.c.cashNeeded);
       if(s === 'newest')    return String(y.a.firstSeen).localeCompare(String(x.a.firstSeen));
       return 0;
     });
     return out;
   }
 
-  // ── כרטיס ──
   function cardHTML(r, i){
-    var a = r.a, c = r.c, s = r.score;
+    var a = r.a, c = r.c, s = r.score, st = STATUS[a.id];
 
     var tags = [];
     if(a.renewal === 'verified') tags.push('<span class="tag renew">✓ פינוי-בינוי מאושר</span>');
     if(a.renewal === 'potential') tags.push('<span class="tag renewp">◈ פוטנציאל התחדשות</span>');
     (a.tags||[]).forEach(function(t){
       var cls = /ירד ב/.test(t) ? 'drop' : /מעל תקציב/.test(t) ? 'over' : '';
-      tags.push('<span class="tag '+cls+'">'+t+'</span>');
+      tags.push('<span class="tag '+cls+'">'+esc(t)+'</span>');
     });
 
     var priceHTML = a.price != null
-      ? '<div class="price">'+money(a.price)+(c.ppsqm ? ' <small>· ₪'+fmt(c.ppsqm)+'/מ״ר</small>' : '')+'</div>'
+      ? '<div class="price">'+money(a.price)
+        + (c.ppsqm && !c.inflated ? ' <small>· ₪'+fmt(c.ppsqm)+'/מ״ר</small>' : '')+'</div>'
       : '<div class="noprice">מחיר לא פורסם</div>';
+
+    var relHTML = '';
+    if(r.rel != null){
+      var cls = r.rel >= 10 ? 'good' : r.rel >= -5 ? 'mid' : 'bad';
+      var word = r.rel >= 0 ? 'מתחת' : 'מעל';
+      relHTML = '<div class="relbadge '+cls+'">'+Math.abs(Math.round(r.rel))+'% '+word+' לממוצע ב'+esc(a.city)+'</div>';
+    } else if(c.inflated && a.price != null){
+      relHTML = '<div class="relbadge mid">השטח כולל אדמה — לא בר-השוואה למ״ר</div>';
+    }
 
     var fin = a.price != null ? (
       '<details class="fin"><summary>פירוט מימון וכדאיות</summary><div class="finrows">'
       + '<div class="frow"><span>מחיר הנכס</span><span>'+money(a.price)+'</span></div>'
-      + '<div class="frow"><span>מס רכישה</span><span>'+money(c.tax)+'</span></div>'
+      + '<div class="frow"><span>מס רכישה (דירה יחידה)</span><span>'+money(c.tax)+'</span></div>'
       + '<div class="frow"><span>עו״ד + אגרות + מעבר</span><span>'+money(c.lawyer + MOVE_FIXED)+'</span></div>'
       + '<div class="frow tot"><span>סה״כ עלות</span><span>'+money(c.total)+'</span></div>'
       + '<div class="frow"><span>משכנתא (75%)</span><span>'+money(c.mortgage)+'</span></div>'
       + '<div class="frow"><span>החזר חודשי (30ש׳, 5.2%)</span><span>'+money(c.monthly)+'</span></div>'
       + '<div class="frow tot"><span>הון עצמי נדרש</span><span class="'+(c.affordable?'g':'r')+'">'+money(c.cashNeeded)+'</span></div>'
       + (c.rent ? '<div class="frow"><span>שכ״ד מוערך'+(c.rentCapped?' *':'')+'</span><span>'+money(c.rent)+'/חו׳</span></div>' : '')
-      + (c.rentCapped ? '<div class="frow"><span style="font-size:11px">* השטח כולל גינה — חושב לפי שטח בנוי משוער</span><span></span></div>' : '')
       + (c.yield ? '<div class="frow"><span>תשואה שנתית</span><span class="'+(c.yield>=3.5?'g':'')+'">'+c.yield.toFixed(1)+'%</span></div>' : '')
       + (c.cashflow != null ? '<div class="frow"><span>תזרים חודשי</span><span class="'+(c.cashflow>=0?'g':'r')+'">'+(c.cashflow>=0?'+':'')+money(c.cashflow)+'</span></div>' : '')
+      + (c.rentCapped ? '<div class="finnote">* השטח כולל גינה — שכה״ד חושב לפי שטח בנוי משוער</div>' : '')
+      + (!c.affordable ? '<div class="finnote">⚠ ההון העצמי הנדרש גבוה מ-'+short(EQUITY)+' ₪ שיש לך</div>' : '')
       + '</div></details>'
     ) : '';
 
+    var statusHTML = '<div class="statusrow">'
+      + Object.keys(STATUS_LABELS).map(function(k){
+          return '<button class="sbtn" data-id="'+esc(a.id)+'" data-s="'+k+'" aria-pressed="'+(st===k)+'">'+STATUS_LABELS[k]+'</button>';
+        }).join('')
+      + '</div>';
+
     return ''
-    + '<article class="card'+(a.hot?' hot':'')+'">'
+    + '<article class="card'+(a.hot?' hot':'')+(st?' st-'+st:'')+'">'
       + '<div class="chead">'
         + '<div class="rank">#'+(i+1)+'</div>'
-        + '<div class="addr">'+(a.hot?'🔥 ':'')+a.address+'</div>'
-        + '<div class="loc">'+a.city+(a.neighborhood && a.neighborhood!=='—' ? ' · '+a.neighborhood : '')+'</div>'
+        + '<div class="addr">'+(a.hot?'🔥 ':'')+(st==='fav'?'⭐ ':'')+esc(a.address)+'</div>'
+        + '<div class="loc">'
+          + '<span>'+esc(a.city)+(a.neighborhood && a.neighborhood!=='—' ? ' · '+esc(a.neighborhood) : '')+'</span>'
+          + (c.isNew ? '<span class="newbadge">חדש</span>' : '')
+          + (c.days != null && c.days > 0 ? '<span style="opacity:.6">· '+c.days+' ימים במעקב</span>' : '')
+        + '</div>'
         + priceHTML
+        + relHTML
       + '</div>'
       + '<div class="specs">'
-        + '<div class="spec"><div class="sv">'+(a.rooms??'—')+'</div><div class="sl">חדרים</div></div>'
-        + '<div class="spec'+(a.sqm>=80?' hl':'')+'"><div class="sv">'+(a.sqm??'—')+'</div><div class="sl">מ״ר</div></div>'
-        + '<div class="spec"><div class="sv">'+(a.floor===0?'ק':(a.floor??'—'))+'</div><div class="sl">קומה</div></div>'
+        + '<div class="spec"><div class="sv">'+(a.rooms==null?'—':a.rooms)+'</div><div class="sl">חדרים</div></div>'
+        + '<div class="spec'+(a.sqm>=80?' hl':'')+'"><div class="sv">'+(a.sqm==null?'—':a.sqm)+'</div><div class="sl">מ״ר</div></div>'
+        + '<div class="spec"><div class="sv">'+(a.floor===0?'ק':(a.floor==null?'—':a.floor))+'</div><div class="sl">קומה</div></div>'
       + '</div>'
       + '<div class="cbody">'
         + '<div class="scorebar">'
           + '<div class="sbtrack"><div class="sbfill" style="width:'+(s||0)+'%;background:'+scoreColor(s)+'"></div></div>'
-          + '<div class="sbnum" style="color:'+scoreColor(s)+'">'+(s??'—')+'</div>'
+          + '<div class="sbnum" style="color:'+scoreColor(s)+'">'+(s==null?'—':s)+'</div>'
         + '</div>'
         + (tags.length ? '<div class="tags">'+tags.join('')+'</div>' : '')
-        + (a.renewalNote ? '<div class="rnote">'+a.renewalNote+'</div>' : '')
-        + (a.note ? '<div class="note">'+a.note+'</div>' : '')
+        + (a.renewalNote ? '<div class="rnote">'+esc(a.renewalNote)+'</div>' : '')
+        + (a.note ? '<div class="note">'+esc(a.note)+'</div>' : '')
         + fin
+        + statusHTML
       + '</div>'
       + '<div class="cfoot">'
         + (a.url
-            ? '<a class="btn pri" href="'+a.url+'" target="_blank" rel="noopener">פתח מודעה ↗</a>'
-            : '<span class="btn dis">אין קישור ישיר</span>')
-        + '<span class="src">'+a.source+'</span>'
+            ? '<a class="btn pri" href="'+esc(a.url)+'" target="_blank" rel="noopener">פתח מודעה ↗</a>'
+            : '<span class="btn dis">אין מודעה מקוונת</span>')
+        + '<span class="src">'+esc(a.source)+'</span>'
       + '</div>'
     + '</article>';
   }
@@ -489,7 +596,15 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
     var vis = getVisible();
     document.getElementById('grid').innerHTML = vis.map(cardHTML).join('');
     document.getElementById('empty').hidden = vis.length > 0;
-    document.getElementById('count').innerHTML = 'מציג <b>'+vis.length+'</b> מתוך '+ROWS.length;
+    var done = vis.filter(function(r){ return STATUS[r.a.id]; }).length;
+    document.getElementById('count').innerHTML =
+      'מציג <b>'+vis.length+'</b> מתוך '+ROWS.length + (done ? ' · '+done+' סומנו' : '');
+  }
+
+  function toast(msg){
+    var t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(t._h); t._h = setTimeout(function(){ t.classList.remove('show'); }, 1900);
   }
 
   // ── אירועים ──
@@ -508,11 +623,40 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
     render();
   });
 
-  document.getElementById('sortSel').addEventListener('change', function(){
-    state.sort = this.value; render();
+  document.getElementById('sortSel').addEventListener('change', function(){ state.sort = this.value; render(); });
+
+  var qt;
+  document.getElementById('q').addEventListener('input', function(){
+    var v = this.value;
+    clearTimeout(qt); qt = setTimeout(function(){ state.q = v; render(); }, 160);
   });
 
-  // ── ערכת נושא ──
+  // סטטוס — לחיצה חוזרת מבטלת
+  document.getElementById('grid').addEventListener('click', function(e){
+    var b = e.target.closest('.sbtn'); if(!b) return;
+    var id = b.dataset.id, s = b.dataset.s;
+    if(STATUS[id] === s){ delete STATUS[id]; toast('הסימון הוסר'); }
+    else { STATUS[id] = s; toast(STATUS_LABELS[s] + ' ✓'); }
+    saveStatus();
+    var openIdx = [];
+    document.querySelectorAll('.card .fin[open]').forEach(function(d){ openIdx.push(d.closest('.card')); });
+    render();
+  });
+
+  document.getElementById('shareBtn').addEventListener('click', function(){
+    var p = new URLSearchParams();
+    if(state.city !== 'הכל') p.set('city', state.city);
+    if(state.sort !== 'score') p.set('sort', state.sort);
+    if(state.q) p.set('q', state.q);
+    var f = Object.keys(state.filters).filter(function(k){ return state.filters[k]; });
+    if(f.length) p.set('f', f.join(','));
+    var url = location.origin + location.pathname + (p.toString() ? '?'+p : '');
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(url).then(function(){ toast('הקישור הועתק'); },
+                                              function(){ prompt('העתק:', url); });
+    } else { prompt('העתק:', url); }
+  });
+
   var tb = document.getElementById('themeBtn');
   var saved = localStorage.getItem('ar-theme');
   if(saved) document.documentElement.setAttribute('data-theme', saved);
@@ -528,9 +672,13 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
   document.getElementById('budgetTxt').textContent = short(BUDGET) + ' ₪';
   document.getElementById('updated').textContent =
     new Date(D.updatedAt).toLocaleString('he-IL',{dateStyle:'long',timeStyle:'short'});
-  renderKPIs();
-  renderCityChips();
-  render();
+  document.getElementById('q').value = state.q;
+  document.getElementById('sortSel').value = state.sort;
+  Object.keys(state.filters).forEach(function(f){
+    var b = document.querySelector('[data-f="'+f+'"]');
+    if(b && state.filters[f]) b.setAttribute('aria-pressed','true');
+  });
+  renderKPIs(); renderBench(); renderCityChips(); render();
 })();
 </script>
 </body>
