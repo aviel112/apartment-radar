@@ -11,197 +11,214 @@
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0b0f14; --bg2:#111823; --card:#151d29; --card2:#1b2534;
-  --line:#243043; --line2:#2f3d52;
-  --tx:#e8eef7; --tx2:#9fb0c7; --tx3:#6b7f99;
+  --bg:#0a0e14; --bg2:#101722; --card:#151d29; --card2:#1c2634; --card3:#222d3d;
+  --line:#243043; --line2:#33445c;
+  --tx:#eaf0f8; --tx2:#a3b4ca; --tx3:#6d819b;
   --acc:#ff6b35; --acc2:#ffa07a;
-  --ok:#22c55e; --warn:#fbbf24; --bad:#ef4444; --info:#38bdf8; --pur:#a78bfa;
-  --radius:16px; --shadow:0 4px 24px rgba(0,0,0,.35);
+  --ok:#2ecc71; --warn:#f5b942; --bad:#ef4444; --info:#3fb8f5; --pur:#a78bfa;
+  --r:18px; --shadow:0 6px 28px rgba(0,0,0,.4);
 }
 :root[data-theme="light"]{
-  --bg:#f5f7fa; --bg2:#ffffff; --card:#ffffff; --card2:#f0f4f9;
-  --line:#dde5ef; --line2:#c8d4e3;
-  --tx:#0f1b2d; --tx2:#4a5c75; --tx3:#7a8ba3;
-  --shadow:0 2px 16px rgba(15,27,45,.08);
+  --bg:#f4f7fb; --bg2:#ffffff; --card:#ffffff; --card2:#f1f5fa; --card3:#e7eef7;
+  --line:#e0e8f2; --line2:#c3d2e4;
+  --tx:#0d1826; --tx2:#48596f; --tx3:#78899f;
+  --ok:#16a34a; --warn:#d97706; --info:#0284c7; --pur:#7c3aed;
+  --shadow:0 3px 20px rgba(13,24,38,.09);
 }
 @media (prefers-color-scheme: light){
   :root:not([data-theme="dark"]){
-    --bg:#f5f7fa; --bg2:#ffffff; --card:#ffffff; --card2:#f0f4f9;
-    --line:#dde5ef; --line2:#c8d4e3;
-    --tx:#0f1b2d; --tx2:#4a5c75; --tx3:#7a8ba3;
-    --shadow:0 2px 16px rgba(15,27,45,.08);
+    --bg:#f4f7fb; --bg2:#ffffff; --card:#ffffff; --card2:#f1f5fa; --card3:#e7eef7;
+    --line:#e0e8f2; --line2:#c3d2e4;
+    --tx:#0d1826; --tx2:#48596f; --tx3:#78899f;
+    --ok:#16a34a; --warn:#d97706; --info:#0284c7; --pur:#7c3aed;
+    --shadow:0 3px 20px rgba(13,24,38,.09);
   }
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:'Heebo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  background:var(--bg); color:var(--tx); line-height:1.55;
-  -webkit-font-smoothing:antialiased; padding:0 0 64px;
-}
-.wrap{max-width:1240px;margin:0 auto;padding:0 16px}
+body{font-family:'Heebo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased;padding:0 0 70px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 18px}
 
-header{background:linear-gradient(160deg,var(--bg2) 0%,var(--bg) 100%);
-  border-bottom:1px solid var(--line);padding:26px 0 20px;margin-bottom:20px}
-.hrow{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
-h1{font-size:clamp(21px,4.5vw,31px);font-weight:900;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
-h1 .dot{width:11px;height:11px;border-radius:50%;background:var(--acc);
-  box-shadow:0 0 0 5px color-mix(in srgb,var(--acc) 18%,transparent);
-  animation:pulse 2.4s ease-in-out infinite;flex:none}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.82)}}
-.sub{color:var(--tx2);font-size:14px;margin-top:5px}
-.hbtns{display:flex;gap:8px;flex:none}
+/* ─── HEADER ─── */
+header{background:linear-gradient(165deg,var(--bg2),var(--bg));border-bottom:1px solid var(--line);
+  padding:30px 0 24px;margin-bottom:24px}
+.hrow{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
+h1{font-size:clamp(23px,5vw,34px);font-weight:900;letter-spacing:-.025em;display:flex;align-items:center;gap:11px}
+h1 .dot{width:12px;height:12px;border-radius:50%;background:var(--acc);
+  box-shadow:0 0 0 6px color-mix(in srgb,var(--acc) 16%,transparent);
+  animation:pulse 2.6s ease-in-out infinite;flex:none}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.tagline{color:var(--tx2);font-size:15px;margin-top:7px;max-width:62ch}
+.tagline b{color:var(--tx);font-weight:700}
+.hbtns{display:flex;gap:9px;flex:none}
 .iconbtn{background:var(--card);border:1px solid var(--line);color:var(--tx2);
-  height:40px;min-width:40px;padding:0 12px;border-radius:11px;cursor:pointer;font-size:14px;
+  height:42px;min-width:42px;padding:0 15px;border-radius:12px;cursor:pointer;font-size:14px;
   display:grid;place-items:center;transition:.16s;font-family:inherit;font-weight:600}
 .iconbtn:hover{border-color:var(--acc);color:var(--acc)}
 
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:11px;margin-top:18px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:13px 15px;position:relative;overflow:hidden}
-.kpi::before{content:'';position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px;background:var(--acc);opacity:.75}
-.kpi .l{font-size:11.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
-.kpi .v{font-size:23px;font-weight:900;letter-spacing:-.02em;margin-top:3px;line-height:1.15}
-.kpi .n{font-size:12px;color:var(--tx2);margin-top:2px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:22px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:15px 17px;position:relative;overflow:hidden}
+.kpi::before{content:'';position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px;background:var(--acc)}
+.kpi .l{font-size:12px;color:var(--tx3);font-weight:600;letter-spacing:.02em}
+.kpi .v{font-size:27px;font-weight:900;letter-spacing:-.03em;margin-top:2px;line-height:1.1}
+.kpi .n{font-size:12.5px;color:var(--tx2);margin-top:2px;line-height:1.4}
 .kpi.ok::before{background:var(--ok)}.kpi.warn::before{background:var(--warn)}
 .kpi.info::before{background:var(--info)}.kpi.pur::before{background:var(--pur)}
 
-/* ── city benchmark strip ── */
-.bench{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:12px 14px;margin-top:12px}
-.bench .bt{font-size:11.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;
-  font-weight:500;margin-bottom:9px}
-.benchrow{display:flex;gap:18px;flex-wrap:wrap}
-.bcity{display:flex;align-items:baseline;gap:7px;font-size:13px}
-.bcity b{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
-.bcity span{color:var(--tx3);font-size:12px}
+.bench{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:15px 17px;margin-top:12px}
+.bench .bt{font-size:12.5px;color:var(--tx2);font-weight:600;margin-bottom:11px}
+.benchrow{display:flex;gap:10px;flex-wrap:wrap}
+.bcity{background:var(--card2);border:1px solid var(--line);border-radius:11px;
+  padding:8px 14px;display:flex;align-items:baseline;gap:8px;font-size:13.5px;font-weight:600}
+.bcity b{font-size:17px;font-weight:900;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.bcity span{color:var(--tx3);font-size:12px;font-weight:500}
 
-.controls{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:14px;margin:18px 0;display:flex;gap:15px;flex-wrap:wrap;align-items:flex-end}
-.cgroup{display:flex;flex-direction:column;gap:7px;min-width:0}
-.cgroup>label{font-size:11.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
-.chips{display:flex;gap:6px;flex-wrap:wrap}
+/* ─── CONTROLS ─── */
+.controls{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:16px;margin:20px 0;display:flex;gap:17px;flex-wrap:wrap;align-items:flex-end}
+.cgroup{display:flex;flex-direction:column;gap:8px;min-width:0}
+.cgroup>label{font-size:12px;color:var(--tx3);font-weight:600}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
 .chip{background:var(--card2);border:1px solid var(--line);color:var(--tx2);
-  padding:6px 13px;border-radius:999px;font-size:13px;cursor:pointer;
-  font-family:inherit;font-weight:500;transition:.14s;white-space:nowrap}
+  padding:7px 15px;border-radius:999px;font-size:13.5px;cursor:pointer;
+  font-family:inherit;font-weight:600;transition:.14s;white-space:nowrap}
 .chip:hover{border-color:var(--line2);color:var(--tx)}
 .chip[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
 select,input[type="search"]{background:var(--card2);border:1px solid var(--line);color:var(--tx);
-  padding:7px 12px;border-radius:10px;font-size:13.5px;font-family:inherit;font-weight:500}
+  padding:9px 13px;border-radius:11px;font-size:14px;font-family:inherit;font-weight:600}
 select{cursor:pointer}
-input[type="search"]{min-width:170px}
-input[type="search"]::placeholder{color:var(--tx3)}
-select:focus-visible,.chip:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+input[type="search"]{min-width:180px;font-weight:500}
+input[type="search"]::placeholder{color:var(--tx3);font-weight:400}
+:is(select,.chip,button,input):focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .spacer{flex:1 1 auto;min-width:0}
-.count{font-size:13px;color:var(--tx2);white-space:nowrap;align-self:flex-end;padding-bottom:6px}
-.count b{color:var(--tx);font-weight:700}
+.count{font-size:13.5px;color:var(--tx2);white-space:nowrap;align-self:flex-end;padding-bottom:9px;font-weight:600}
+.count b{color:var(--tx);font-weight:900}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+/* ─── TIER HEADERS ─── */
+.tier{grid-column:1/-1;display:flex;align-items:center;gap:13px;
+  margin:20px 0 2px;padding-top:6px}
+.tier:first-child{margin-top:0}
+.tier .tdot{width:11px;height:11px;border-radius:50%;flex:none}
+.tier h2{font-size:17px;font-weight:900;letter-spacing:-.01em;white-space:nowrap}
+.tier .tn{font-size:13px;color:var(--tx3);font-weight:600;white-space:nowrap}
+.tier .tline{flex:1;height:1px;background:var(--line)}
+
+/* ─── CARDS ─── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(345px,1fr));gap:16px;align-items:start}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
   overflow:hidden;display:flex;flex-direction:column;
-  transition:transform .16s,border-color .16s,box-shadow .16s,opacity .16s}
-.card:hover{transform:translateY(-2px);border-color:var(--line2);box-shadow:var(--shadow)}
-.card.hot{border-color:color-mix(in srgb,var(--acc) 45%,var(--line))}
+  transition:transform .18s,border-color .18s,box-shadow .18s,opacity .18s}
+.card:hover{transform:translateY(-3px);border-color:var(--line2);box-shadow:var(--shadow)}
+.card.st-out{opacity:.45}
 .card.st-fav{border-color:color-mix(in srgb,var(--pur) 55%,var(--line))}
-.card.st-out{opacity:.5}
-.chead{padding:14px 16px 12px;border-bottom:1px solid var(--line);position:relative}
-.card.hot .chead{background:linear-gradient(180deg,color-mix(in srgb,var(--acc) 9%,transparent),transparent)}
-.card.st-fav .chead{background:linear-gradient(180deg,color-mix(in srgb,var(--pur) 10%,transparent),transparent)}
-.rank{position:absolute;inset-block-start:14px;inset-inline-end:16px;
-  font-size:11px;font-weight:900;color:var(--tx3);letter-spacing:.04em}
-.addr{font-size:17px;font-weight:700;letter-spacing:-.01em;padding-inline-end:38px;line-height:1.3}
-.loc{font-size:13px;color:var(--tx2);margin-top:2px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
-.newbadge{font-size:10px;font-weight:900;letter-spacing:.05em;background:var(--acc);color:#fff;
-  padding:1px 6px;border-radius:5px}
-.price{font-size:26px;font-weight:900;letter-spacing:-.025em;margin-top:8px;line-height:1.1}
-.price small{font-size:13.5px;font-weight:500;color:var(--tx2);letter-spacing:0}
-.noprice{font-size:18px;font-weight:700;color:var(--warn);margin-top:8px}
-.relbadge{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;
-  padding:3px 9px;border-radius:7px}
-.relbadge.good{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
-.relbadge.mid{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
-.relbadge.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
 
-.specs{display:flex;border-bottom:1px solid var(--line)}
-.spec{flex:1;padding:10px 6px;text-align:center;border-inline-start:1px solid var(--line)}
+/* verdict ribbon */
+.verdict{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:9px 17px;font-size:13px;font-weight:900;letter-spacing:.01em}
+.verdict .vs{font-size:12px;font-weight:800;opacity:.85;font-variant-numeric:tabular-nums}
+.v-top{background:color-mix(in srgb,var(--ok) 20%,transparent);color:var(--ok)}
+.v-mid{background:color-mix(in srgb,var(--warn) 20%,transparent);color:var(--warn)}
+.v-ask{background:color-mix(in srgb,var(--info) 18%,transparent);color:var(--info)}
+.v-low{background:color-mix(in srgb,var(--tx3) 16%,transparent);color:var(--tx2)}
+.v-fav{background:color-mix(in srgb,var(--pur) 20%,transparent);color:var(--pur)}
+.v-out{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+
+.chead{padding:16px 17px 15px;border-bottom:1px solid var(--line)}
+.addr{font-size:19px;font-weight:900;letter-spacing:-.02em;line-height:1.25}
+.loc{font-size:13.5px;color:var(--tx2);margin-top:3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.newbadge{font-size:10.5px;font-weight:900;background:var(--acc);color:#fff;padding:2px 7px;border-radius:6px}
+.price{font-size:30px;font-weight:900;letter-spacing:-.035em;margin-top:11px;line-height:1.05}
+.price small{font-size:14px;font-weight:600;color:var(--tx2);letter-spacing:0}
+.noprice{font-size:19px;font-weight:800;color:var(--warn);margin-top:11px}
+.relbadge{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:800;padding:4px 11px;border-radius:8px}
+.relbadge.good{background:color-mix(in srgb,var(--ok) 17%,transparent);color:var(--ok)}
+.relbadge.mid{background:color-mix(in srgb,var(--warn) 17%,transparent);color:var(--warn)}
+.relbadge.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.relbadge.na{background:var(--card2);color:var(--tx3);font-weight:600}
+
+.specs{display:flex;border-bottom:1px solid var(--line);background:var(--card2)}
+.spec{flex:1;padding:12px 6px;text-align:center;border-inline-start:1px solid var(--line)}
 .spec:first-child{border-inline-start:none}
-.spec .sv{font-size:15.5px;font-weight:800;letter-spacing:-.01em}
-.spec .sl{font-size:10.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.05em;margin-top:1px}
+.spec .sv{font-size:18px;font-weight:900;letter-spacing:-.02em}
+.spec .sl{font-size:11px;color:var(--tx3);font-weight:600;margin-top:1px}
 .spec.hl .sv{color:var(--acc)}
 
-.cbody{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
-.tags{display:flex;gap:5px;flex-wrap:wrap}
-.tag{font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:500;
-  background:var(--card2);border:1px solid var(--line);color:var(--tx2)}
-.tag.renew{background:color-mix(in srgb,var(--ok) 16%,transparent);border-color:color-mix(in srgb,var(--ok) 40%,transparent);color:var(--ok);font-weight:700}
-.tag.renewp{background:color-mix(in srgb,var(--info) 15%,transparent);border-color:color-mix(in srgb,var(--info) 38%,transparent);color:var(--info);font-weight:700}
-.tag.drop{background:color-mix(in srgb,var(--ok) 14%,transparent);border-color:color-mix(in srgb,var(--ok) 35%,transparent);color:var(--ok)}
-.tag.over{background:color-mix(in srgb,var(--bad) 14%,transparent);border-color:color-mix(in srgb,var(--bad) 35%,transparent);color:var(--bad)}
-.note{font-size:13px;color:var(--tx2);line-height:1.5}
-.rnote{font-size:12.5px;color:var(--ok);line-height:1.5;
-  background:color-mix(in srgb,var(--ok) 8%,transparent);
-  border-inline-start:2px solid var(--ok);padding:7px 10px;border-radius:0 8px 8px 0}
+.cbody{padding:15px 17px;flex:1;display:flex;flex-direction:column;gap:12px}
 
-.fin{background:var(--card2);border-radius:11px;padding:11px 12px;font-size:13px}
-.fin summary{cursor:pointer;font-weight:700;font-size:12.5px;color:var(--tx2);
+/* why-good bullets */
+.why{display:flex;flex-direction:column;gap:6px}
+.wl{display:flex;gap:9px;font-size:13.5px;line-height:1.5;align-items:flex-start}
+.wl .ic{flex:none;width:17px;text-align:center;font-size:12px;margin-top:2px}
+.wl.p .ic{color:var(--ok)} .wl.n .ic{color:var(--bad)} .wl.i .ic{color:var(--info)}
+.wl span:last-child{color:var(--tx2)}
+.wl b{color:var(--tx);font-weight:700}
+
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;padding:3px 10px;border-radius:7px;font-weight:600;
+  background:var(--card2);border:1px solid var(--line);color:var(--tx2)}
+.tag.renew{background:color-mix(in srgb,var(--ok) 15%,transparent);border-color:color-mix(in srgb,var(--ok) 38%,transparent);color:var(--ok);font-weight:800}
+.tag.renewp{background:color-mix(in srgb,var(--info) 14%,transparent);border-color:color-mix(in srgb,var(--info) 36%,transparent);color:var(--info);font-weight:800}
+.tag.drop{background:color-mix(in srgb,var(--ok) 13%,transparent);border-color:color-mix(in srgb,var(--ok) 33%,transparent);color:var(--ok)}
+.tag.over{background:color-mix(in srgb,var(--bad) 13%,transparent);border-color:color-mix(in srgb,var(--bad) 33%,transparent);color:var(--bad)}
+.note{font-size:13.5px;color:var(--tx2);line-height:1.55}
+
+.fin{background:var(--card2);border-radius:12px;padding:12px 14px;font-size:13.5px}
+.fin summary{cursor:pointer;font-weight:800;font-size:13px;color:var(--tx2);
   list-style:none;display:flex;justify-content:space-between;align-items:center}
 .fin summary::-webkit-details-marker{display:none}
-.fin summary::after{content:'▾';font-size:11px;transition:.2s;color:var(--tx3)}
+.fin summary::after{content:'▾';font-size:12px;transition:.2s;color:var(--tx3)}
 .fin[open] summary::after{transform:rotate(180deg)}
-.finrows{margin-top:10px;display:flex;flex-direction:column;gap:6px;padding-top:10px;border-top:1px solid var(--line)}
-.frow{display:flex;justify-content:space-between;gap:10px;font-size:12.5px}
+.finrows{margin-top:11px;display:flex;flex-direction:column;gap:7px;padding-top:11px;border-top:1px solid var(--line)}
+.frow{display:flex;justify-content:space-between;gap:10px;font-size:13px}
 .frow span:first-child{color:var(--tx3)}
-.frow span:last-child{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
-.frow.tot{border-top:1px dashed var(--line2);padding-top:6px;margin-top:2px}
-.frow.tot span{color:var(--tx);font-size:13px}
+.frow span:last-child{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.frow.tot{border-top:1px dashed var(--line2);padding-top:8px;margin-top:2px}
+.frow.tot span{color:var(--tx);font-size:13.5px}
 .frow .g{color:var(--ok)}.frow .r{color:var(--bad)}
-.finnote{font-size:11px;color:var(--tx3);line-height:1.45;margin-top:4px}
+.finnote{font-size:11.5px;color:var(--tx3);line-height:1.5;margin-top:5px}
 
-.scorebar{display:flex;align-items:center;gap:9px}
-.sbtrack{flex:1;height:6px;background:var(--card2);border-radius:99px;overflow:hidden}
-.sbfill{height:100%;border-radius:99px;transition:width .4s ease}
-.sbnum{font-size:13px;font-weight:900;min-width:26px;text-align:center;font-variant-numeric:tabular-nums}
-
-/* ── status ── */
-.statusrow{display:flex;gap:5px;flex-wrap:wrap}
-.sbtn{flex:1;min-width:0;background:var(--card2);border:1px solid var(--line);color:var(--tx3);
-  padding:5px 4px;border-radius:8px;font-size:11.5px;cursor:pointer;font-family:inherit;
-  font-weight:600;transition:.14s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sbtn:hover{border-color:var(--line2);color:var(--tx2)}
+.statusrow{display:flex;gap:6px;flex-wrap:wrap;padding-top:2px}
+.sbtn{flex:1;min-width:0;background:transparent;border:1px solid var(--line);color:var(--tx3);
+  padding:7px 4px;border-radius:9px;font-size:12px;cursor:pointer;font-family:inherit;
+  font-weight:700;transition:.14s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sbtn:hover{border-color:var(--line2);color:var(--tx2);background:var(--card2)}
 .sbtn[aria-pressed="true"]{color:#fff;border-color:transparent}
 .sbtn[data-s="called"][aria-pressed="true"]{background:var(--info)}
-.sbtn[data-s="seen"][aria-pressed="true"]{background:var(--warn);color:#1a1a1a}
+.sbtn[data-s="seen"][aria-pressed="true"]{background:var(--warn);color:#151d29}
 .sbtn[data-s="fav"][aria-pressed="true"]{background:var(--pur)}
 .sbtn[data-s="out"][aria-pressed="true"]{background:var(--bad)}
 
-.cfoot{padding:10px 16px;border-top:1px solid var(--line);display:flex;gap:8px;align-items:center}
-.btn{flex:1;text-align:center;padding:8px 12px;border-radius:10px;font-size:13.5px;font-weight:700;
+.cfoot{padding:13px 17px;border-top:1px solid var(--line);display:flex;gap:10px;align-items:center}
+.btn{flex:1;text-align:center;padding:11px 14px;border-radius:11px;font-size:14.5px;font-weight:800;
   text-decoration:none;transition:.14s;border:1px solid transparent;font-family:inherit;cursor:pointer}
 .btn.pri{background:var(--acc);color:#fff}
 .btn.pri:hover{background:var(--acc2)}
 .btn.dis{background:var(--card2);color:var(--tx3);cursor:not-allowed;border-color:var(--line)}
-.src{font-size:11px;color:var(--tx3);white-space:nowrap;font-weight:500}
+.src{font-size:11.5px;color:var(--tx3);white-space:nowrap;font-weight:700}
 
-.empty{text-align:center;padding:60px 20px;color:var(--tx3)}
-footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
-  color:var(--tx3);font-size:12.5px;text-align:center;line-height:1.7}
+.empty{text-align:center;padding:70px 20px;color:var(--tx3);font-size:15px}
+footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
+  color:var(--tx3);font-size:13px;text-align:center;line-height:1.8}
 
-.toast{position:fixed;inset-block-end:20px;inset-inline-start:50%;transform:translateX(50%) translateY(80px);
-  background:var(--acc);color:#fff;padding:11px 20px;border-radius:11px;font-size:14px;font-weight:700;
-  box-shadow:var(--shadow);transition:transform .28s cubic-bezier(.2,.9,.3,1.2);z-index:99;pointer-events:none}
+.toast{position:fixed;inset-block-end:22px;inset-inline-start:50%;transform:translateX(50%) translateY(90px);
+  background:var(--acc);color:#fff;padding:12px 22px;border-radius:12px;font-size:14.5px;font-weight:800;
+  box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.2,.9,.3,1.2);z-index:99;pointer-events:none}
 .toast.show{transform:translateX(50%) translateY(0)}
 
 @media (max-width:640px){
-  .grid{grid-template-columns:1fr}
-  .controls{padding:12px;gap:13px}
+  .grid{grid-template-columns:1fr;gap:14px}
+  .controls{padding:14px;gap:14px}
   .kpis{grid-template-columns:repeat(2,1fr)}
   .count{width:100%;padding-bottom:0}
   input[type="search"]{width:100%}
+  .price{font-size:27px}
 }
 @media print{
-  .controls,.hbtns,.cfoot,.statusrow,.toast{display:none}
+  .controls,.hbtns,.cfoot,.statusrow,.toast,.fin{display:none}
   body{background:#fff;color:#000;padding:0}
-  .card{break-inside:avoid;border:1px solid #ccc}
-  .fin{display:none}
+  .card{break-inside:avoid;border:1px solid #bbb;box-shadow:none}
+  .tier{break-after:avoid}
 }
 </style>
 </head>
@@ -212,7 +229,11 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
     <div class="hrow">
       <div>
         <h1><span class="dot"></span>APARTMENT RADAR</h1>
-        <p class="sub">הדירה הראשונה של אביאל · מרכז הארץ · עד <span id="budgetTxt"></span></p>
+        <p class="tagline">
+          מעקב אחרי דירות למכירה במרכז הארץ עד <b id="budgetTxt"></b>.
+          כל דירה מדורגת לפי <b>כמה היא זולה ביחס לממוצע בעיר שלה</b>, גודל, פוטנציאל התחדשות עירונית ומה שצריך בהון עצמי.
+          הרשימה מתעדכנת לבד פעמיים ביום.
+        </p>
       </div>
       <div class="hbtns">
         <button class="iconbtn" id="shareBtn" title="העתק קישור לתצוגה הנוכחית">שתף</button>
@@ -221,7 +242,7 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
     </div>
     <div class="kpis" id="kpis"></div>
     <div class="bench">
-      <div class="bt">מחיר ממוצע למ״ר לפי עיר — ההשוואה שקובעת אם דירה זולה באמת</div>
+      <div class="bt">מחיר ממוצע למ״ר בכל עיר — זה מה שקובע אם דירה זולה באמת</div>
       <div class="benchrow" id="bench"></div>
     </div>
   </div>
@@ -273,7 +294,7 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
   <footer>
     עודכן לאחרונה: <span id="updated"></span><br>
     מתעדכן אוטומטית פעמיים ביום (09:30 · 19:30) · מקורות: יד2 · מדלן · פייסבוק מרקטפלייס<br>
-    <span style="opacity:.7">הסטטוסים שאתה מסמן נשמרים בדפדפן הזה בלבד · חישובי המימון והתשואה הם הערכה, לא ייעוץ פיננסי</span>
+    <span style="opacity:.75">הסימונים שאתה מסמן נשמרים בדפדפן הזה בלבד · חישובי המימון והתשואה הם הערכה, לא ייעוץ פיננסי</span>
   </footer>
 </div>
 
@@ -283,402 +304,417 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
 <script>
 (function(){
   'use strict';
-  var D = window.APARTMENT_DATA;
-  var APTS = D.apartments;
+  var D = window.APARTMENT_DATA, APTS = D.apartments;
   var BUDGET = D.budget, EQUITY = D.equity, LEV = D.leverage;
-
-  var LAWYER_PCT = 0.006, MOVE_FIXED = 15000;
-  var MORTGAGE_RATE = 0.052, MORTGAGE_YEARS = 30;
+  var LAWYER_PCT = 0.006, MOVE_FIXED = 15000, MORTGAGE_RATE = 0.052, MORTGAGE_YEARS = 30;
   var RENT_PSQM = {'רמת גן':78,'בת ים':62,'חולון':60,'רחובות':48};
   var NEW_DAYS = 3;
 
-  var fmt = function(n){ return n==null ? '—' : new Intl.NumberFormat('he-IL').format(Math.round(n)); };
-  var money = function(n){ return n==null ? '—' : '₪' + fmt(n); };
-  var short = function(n){
-    if(n==null) return '—';
-    if(n>=1000000) return (n/1000000).toFixed(2).replace(/\.?0+$/,'') + 'M';
-    if(n>=1000) return Math.round(n/1000) + 'K';
+  var fmt=function(n){return n==null?'—':new Intl.NumberFormat('he-IL').format(Math.round(n));};
+  var money=function(n){return n==null?'—':'₪'+fmt(n);};
+  var short=function(n){
+    if(n==null)return '—';
+    if(n>=1000000)return (n/1000000).toFixed(2).replace(/\.?0+$/,'')+'M';
+    if(n>=1000)return Math.round(n/1000)+'K';
     return String(n);
   };
-  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){
-    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
 
   function purchaseTax(p){
-    if(p==null) return 0;
-    var T1 = 1978745, T2 = 2347040;
-    if(p <= T1) return 0;
-    if(p <= T2) return (p - T1) * 0.035;
-    return (T2 - T1) * 0.035 + (p - T2) * 0.05;
+    if(p==null)return 0;
+    var T1=1978745,T2=2347040;
+    if(p<=T1)return 0;
+    if(p<=T2)return (p-T1)*0.035;
+    return (T2-T1)*0.035+(p-T2)*0.05;
   }
-  function monthlyPayment(pr, rate, yrs){
-    var r = rate/12, n = yrs*12;
-    return r === 0 ? pr/n : pr * r / (1 - Math.pow(1+r, -n));
-  }
-  function daysSince(d){
-    if(!d) return null;
-    return Math.floor((new Date().setHours(0,0,0,0) - new Date(d).setHours(0,0,0,0)) / 86400000);
-  }
+  function monthlyPayment(pr,rate,yrs){var r=rate/12,n=yrs*12;return r===0?pr/n:pr*r/(1-Math.pow(1+r,-n));}
+  function daysSince(d){return d?Math.floor((new Date().setHours(0,0,0,0)-new Date(d).setHours(0,0,0,0))/86400000):null;}
 
-  // בדירות גן / קוטג' השטח המפורסם כולל אדמה — מחיר למ"ר יוצא נמוך באופן מטעה
-  // ואי אפשר להשוות אותו לדירות רגילות. מזהים לפי פער חריג מול מספר החדרים.
-  function sqmInflated(a){
-    if(!a.sqm || !a.rooms) return false;
-    return a.sqm > a.rooms * 32 + 20;
-  }
+  // בדירות גן/קוטג' השטח המפורסם כולל אדמה — מחיר למ"ר לא בר-השוואה
+  function sqmInflated(a){ return !!(a.sqm && a.rooms && a.sqm > a.rooms*32+20); }
 
   function calc(a){
-    var o = {};
-    o.inflated = sqmInflated(a);
-    o.ppsqm = (a.price && a.sqm) ? a.price / a.sqm : null;
-    o.tax = purchaseTax(a.price);
-    o.lawyer = a.price ? a.price * LAWYER_PCT : 0;
-    o.closing = a.price ? (o.tax + o.lawyer + MOVE_FIXED) : null;
-    o.total = a.price ? a.price + o.closing : null;
-    o.mortgage = a.price ? a.price * LEV : null;
-    o.down = a.price ? a.price * (1 - LEV) : null;
-    o.cashNeeded = a.price ? o.down + o.closing : null;
-    o.monthly = o.mortgage ? monthlyPayment(o.mortgage, MORTGAGE_RATE, MORTGAGE_YEARS) : null;
-
-    var rentSqm = (a.sqm && a.rooms) ? Math.min(a.sqm, a.rooms * 32 + 20) : a.sqm;
-    o.rentCapped = !!(a.sqm && rentSqm < a.sqm);
-    o.rent = (rentSqm && RENT_PSQM[a.city]) ? rentSqm * RENT_PSQM[a.city] : null;
-    o.yield = (o.rent && a.price) ? (o.rent * 12 / a.price) * 100 : null;
-    o.cashflow = (o.rent && o.monthly) ? o.rent - o.monthly : null;
-    o.affordable = o.cashNeeded != null ? o.cashNeeded <= EQUITY : null;
-    o.inBudget = a.price != null ? a.price <= BUDGET : null;
-    o.days = daysSince(a.firstSeen);
-    o.isNew = o.days != null && o.days <= NEW_DAYS;
+    var o={};
+    o.inflated=sqmInflated(a);
+    o.ppsqm=(a.price&&a.sqm)?a.price/a.sqm:null;
+    o.tax=purchaseTax(a.price);
+    o.lawyer=a.price?a.price*LAWYER_PCT:0;
+    o.closing=a.price?(o.tax+o.lawyer+MOVE_FIXED):null;
+    o.total=a.price?a.price+o.closing:null;
+    o.mortgage=a.price?a.price*LEV:null;
+    o.down=a.price?a.price*(1-LEV):null;
+    o.cashNeeded=a.price?o.down+o.closing:null;
+    o.monthly=o.mortgage?monthlyPayment(o.mortgage,MORTGAGE_RATE,MORTGAGE_YEARS):null;
+    var rentSqm=(a.sqm&&a.rooms)?Math.min(a.sqm,a.rooms*32+20):a.sqm;
+    o.rentCapped=!!(a.sqm&&rentSqm<a.sqm);
+    o.rent=(rentSqm&&RENT_PSQM[a.city])?rentSqm*RENT_PSQM[a.city]:null;
+    o.yield=(o.rent&&a.price)?(o.rent*12/a.price)*100:null;
+    o.cashflow=(o.rent&&o.monthly)?o.rent-o.monthly:null;
+    o.affordable=o.cashNeeded!=null?o.cashNeeded<=EQUITY:null;
+    o.inBudget=a.price!=null?a.price<=BUDGET:null;
+    o.days=daysSince(a.firstSeen);
+    o.isNew=o.days!=null&&o.days<=NEW_DAYS;
     return o;
   }
 
-  // ── ממוצע מחיר למ"ר לכל עיר — הבסיס להשוואה ──
-  var CITY_AVG = (function(){
-    var acc = {};
+  var CITY_AVG=(function(){
+    var acc={};
     APTS.forEach(function(a){
-      // דירות גן מעוותות את הממוצע — השטח שלהן כולל אדמה
-      if(a.price && a.sqm && !sqmInflated(a)){
-        (acc[a.city] = acc[a.city] || []).push(a.price / a.sqm);
-      }
+      if(a.price&&a.sqm&&!sqmInflated(a))(acc[a.city]=acc[a.city]||[]).push(a.price/a.sqm);
     });
-    var out = {};
+    var out={};
     Object.keys(acc).forEach(function(c){
-      out[c] = { avg: acc[c].reduce(function(s,v){return s+v;},0) / acc[c].length, n: acc[c].length };
+      out[c]={avg:acc[c].reduce(function(s,v){return s+v;},0)/acc[c].length,n:acc[c].length};
     });
     return out;
   })();
 
-  // כמה אחוז מתחת/מעל לממוצע העיר
-  function relToCity(a, c){
-    if(c.ppsqm == null || c.inflated || !CITY_AVG[a.city]) return null;
-    return (CITY_AVG[a.city].avg - c.ppsqm) / CITY_AVG[a.city].avg * 100;
+  function relToCity(a,c){
+    if(c.ppsqm==null||c.inflated||!CITY_AVG[a.city])return null;
+    return (CITY_AVG[a.city].avg-c.ppsqm)/CITY_AVG[a.city].avg*100;
   }
 
-  // ── ציון 0–100 ──
-  // מחיר למ"ר מוחלט 15% · יחסי לעיר 15% · גודל 20% · התחדשות 30% · מימון 20%
-  function score(a, c, rel){
-    var s = 0, w = 0;
-    if(c.ppsqm != null && !c.inflated){
-      var p = 1 - (c.ppsqm - 14000) / (40000 - 14000);
-      s += Math.max(0, Math.min(1, p)) * 15; w += 15;
+  function score(a,c,rel){
+    var s=0,w=0;
+    if(c.ppsqm!=null&&!c.inflated){
+      var p=1-(c.ppsqm-14000)/(40000-14000);
+      s+=Math.max(0,Math.min(1,p))*15;w+=15;
     }
-    if(rel != null){
-      var rv = (rel + 25) / 50;                 // -25% → 0 ,‏ +25% → 1
-      s += Math.max(0, Math.min(1, rv)) * 15; w += 15;
+    if(rel!=null){
+      var rv=(rel+25)/50;
+      s+=Math.max(0,Math.min(1,rv))*15;w+=15;
     }
-    if(a.sqm != null){
-      var g = (a.sqm - 35) / (100 - 35);
-      s += Math.max(0, Math.min(1, g)) * 20; w += 20;
+    if(a.sqm!=null){
+      var g=(a.sqm-35)/(100-35);
+      s+=Math.max(0,Math.min(1,g))*20;w+=20;
     }
-    s += (a.renewal === 'verified' ? 1 : a.renewal === 'potential' ? 0.5 : 0) * 30; w += 30;
-    if(c.cashNeeded != null){
-      var f = 1 - (c.cashNeeded - 250000) / (EQUITY * 1.6 - 250000);
-      s += Math.max(0, Math.min(1, f)) * 20; w += 20;
+    s+=(a.renewal==='verified'?1:a.renewal==='potential'?0.5:0)*30;w+=30;
+    if(c.cashNeeded!=null){
+      var f=1-(c.cashNeeded-250000)/(EQUITY*1.6-250000);
+      s+=Math.max(0,Math.min(1,f))*20;w+=20;
     }
-    if(w === 0) return null;
-    var base = s / w * 100;
-    if(a.price != null && a.price > BUDGET){
-      var over = (a.price - BUDGET) / BUDGET;
-      base *= Math.max(0.35, 1 - over * 2.2);
+    if(w===0)return null;
+    var base=s/w*100;
+    if(a.price!=null&&a.price>BUDGET){
+      var over=(a.price-BUDGET)/BUDGET;
+      base*=Math.max(0.35,1-over*2.2);
     }
     return Math.round(base);
   }
-  function scoreColor(s){
-    if(s == null) return 'var(--tx3)';
-    return s >= 72 ? 'var(--ok)' : s >= 55 ? 'var(--warn)' : 'var(--bad)';
+
+  // ── תרגום ציון למילים ──
+  // דירה בלי מחיר לא מקבלת ציון אמיתי (חסרים 50% מהמשקל) — היא לא "גרועה",
+  // פשוט לא יודעים. לכן היא מקבלת קטגוריה משלה במקום ליפול לתחתית.
+  function verdict(r){
+    if(r.a.price==null) return {k:'ask', t:'צריך לברר מחיר'};
+    var s=r.score;
+    if(s==null) return {k:'low', t:'חסרים נתונים'};
+    if(s>=70)   return {k:'top', t:'עסקה מובילה'};
+    if(s>=55)   return {k:'mid', t:'שווה בדיקה'};
+    return {k:'low', t:'פחות מתאים'};
   }
 
-  var ROWS = APTS.map(function(a){
-    var c = calc(a);
-    var rel = relToCity(a, c);
-    return { a:a, c:c, rel:rel, score:score(a,c,rel) };
+  var ROWS=APTS.map(function(a){
+    var c=calc(a),rel=relToCity(a,c);
+    return {a:a,c:c,rel:rel,score:score(a,c,rel)};
   });
 
-  // ── סטטוסים (localStorage) ──
-  var SKEY = 'ar-status-v1';
-  var STATUS = {};
-  try { STATUS = JSON.parse(localStorage.getItem(SKEY) || '{}'); } catch(e){ STATUS = {}; }
-  function saveStatus(){ try{ localStorage.setItem(SKEY, JSON.stringify(STATUS)); }catch(e){} }
-  var STATUS_LABELS = { called:'התקשרתי', seen:'ראיתי', fav:'מועדפת', out:'פסלתי' };
+  var SKEY='ar-status-v1',STATUS={};
+  try{STATUS=JSON.parse(localStorage.getItem(SKEY)||'{}');}catch(e){STATUS={};}
+  function saveStatus(){try{localStorage.setItem(SKEY,JSON.stringify(STATUS));}catch(e){}}
+  var STATUS_LABELS={called:'התקשרתי',seen:'ראיתי',fav:'מועדפת',out:'פסלתי'};
 
-  var state = { city:'הכל', filters:{}, sort:'score', q:'' };
-
-  // ── קריאת מצב מה-URL (לשיתוף) ──
+  var state={city:'הכל',filters:{},sort:'score',q:''};
   (function(){
-    var p = new URLSearchParams(location.search);
-    if(p.get('city')) state.city = p.get('city');
-    if(p.get('sort')) state.sort = p.get('sort');
-    if(p.get('q'))    state.q = p.get('q');
-    (p.get('f')||'').split(',').filter(Boolean).forEach(function(f){ state.filters[f] = true; });
+    var p=new URLSearchParams(location.search);
+    if(p.get('city'))state.city=p.get('city');
+    if(p.get('sort'))state.sort=p.get('sort');
+    if(p.get('q'))state.q=p.get('q');
+    (p.get('f')||'').split(',').filter(Boolean).forEach(function(f){state.filters[f]=true;});
   })();
 
   function renderKPIs(){
-    var priced = ROWS.filter(function(r){ return r.a.price != null; });
-    var inBudget = priced.filter(function(r){ return r.c.inBudget; });
-    var withP = priced.filter(function(r){ return r.c.ppsqm != null; });
-    var avg = withP.length ? withP.reduce(function(s,r){return s+r.c.ppsqm;},0)/withP.length : null;
-    var best = withP.slice().sort(function(x,y){ return x.c.ppsqm - y.c.ppsqm; })[0];
-    var deals = ROWS.filter(function(r){ return r.rel != null && r.rel >= 10; });
-    var fresh = ROWS.filter(function(r){ return r.c.isNew; });
-
-    var k = [
-      { l:'דירות במעקב', v:ROWS.length, n:inBudget.length + ' בתוך התקציב', cls:'' },
-      { l:'חדשות היום', v:fresh.length, n:'נוספו ב-' + NEW_DAYS + ' הימים האחרונים', cls:'warn' },
-      { l:'מתחת לממוצע העיר', v:deals.length, n:'ב-10% ומעלה — עסקאות אמיתיות', cls:'ok' },
-      { l:'התחדשות עירונית', v:ROWS.filter(function(r){return r.a.renewal!=='none';}).length, n:'מאושר או בפוטנציאל', cls:'pur' },
-      { l:'ממוצע כללי למ״ר', v: avg ? '₪'+fmt(avg) : '—', n:'על ' + withP.length + ' מתומחרות', cls:'info' }
+    var priced=ROWS.filter(function(r){return r.a.price!=null;});
+    var inB=priced.filter(function(r){return r.c.inBudget;});
+    var withP=priced.filter(function(r){return r.c.ppsqm!=null&&!r.c.inflated;});
+    var avg=withP.length?withP.reduce(function(s,r){return s+r.c.ppsqm;},0)/withP.length:null;
+    var deals=ROWS.filter(function(r){return r.rel!=null&&r.rel>=10;});
+    var tops=ROWS.filter(function(r){return r.a.price!=null&&r.score!=null&&r.score>=70;});
+    var ask=ROWS.filter(function(r){return r.a.price==null;});
+    var k=[
+      {l:'עסקאות מובילות',v:tops.length,n:'ציון 70 ומעלה — להתחיל מכאן',cls:'ok'},
+      {l:'מתחת לממוצע העיר',v:deals.length,n:'ב-10% ומעלה מתחת למחיר האזור',cls:'ok'},
+      {l:'התחדשות עירונית',v:ROWS.filter(function(r){return r.a.renewal!=='none';}).length,n:'פינוי-בינוי מאושר או בפוטנציאל',cls:'pur'},
+      {l:'צריך לברר מחיר',v:ask.length,n:'המחיר לא פורסם — שיחת טלפון',cls:'info'},
+      {l:'דירות במעקב',v:ROWS.length,n:inB.length+' בתקציב · ממוצע ₪'+(avg?fmt(avg):'—')+'/מ״ר',cls:''}
     ];
-    document.getElementById('kpis').innerHTML = k.map(function(x){
+    document.getElementById('kpis').innerHTML=k.map(function(x){
       return '<div class="kpi '+x.cls+'"><div class="l">'+x.l+'</div><div class="v">'+x.v+'</div><div class="n">'+x.n+'</div></div>';
     }).join('');
   }
 
   function renderBench(){
-    var rows = Object.keys(CITY_AVG).sort(function(a,b){ return CITY_AVG[a].avg - CITY_AVG[b].avg; });
-    document.getElementById('bench').innerHTML = rows.map(function(c){
-      return '<div class="bcity">'+esc(c)+' <b>₪'+fmt(CITY_AVG[c].avg)+'</b> <span>('+CITY_AVG[c].n+' דירות)</span></div>';
+    var rows=Object.keys(CITY_AVG).sort(function(a,b){return CITY_AVG[a].avg-CITY_AVG[b].avg;});
+    document.getElementById('bench').innerHTML=rows.map(function(c){
+      return '<div class="bcity">'+esc(c)+' <b>₪'+fmt(CITY_AVG[c].avg)+'</b> <span>'+CITY_AVG[c].n+' דירות</span></div>';
     }).join('');
   }
 
   function renderCityChips(){
-    var cities = ['הכל'].concat(Array.from(new Set(APTS.map(function(a){return a.city;}))).sort());
-    document.getElementById('cityChips').innerHTML = cities.map(function(c){
-      var n = c === 'הכל' ? ROWS.length : ROWS.filter(function(r){return r.a.city===c;}).length;
+    var cities=['הכל'].concat(Array.from(new Set(APTS.map(function(a){return a.city;}))).sort());
+    document.getElementById('cityChips').innerHTML=cities.map(function(c){
+      var n=c==='הכל'?ROWS.length:ROWS.filter(function(r){return r.a.city===c;}).length;
       return '<button class="chip" data-city="'+esc(c)+'" aria-pressed="'+(state.city===c)+'">'+esc(c)+' <span style="opacity:.6">'+n+'</span></button>';
     }).join('');
   }
 
   function getVisible(){
-    var q = state.q.trim().toLowerCase();
-    var out = ROWS.filter(function(r){
-      var a = r.a, f = state.filters, st = STATUS[a.id];
-      if(state.city !== 'הכל' && a.city !== state.city) return false;
-      if(f.budget && !(a.price != null && a.price <= BUDGET)) return false;
-      if(f.renewal && a.renewal === 'none') return false;
-      if(f.priced && a.price == null) return false;
-      if(f.deal && !(r.rel != null && r.rel >= 10)) return false;
-      if(f.hot && !a.hot) return false;
-      if(f.fav && st !== 'fav') return false;
-      if(f.untouched && st) return false;
+    var q=state.q.trim().toLowerCase();
+    var out=ROWS.filter(function(r){
+      var a=r.a,f=state.filters,st=STATUS[a.id];
+      if(state.city!=='הכל'&&a.city!==state.city)return false;
+      if(f.budget&&!(a.price!=null&&a.price<=BUDGET))return false;
+      if(f.renewal&&a.renewal==='none')return false;
+      if(f.priced&&a.price==null)return false;
+      if(f.deal&&!(r.rel!=null&&r.rel>=10))return false;
+      if(f.hot&&!a.hot)return false;
+      if(f.fav&&st!=='fav')return false;
+      if(f.untouched&&st)return false;
       if(q){
-        var hay = [a.address, a.city, a.neighborhood, a.note, (a.tags||[]).join(' ')].join(' ').toLowerCase();
-        if(hay.indexOf(q) === -1) return false;
+        var hay=[a.address,a.city,a.neighborhood,a.note,(a.tags||[]).join(' ')].join(' ').toLowerCase();
+        if(hay.indexOf(q)===-1)return false;
       }
       return true;
     });
-
-    var nul = function(v){ return v == null ? Infinity : v; };
-    var s = state.sort;
+    var nul=function(v){return v==null?Infinity:v;};
+    var s=state.sort;
     out.sort(function(x,y){
-      // פסולות תמיד בסוף
-      var xo = STATUS[x.a.id]==='out' ? 1:0, yo = STATUS[y.a.id]==='out' ? 1:0;
-      if(xo !== yo) return xo - yo;
-      if(s === 'score')     return (y.score||0) - (x.score||0);
-      if(s === 'rel')       return (y.rel==null?-999:y.rel) - (x.rel==null?-999:x.rel);
-      if(s === 'ppsqm')     return nul(x.c.ppsqm) - nul(y.c.ppsqm);
-      if(s === 'price')     return nul(x.a.price) - nul(y.a.price);
-      if(s === 'priceDesc') return (y.a.price||0) - (x.a.price||0);
-      if(s === 'sqm')       return (y.a.sqm||0) - (x.a.sqm||0);
-      if(s === 'yield')     return (y.c.yield||0) - (x.c.yield||0);
-      if(s === 'cash')      return nul(x.c.cashNeeded) - nul(y.c.cashNeeded);
-      if(s === 'newest')    return String(y.a.firstSeen).localeCompare(String(x.a.firstSeen));
+      var xo=STATUS[x.a.id]==='out'?1:0,yo=STATUS[y.a.id]==='out'?1:0;
+      if(xo!==yo)return xo-yo;
+      if(s==='score')return (y.score||0)-(x.score||0);
+      if(s==='rel')return (y.rel==null?-999:y.rel)-(x.rel==null?-999:x.rel);
+      if(s==='ppsqm')return nul(x.c.ppsqm)-nul(y.c.ppsqm);
+      if(s==='price')return nul(x.a.price)-nul(y.a.price);
+      if(s==='priceDesc')return (y.a.price||0)-(x.a.price||0);
+      if(s==='sqm')return (y.a.sqm||0)-(x.a.sqm||0);
+      if(s==='yield')return (y.c.yield||0)-(x.c.yield||0);
+      if(s==='cash')return nul(x.c.cashNeeded)-nul(y.c.cashNeeded);
+      if(s==='newest')return String(y.a.firstSeen).localeCompare(String(x.a.firstSeen));
       return 0;
     });
     return out;
   }
 
-  function cardHTML(r, i){
-    var a = r.a, c = r.c, s = r.score, st = STATUS[a.id];
-
-    var tags = [];
-    if(a.renewal === 'verified') tags.push('<span class="tag renew">✓ פינוי-בינוי מאושר</span>');
-    if(a.renewal === 'potential') tags.push('<span class="tag renewp">◈ פוטנציאל התחדשות</span>');
+  // ── "למה זה טוב" — שורות בשפה פשוטה במקום ערימת תגיות ──
+  function whyLines(r){
+    var a=r.a,c=r.c,L=[];
+    if(a.renewal==='verified')
+      L.push({k:'p',t:'<b>פינוי-בינוי מאושר</b> — בסוף התהליך מקבלים דירה חדשה במקום הישנה'});
+    else if(a.renewal==='potential')
+      L.push({k:'p',t:'<b>אזור התחדשות</b> — יש תנועה של פינוי-בינוי בשכונה, שווה לברר'});
+    if(r.rel!=null&&r.rel>=10)
+      L.push({k:'p',t:'זולה ב-<b>'+Math.round(r.rel)+'%</b> ממה שמשלמים בממוצע ב'+esc(a.city)});
+    else if(r.rel!=null&&r.rel<=-10)
+      L.push({k:'n',t:'יקרה ב-<b>'+Math.abs(Math.round(r.rel))+'%</b> מהממוצע ב'+esc(a.city)});
+    if(a.sqm&&a.sqm>=85&&!c.inflated)
+      L.push({k:'p',t:'<b>'+a.sqm+' מ״ר</b> — גדולה משמעותית מהרוב ברשימה'});
     (a.tags||[]).forEach(function(t){
-      var cls = /ירד ב/.test(t) ? 'drop' : /מעל תקציב/.test(t) ? 'over' : '';
+      if(/ירד ב/.test(t)) L.push({k:'p',t:'<b>'+esc(t)+'</b> — המוכר מתגמש, יש מקום למשא ומתן'});
+    });
+    if(c.affordable===false)
+      L.push({k:'n',t:'דורשת <b>'+money(c.cashNeeded)+'</b> הון עצמי — יותר ממה שיש'});
+    if(a.price!=null&&a.price>BUDGET)
+      L.push({k:'n',t:'<b>'+money(a.price-BUDGET)+'</b> מעל התקציב'});
+    if(a.price==null)
+      L.push({k:'i',t:'המחיר לא פורסם — <b>צריך להתקשר</b> כדי לדעת'});
+    if(c.yield!=null&&c.yield>=4)
+      L.push({k:'p',t:'תשואת שכירות <b>'+c.yield.toFixed(1)+'%</b> — מהגבוהות ברשימה'});
+    return L.slice(0,4);
+  }
+
+  function cardHTML(r,i){
+    var a=r.a,c=r.c,s=r.score,st=STATUS[a.id];
+    var v=verdict(r);
+    var vk=st==='out'?'out':st==='fav'?'fav':v.k;
+    var vt=st==='out'?'פסלת את זה':st==='fav'?'סימנת כמועדפת':v.t;
+
+    var tags=[];
+    (a.tags||[]).forEach(function(t){
+      if(/ירד ב/.test(t))return;                     // כבר מופיע ב"למה"
+      var cls=/מעל תקציב/.test(t)?'over':'';
       tags.push('<span class="tag '+cls+'">'+esc(t)+'</span>');
     });
 
-    var priceHTML = a.price != null
-      ? '<div class="price">'+money(a.price)
-        + (c.ppsqm && !c.inflated ? ' <small>· ₪'+fmt(c.ppsqm)+'/מ״ר</small>' : '')+'</div>'
+    var priceHTML=a.price!=null
+      ? '<div class="price">'+money(a.price)+(c.ppsqm&&!c.inflated?' <small>· ₪'+fmt(c.ppsqm)+'/מ״ר</small>':'')+'</div>'
       : '<div class="noprice">מחיר לא פורסם</div>';
 
-    var relHTML = '';
-    if(r.rel != null){
-      var cls = r.rel >= 10 ? 'good' : r.rel >= -5 ? 'mid' : 'bad';
-      var word = r.rel >= 0 ? 'מתחת' : 'מעל';
-      relHTML = '<div class="relbadge '+cls+'">'+Math.abs(Math.round(r.rel))+'% '+word+' לממוצע ב'+esc(a.city)+'</div>';
-    } else if(c.inflated && a.price != null){
-      relHTML = '<div class="relbadge mid">השטח כולל אדמה — לא בר-השוואה למ״ר</div>';
+    var relHTML='';
+    if(r.rel!=null){
+      var cls2=r.rel>=10?'good':r.rel>=-5?'mid':'bad';
+      relHTML='<div class="relbadge '+cls2+'">'+Math.abs(Math.round(r.rel))+'% '
+        +(r.rel>=0?'מתחת לממוצע':'מעל הממוצע')+' ב'+esc(a.city)+'</div>';
+    } else if(c.inflated&&a.price!=null){
+      relHTML='<div class="relbadge na">השטח כולל אדמה — לא בר-השוואה למ״ר</div>';
     }
 
-    var fin = a.price != null ? (
-      '<details class="fin"><summary>פירוט מימון וכדאיות</summary><div class="finrows">'
-      + '<div class="frow"><span>מחיר הנכס</span><span>'+money(a.price)+'</span></div>'
-      + '<div class="frow"><span>מס רכישה (דירה יחידה)</span><span>'+money(c.tax)+'</span></div>'
-      + '<div class="frow"><span>עו״ד + אגרות + מעבר</span><span>'+money(c.lawyer + MOVE_FIXED)+'</span></div>'
-      + '<div class="frow tot"><span>סה״כ עלות</span><span>'+money(c.total)+'</span></div>'
-      + '<div class="frow"><span>משכנתא (75%)</span><span>'+money(c.mortgage)+'</span></div>'
-      + '<div class="frow"><span>החזר חודשי (30ש׳, 5.2%)</span><span>'+money(c.monthly)+'</span></div>'
-      + '<div class="frow tot"><span>הון עצמי נדרש</span><span class="'+(c.affordable?'g':'r')+'">'+money(c.cashNeeded)+'</span></div>'
-      + (c.rent ? '<div class="frow"><span>שכ״ד מוערך'+(c.rentCapped?' *':'')+'</span><span>'+money(c.rent)+'/חו׳</span></div>' : '')
-      + (c.yield ? '<div class="frow"><span>תשואה שנתית</span><span class="'+(c.yield>=3.5?'g':'')+'">'+c.yield.toFixed(1)+'%</span></div>' : '')
-      + (c.cashflow != null ? '<div class="frow"><span>תזרים חודשי</span><span class="'+(c.cashflow>=0?'g':'r')+'">'+(c.cashflow>=0?'+':'')+money(c.cashflow)+'</span></div>' : '')
-      + (c.rentCapped ? '<div class="finnote">* השטח כולל גינה — שכה״ד חושב לפי שטח בנוי משוער</div>' : '')
-      + (!c.affordable ? '<div class="finnote">⚠ ההון העצמי הנדרש גבוה מ-'+short(EQUITY)+' ₪ שיש לך</div>' : '')
-      + '</div></details>'
-    ) : '';
+    var why=whyLines(r);
+    var whyHTML=why.length?'<div class="why">'+why.map(function(l){
+      var ic=l.k==='p'?'✓':l.k==='n'?'✕':'?';
+      return '<div class="wl '+l.k+'"><span class="ic">'+ic+'</span><span>'+l.t+'</span></div>';
+    }).join('')+'</div>':'';
 
-    var statusHTML = '<div class="statusrow">'
-      + Object.keys(STATUS_LABELS).map(function(k){
-          return '<button class="sbtn" data-id="'+esc(a.id)+'" data-s="'+k+'" aria-pressed="'+(st===k)+'">'+STATUS_LABELS[k]+'</button>';
-        }).join('')
-      + '</div>';
+    var fin=a.price!=null?(
+      '<details class="fin"><summary>כמה זה באמת עולה</summary><div class="finrows">'
+      +'<div class="frow"><span>מחיר הנכס</span><span>'+money(a.price)+'</span></div>'
+      +'<div class="frow"><span>מס רכישה (דירה יחידה)</span><span>'+money(c.tax)+'</span></div>'
+      +'<div class="frow"><span>עו״ד + אגרות + מעבר</span><span>'+money(c.lawyer+MOVE_FIXED)+'</span></div>'
+      +'<div class="frow tot"><span>סה״כ עלות</span><span>'+money(c.total)+'</span></div>'
+      +'<div class="frow"><span>משכנתא (75%)</span><span>'+money(c.mortgage)+'</span></div>'
+      +'<div class="frow"><span>החזר חודשי (30ש׳, 5.2%)</span><span>'+money(c.monthly)+'</span></div>'
+      +'<div class="frow tot"><span>הון עצמי נדרש</span><span class="'+(c.affordable?'g':'r')+'">'+money(c.cashNeeded)+'</span></div>'
+      +(c.rent?'<div class="frow"><span>שכ״ד מוערך'+(c.rentCapped?' *':'')+'</span><span>'+money(c.rent)+'/חו׳</span></div>':'')
+      +(c.yield?'<div class="frow"><span>תשואה שנתית</span><span class="'+(c.yield>=3.5?'g':'')+'">'+c.yield.toFixed(1)+'%</span></div>':'')
+      +(c.cashflow!=null?'<div class="frow"><span>תזרים חודשי</span><span class="'+(c.cashflow>=0?'g':'r')+'">'+(c.cashflow>=0?'+':'')+money(c.cashflow)+'</span></div>':'')
+      +(c.rentCapped?'<div class="finnote">* השטח כולל גינה — שכה״ד חושב לפי שטח בנוי משוער</div>':'')
+      +'</div></details>'
+    ):'';
+
+    var statusHTML='<div class="statusrow">'+Object.keys(STATUS_LABELS).map(function(k){
+      return '<button class="sbtn" data-id="'+esc(a.id)+'" data-s="'+k+'" aria-pressed="'+(st===k)+'">'+STATUS_LABELS[k]+'</button>';
+    }).join('')+'</div>';
 
     return ''
-    + '<article class="card'+(a.hot?' hot':'')+(st?' st-'+st:'')+'">'
-      + '<div class="chead">'
-        + '<div class="rank">#'+(i+1)+'</div>'
-        + '<div class="addr">'+(a.hot?'🔥 ':'')+(st==='fav'?'⭐ ':'')+esc(a.address)+'</div>'
-        + '<div class="loc">'
-          + '<span>'+esc(a.city)+(a.neighborhood && a.neighborhood!=='—' ? ' · '+esc(a.neighborhood) : '')+'</span>'
-          + (c.isNew ? '<span class="newbadge">חדש</span>' : '')
-          + (c.days != null && c.days > 0 ? '<span style="opacity:.6">· '+c.days+' ימים במעקב</span>' : '')
-        + '</div>'
-        + priceHTML
-        + relHTML
-      + '</div>'
-      + '<div class="specs">'
-        + '<div class="spec"><div class="sv">'+(a.rooms==null?'—':a.rooms)+'</div><div class="sl">חדרים</div></div>'
-        + '<div class="spec'+(a.sqm>=80?' hl':'')+'"><div class="sv">'+(a.sqm==null?'—':a.sqm)+'</div><div class="sl">מ״ר</div></div>'
-        + '<div class="spec"><div class="sv">'+(a.floor===0?'ק':(a.floor==null?'—':a.floor))+'</div><div class="sl">קומה</div></div>'
-      + '</div>'
-      + '<div class="cbody">'
-        + '<div class="scorebar">'
-          + '<div class="sbtrack"><div class="sbfill" style="width:'+(s||0)+'%;background:'+scoreColor(s)+'"></div></div>'
-          + '<div class="sbnum" style="color:'+scoreColor(s)+'">'+(s==null?'—':s)+'</div>'
-        + '</div>'
-        + (tags.length ? '<div class="tags">'+tags.join('')+'</div>' : '')
-        + (a.renewalNote ? '<div class="rnote">'+esc(a.renewalNote)+'</div>' : '')
-        + (a.note ? '<div class="note">'+esc(a.note)+'</div>' : '')
-        + fin
-        + statusHTML
-      + '</div>'
-      + '<div class="cfoot">'
-        + (a.url
-            ? '<a class="btn pri" href="'+esc(a.url)+'" target="_blank" rel="noopener">פתח מודעה ↗</a>'
-            : '<span class="btn dis">אין מודעה מקוונת</span>')
-        + '<span class="src">'+esc(a.source)+'</span>'
-      + '</div>'
-    + '</article>';
+    +'<article class="card'+(st?' st-'+st:'')+'">'
+      +'<div class="verdict v-'+vk+'"><span>'+(a.hot?'🔥 ':'')+vt+'</span>'
+        +'<span class="vs">'+(s==null?'':'ציון '+s)+'</span></div>'
+      +'<div class="chead">'
+        +'<div class="addr">'+esc(a.address)+'</div>'
+        +'<div class="loc">'
+          +'<span>'+esc(a.city)+(a.neighborhood&&a.neighborhood!=='—'?' · '+esc(a.neighborhood):'')+'</span>'
+          +(c.isNew?'<span class="newbadge">חדש</span>':'')
+          +(c.days!=null&&c.days>0?'<span style="opacity:.6">· '+c.days+' ימים במעקב</span>':'')
+        +'</div>'
+        +priceHTML+relHTML
+      +'</div>'
+      +'<div class="specs">'
+        +'<div class="spec"><div class="sv">'+(a.rooms==null?'—':a.rooms)+'</div><div class="sl">חדרים</div></div>'
+        +'<div class="spec'+(a.sqm>=85?' hl':'')+'"><div class="sv">'+(a.sqm==null?'—':a.sqm)+'</div><div class="sl">מ״ר</div></div>'
+        +'<div class="spec"><div class="sv">'+(a.floor===0?'ק':(a.floor==null?'—':a.floor))+'</div><div class="sl">קומה</div></div>'
+      +'</div>'
+      +'<div class="cbody">'
+        +whyHTML
+        +(a.renewalNote?'<div class="note">'+esc(a.renewalNote)+'</div>':'')
+        +(a.note?'<div class="note">'+esc(a.note)+'</div>':'')
+        +(tags.length?'<div class="tags">'+tags.join('')+'</div>':'')
+        +fin+statusHTML
+      +'</div>'
+      +'<div class="cfoot">'
+        +(a.url?'<a class="btn pri" href="'+esc(a.url)+'" target="_blank" rel="noopener">פתח את המודעה ↗</a>'
+               :'<span class="btn dis">אין מודעה מקוונת</span>')
+        +'<span class="src">'+esc(a.source)+'</span>'
+      +'</div>'
+    +'</article>';
   }
 
+  var TIERS=[
+    {k:'top',t:'עסקאות מובילות',d:'ציון 70 ומעלה',c:'var(--ok)'},
+    {k:'mid',t:'שווה בדיקה',d:'ציון 55–69',c:'var(--warn)'},
+    {k:'ask',t:'צריך לברר מחיר',d:'המחיר לא פורסם — שיחת טלפון וזה מתברר',c:'var(--info)'},
+    {k:'low',t:'פחות מתאים',d:'ציון מתחת ל-55',c:'var(--tx3)'}
+  ];
+
   function render(){
-    var vis = getVisible();
-    document.getElementById('grid').innerHTML = vis.map(cardHTML).join('');
-    document.getElementById('empty').hidden = vis.length > 0;
-    var done = vis.filter(function(r){ return STATUS[r.a.id]; }).length;
-    document.getElementById('count').innerHTML =
-      'מציג <b>'+vis.length+'</b> מתוך '+ROWS.length + (done ? ' · '+done+' סומנו' : '');
+    var vis=getVisible(),html='';
+    if(state.sort==='score'){
+      // חלוקה לרמות — הרבה יותר קל לסרוק מרשימה שטוחה
+      var buckets={top:[],mid:[],ask:[],low:[]};
+      vis.forEach(function(r){
+        if(STATUS[r.a.id]==='out') buckets.low.push(r);
+        else buckets[verdict(r).k].push(r);
+      });
+      var n=0;
+      TIERS.forEach(function(t){
+        var b=buckets[t.k];
+        if(!b.length)return;
+        html+='<div class="tier"><span class="tdot" style="background:'+t.c+'"></span>'
+             +'<h2>'+t.t+'</h2><span class="tn">'+b.length+' דירות · '+t.d+'</span><span class="tline"></span></div>';
+        html+=b.map(function(r){return cardHTML(r,n++);}).join('');
+      });
+    } else {
+      html=vis.map(cardHTML).join('');
+    }
+    document.getElementById('grid').innerHTML=html;
+    document.getElementById('empty').hidden=vis.length>0;
+    var done=vis.filter(function(r){return STATUS[r.a.id];}).length;
+    document.getElementById('count').innerHTML='מציג <b>'+vis.length+'</b> מתוך '+ROWS.length+(done?' · '+done+' סומנו':'');
   }
 
   function toast(msg){
-    var t = document.getElementById('toast');
-    t.textContent = msg; t.classList.add('show');
-    clearTimeout(t._h); t._h = setTimeout(function(){ t.classList.remove('show'); }, 1900);
+    var t=document.getElementById('toast');
+    t.textContent=msg;t.classList.add('show');
+    clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('show');},1900);
   }
 
-  // ── אירועים ──
-  document.getElementById('cityChips').addEventListener('click', function(e){
-    var b = e.target.closest('[data-city]'); if(!b) return;
-    state.city = b.dataset.city;
-    this.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', c===b); });
+  document.getElementById('cityChips').addEventListener('click',function(e){
+    var b=e.target.closest('[data-city]');if(!b)return;
+    state.city=b.dataset.city;
+    this.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed',c===b);});
     render();
   });
-
-  document.getElementById('filterChips').addEventListener('click', function(e){
-    var b = e.target.closest('[data-f]'); if(!b) return;
-    var on = b.getAttribute('aria-pressed') === 'true';
-    b.setAttribute('aria-pressed', !on);
-    state.filters[b.dataset.f] = !on;
+  document.getElementById('filterChips').addEventListener('click',function(e){
+    var b=e.target.closest('[data-f]');if(!b)return;
+    var on=b.getAttribute('aria-pressed')==='true';
+    b.setAttribute('aria-pressed',!on);
+    state.filters[b.dataset.f]=!on;
     render();
   });
-
-  document.getElementById('sortSel').addEventListener('change', function(){ state.sort = this.value; render(); });
-
+  document.getElementById('sortSel').addEventListener('change',function(){state.sort=this.value;render();});
   var qt;
-  document.getElementById('q').addEventListener('input', function(){
-    var v = this.value;
-    clearTimeout(qt); qt = setTimeout(function(){ state.q = v; render(); }, 160);
+  document.getElementById('q').addEventListener('input',function(){
+    var v=this.value;clearTimeout(qt);qt=setTimeout(function(){state.q=v;render();},160);
   });
-
-  // סטטוס — לחיצה חוזרת מבטלת
-  document.getElementById('grid').addEventListener('click', function(e){
-    var b = e.target.closest('.sbtn'); if(!b) return;
-    var id = b.dataset.id, s = b.dataset.s;
-    if(STATUS[id] === s){ delete STATUS[id]; toast('הסימון הוסר'); }
-    else { STATUS[id] = s; toast(STATUS_LABELS[s] + ' ✓'); }
-    saveStatus();
-    var openIdx = [];
-    document.querySelectorAll('.card .fin[open]').forEach(function(d){ openIdx.push(d.closest('.card')); });
-    render();
+  document.getElementById('grid').addEventListener('click',function(e){
+    var b=e.target.closest('.sbtn');if(!b)return;
+    var id=b.dataset.id,s=b.dataset.s;
+    if(STATUS[id]===s){delete STATUS[id];toast('הסימון הוסר');}
+    else{STATUS[id]=s;toast(STATUS_LABELS[s]+' ✓');}
+    saveStatus();render();
   });
-
-  document.getElementById('shareBtn').addEventListener('click', function(){
-    var p = new URLSearchParams();
-    if(state.city !== 'הכל') p.set('city', state.city);
-    if(state.sort !== 'score') p.set('sort', state.sort);
-    if(state.q) p.set('q', state.q);
-    var f = Object.keys(state.filters).filter(function(k){ return state.filters[k]; });
-    if(f.length) p.set('f', f.join(','));
-    var url = location.origin + location.pathname + (p.toString() ? '?'+p : '');
+  document.getElementById('shareBtn').addEventListener('click',function(){
+    var p=new URLSearchParams();
+    if(state.city!=='הכל')p.set('city',state.city);
+    if(state.sort!=='score')p.set('sort',state.sort);
+    if(state.q)p.set('q',state.q);
+    var f=Object.keys(state.filters).filter(function(k){return state.filters[k];});
+    if(f.length)p.set('f',f.join(','));
+    var url=location.origin+location.pathname+(p.toString()?'?'+p:'');
     if(navigator.clipboard){
-      navigator.clipboard.writeText(url).then(function(){ toast('הקישור הועתק'); },
-                                              function(){ prompt('העתק:', url); });
-    } else { prompt('העתק:', url); }
+      navigator.clipboard.writeText(url).then(function(){toast('הקישור הועתק');},function(){prompt('העתק:',url);});
+    }else{prompt('העתק:',url);}
   });
 
-  var tb = document.getElementById('themeBtn');
-  var saved = localStorage.getItem('ar-theme');
-  if(saved) document.documentElement.setAttribute('data-theme', saved);
-  tb.addEventListener('click', function(){
-    var cur = document.documentElement.getAttribute('data-theme');
-    var isDark = cur ? cur === 'dark' : !window.matchMedia('(prefers-color-scheme: light)').matches;
-    var next = isDark ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('ar-theme', next);
+  var tb=document.getElementById('themeBtn'),saved=localStorage.getItem('ar-theme');
+  if(saved)document.documentElement.setAttribute('data-theme',saved);
+  tb.addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme');
+    var isDark=cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;
+    var next=isDark?'light':'dark';
+    document.documentElement.setAttribute('data-theme',next);
+    localStorage.setItem('ar-theme',next);
   });
 
-  // ── אתחול ──
-  document.getElementById('budgetTxt').textContent = short(BUDGET) + ' ₪';
-  document.getElementById('updated').textContent =
+  document.getElementById('budgetTxt').textContent=short(BUDGET)+' ₪';
+  document.getElementById('updated').textContent=
     new Date(D.updatedAt).toLocaleString('he-IL',{dateStyle:'long',timeStyle:'short'});
-  document.getElementById('q').value = state.q;
-  document.getElementById('sortSel').value = state.sort;
+  document.getElementById('q').value=state.q;
+  document.getElementById('sortSel').value=state.sort;
   Object.keys(state.filters).forEach(function(f){
-    var b = document.querySelector('[data-f="'+f+'"]');
-    if(b && state.filters[f]) b.setAttribute('aria-pressed','true');
+    var b=document.querySelector('[data-f="'+f+'"]');
+    if(b&&state.filters[f])b.setAttribute('aria-pressed','true');
   });
-  renderKPIs(); renderBench(); renderCityChips(); render();
+  renderKPIs();renderBench();renderCityChips();render();
 })();
 </script>
 </body>
