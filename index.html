@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>APARTMENT RADAR — הדירה הראשונה של אביאל</title>
+<meta name="description" content="מעקב דירות במרכז עד 1.45M — מיון לפי מחיר למ״ר, כדאיות ופוטנציאל התחדשות עירונית">
+<meta name="theme-color" content="#0b0f14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f14; --bg2:#111823; --card:#151d29; --card2:#1b2534;
+  --line:#243043; --line2:#2f3d52;
+  --tx:#e8eef7; --tx2:#9fb0c7; --tx3:#6b7f99;
+  --acc:#ff6b35; --acc2:#ffa07a;
+  --ok:#22c55e; --warn:#fbbf24; --bad:#ef4444; --info:#38bdf8;
+  --radius:16px;
+  --shadow:0 4px 24px rgba(0,0,0,.35);
+}
+:root[data-theme="light"]{
+  --bg:#f5f7fa; --bg2:#ffffff; --card:#ffffff; --card2:#f0f4f9;
+  --line:#dde5ef; --line2:#c8d4e3;
+  --tx:#0f1b2d; --tx2:#4a5c75; --tx3:#7a8ba3;
+  --shadow:0 2px 16px rgba(15,27,45,.08);
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f5f7fa; --bg2:#ffffff; --card:#ffffff; --card2:#f0f4f9;
+    --line:#dde5ef; --line2:#c8d4e3;
+    --tx:#0f1b2d; --tx2:#4a5c75; --tx3:#7a8ba3;
+    --shadow:0 2px 16px rgba(15,27,45,.08);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Heebo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--bg); color:var(--tx);
+  line-height:1.55; -webkit-font-smoothing:antialiased;
+  padding:0 0 64px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* ── HEADER ── */
+header{
+  background:linear-gradient(160deg,var(--bg2) 0%,var(--bg) 100%);
+  border-bottom:1px solid var(--line);
+  padding:28px 0 22px; margin-bottom:22px;
+}
+.hrow{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+h1{
+  font-size:clamp(22px,4.5vw,32px); font-weight:900; letter-spacing:-.02em;
+  display:flex;align-items:center;gap:10px;
+}
+h1 .dot{width:11px;height:11px;border-radius:50%;background:var(--acc);
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--acc) 18%,transparent);
+  animation:pulse 2.4s ease-in-out infinite;flex:none}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.82)}}
+.sub{color:var(--tx2);font-size:14px;margin-top:5px}
+.themebtn{
+  background:var(--card);border:1px solid var(--line);color:var(--tx2);
+  width:40px;height:40px;border-radius:11px;cursor:pointer;font-size:17px;
+  display:grid;place-items:center;transition:.16s;flex:none;
+}
+.themebtn:hover{border-color:var(--acc);color:var(--acc)}
+
+/* ── KPI ── */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-top:20px}
+.kpi{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 15px;position:relative;overflow:hidden;
+}
+.kpi::before{content:'';position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px;background:var(--acc);opacity:.75}
+.kpi .l{font-size:11.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+.kpi .v{font-size:24px;font-weight:900;letter-spacing:-.02em;margin-top:3px;line-height:1.15}
+.kpi .n{font-size:12px;color:var(--tx2);margin-top:2px}
+.kpi.ok::before{background:var(--ok)} .kpi.warn::before{background:var(--warn)} .kpi.info::before{background:var(--info)}
+
+/* ── CONTROLS ── */
+.controls{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px;margin:20px 0;display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;
+}
+.cgroup{display:flex;flex-direction:column;gap:7px;min-width:0}
+.cgroup > label{font-size:11.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{
+  background:var(--card2);border:1px solid var(--line);color:var(--tx2);
+  padding:6px 13px;border-radius:999px;font-size:13px;cursor:pointer;
+  font-family:inherit;font-weight:500;transition:.14s;white-space:nowrap;
+}
+.chip:hover{border-color:var(--line2);color:var(--tx)}
+.chip[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
+select{
+  background:var(--card2);border:1px solid var(--line);color:var(--tx);
+  padding:7px 12px;border-radius:10px;font-size:13.5px;font-family:inherit;
+  cursor:pointer;font-weight:500;
+}
+select:focus-visible,.chip:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.spacer{flex:1 1 auto;min-width:0}
+.count{font-size:13px;color:var(--tx2);white-space:nowrap;align-self:flex-end;padding-bottom:6px}
+.count b{color:var(--tx);font-weight:700}
+
+/* ── CARDS ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .16s,border-color .16s,box-shadow .16s;
+}
+.card:hover{transform:translateY(-2px);border-color:var(--line2);box-shadow:var(--shadow)}
+.card.hot{border-color:color-mix(in srgb,var(--acc) 45%,var(--line))}
+.chead{padding:15px 16px 12px;border-bottom:1px solid var(--line);position:relative}
+.card.hot .chead{background:linear-gradient(180deg,color-mix(in srgb,var(--acc) 9%,transparent),transparent)}
+.rank{
+  position:absolute;inset-block-start:15px;inset-inline-end:16px;
+  font-size:11px;font-weight:900;color:var(--tx3);letter-spacing:.04em;
+}
+.addr{font-size:17px;font-weight:700;letter-spacing:-.01em;padding-inline-end:36px;line-height:1.3}
+.loc{font-size:13px;color:var(--tx2);margin-top:2px}
+.price{font-size:27px;font-weight:900;letter-spacing:-.025em;margin-top:9px;line-height:1.1}
+.price small{font-size:14px;font-weight:500;color:var(--tx2);letter-spacing:0}
+.noprice{font-size:19px;font-weight:700;color:var(--warn);margin-top:9px}
+
+.specs{display:flex;gap:0;border-bottom:1px solid var(--line)}
+.spec{flex:1;padding:11px 8px;text-align:center;border-inline-start:1px solid var(--line)}
+.spec:first-child{border-inline-start:none}
+.spec .sv{font-size:16px;font-weight:800;letter-spacing:-.01em}
+.spec .sl{font-size:10.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.05em;margin-top:1px}
+.spec.hl .sv{color:var(--acc)}
+
+.cbody{padding:13px 16px;flex:1;display:flex;flex-direction:column;gap:11px}
+.tags{display:flex;gap:5px;flex-wrap:wrap}
+.tag{
+  font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:500;
+  background:var(--card2);border:1px solid var(--line);color:var(--tx2);
+}
+.tag.renew{background:color-mix(in srgb,var(--ok) 16%,transparent);border-color:color-mix(in srgb,var(--ok) 40%,transparent);color:var(--ok);font-weight:700}
+.tag.renewp{background:color-mix(in srgb,var(--info) 15%,transparent);border-color:color-mix(in srgb,var(--info) 38%,transparent);color:var(--info);font-weight:700}
+.tag.drop{background:color-mix(in srgb,var(--ok) 14%,transparent);border-color:color-mix(in srgb,var(--ok) 35%,transparent);color:var(--ok)}
+.tag.over{background:color-mix(in srgb,var(--bad) 14%,transparent);border-color:color-mix(in srgb,var(--bad) 35%,transparent);color:var(--bad)}
+.note{font-size:13px;color:var(--tx2);line-height:1.5}
+.rnote{
+  font-size:12.5px;color:var(--ok);line-height:1.5;
+  background:color-mix(in srgb,var(--ok) 8%,transparent);
+  border-inline-start:2px solid var(--ok);padding:7px 10px;border-radius:0 8px 8px 0;
+}
+
+/* ── FINANCE ── */
+.fin{background:var(--card2);border-radius:11px;padding:11px 12px;font-size:13px}
+.fin summary{cursor:pointer;font-weight:700;font-size:12.5px;color:var(--tx2);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.fin summary::-webkit-details-marker{display:none}
+.fin summary::after{content:'▾';font-size:11px;transition:.2s;color:var(--tx3)}
+.fin[open] summary::after{transform:rotate(180deg)}
+.finrows{margin-top:10px;display:flex;flex-direction:column;gap:6px;padding-top:10px;border-top:1px solid var(--line)}
+.frow{display:flex;justify-content:space-between;gap:10px;font-size:12.5px}
+.frow span:first-child{color:var(--tx3)}
+.frow span:last-child{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.frow.tot{border-top:1px dashed var(--line2);padding-top:6px;margin-top:2px}
+.frow.tot span{color:var(--tx);font-size:13px}
+.frow .g{color:var(--ok)} .frow .r{color:var(--bad)}
+
+/* ── SCORE ── */
+.scorebar{display:flex;align-items:center;gap:9px}
+.sbtrack{flex:1;height:6px;background:var(--card2);border-radius:99px;overflow:hidden}
+.sbfill{height:100%;border-radius:99px;transition:width .4s ease}
+.sbnum{font-size:13px;font-weight:900;min-width:26px;text-align:center;font-variant-numeric:tabular-nums}
+
+.cfoot{padding:11px 16px;border-top:1px solid var(--line);display:flex;gap:8px;align-items:center}
+.btn{
+  flex:1;text-align:center;padding:8px 12px;border-radius:10px;font-size:13.5px;font-weight:700;
+  text-decoration:none;transition:.14s;border:1px solid transparent;font-family:inherit;cursor:pointer;
+}
+.btn.pri{background:var(--acc);color:#fff}
+.btn.pri:hover{background:var(--acc2)}
+.btn.sec{background:transparent;border-color:var(--line2);color:var(--tx2)}
+.btn.sec:hover{border-color:var(--acc);color:var(--acc)}
+.btn.dis{background:var(--card2);color:var(--tx3);cursor:not-allowed;border-color:var(--line)}
+.src{font-size:11px;color:var(--tx3);white-space:nowrap;font-weight:500}
+
+.empty{text-align:center;padding:60px 20px;color:var(--tx3)}
+footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+  color:var(--tx3);font-size:12.5px;text-align:center;line-height:1.7}
+
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .controls{padding:12px;gap:13px}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .count{width:100%;padding-bottom:0}
+}
+@media print{.controls,.themebtn,.cfoot{display:none}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="hrow">
+      <div>
+        <h1><span class="dot"></span>APARTMENT RADAR</h1>
+        <p class="sub">הדירה הראשונה של אביאל · מרכז הארץ · עד <span id="budgetTxt"></span></p>
+      </div>
+      <button class="themebtn" id="themeBtn" title="החלף מצב תצוגה" aria-label="החלף מצב תצוגה">◐</button>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="controls">
+    <div class="cgroup">
+      <label>עיר</label>
+      <div class="chips" id="cityChips"></div>
+    </div>
+    <div class="cgroup">
+      <label>סינון</label>
+      <div class="chips" id="filterChips">
+        <button class="chip" data-f="budget" aria-pressed="false">בתקציב בלבד</button>
+        <button class="chip" data-f="renewal" aria-pressed="false">התחדשות עירונית</button>
+        <button class="chip" data-f="priced" aria-pressed="false">עם מחיר</button>
+        <button class="chip" data-f="hot" aria-pressed="false">🔥 חמות</button>
+      </div>
+    </div>
+    <div class="cgroup">
+      <label>מיון</label>
+      <select id="sortSel">
+        <option value="score">ציון כדאיות</option>
+        <option value="ppsqm">מחיר למ״ר — מהזול</option>
+        <option value="price">מחיר — מהזול</option>
+        <option value="priceDesc">מחיר — מהיקר</option>
+        <option value="sqm">גודל — מהגדול</option>
+        <option value="newest">נוספו לאחרונה</option>
+      </select>
+    </div>
+    <div class="spacer"></div>
+    <div class="count" id="count"></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>אין דירות שתואמות לסינון הנוכחי</div>
+
+  <footer>
+    עודכן לאחרונה: <span id="updated"></span><br>
+    מתעדכן אוטומטית כל יום ב-09:30 · מקורות: יד2 · מדלן · פייסבוק מרקטפלייס<br>
+    <span style="opacity:.7">חישובי המימון והתשואה הם הערכה בלבד — לא ייעוץ פיננסי</span>
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function(){
+  'use strict';
+  var D = window.APARTMENT_DATA;
+  var APTS = D.apartments;
+  var BUDGET = D.budget, EQUITY = D.equity, LEV = D.leverage;
+
+  // ── עלויות רכישה נלוות (הערכה) ──
+  var LAWYER_PCT = 0.006;        // עו"ד ~0.5% + מע"מ
+  var BROKER_PCT = 0.0;          // רוב המודעות תיווך — לא נכלל בברירת מחדל
+  var MOVE_FIXED = 15000;        // מעבר, שמאי, אגרות
+  var MORTGAGE_RATE = 0.052;     // ריבית משכנתא מוערכת
+  var MORTGAGE_YEARS = 30;
+
+  // שכ"ד מוערך לחודש למ"ר לפי עיר
+  var RENT_PSQM = {'רמת גן':78,'בת ים':62,'חולון':60,'רחובות':48};
+
+  var fmt = function(n){ return n==null ? '—' : new Intl.NumberFormat('he-IL').format(Math.round(n)); };
+  var money = function(n){ return n==null ? '—' : '₪' + fmt(n); };
+  var short = function(n){
+    if(n==null) return '—';
+    if(n>=1000000) return (n/1000000).toFixed(2).replace(/\.?0+$/,'') + 'M';
+    if(n>=1000) return Math.round(n/1000) + 'K';
+    return String(n);
+  };
+
+  // ── מס רכישה — דירה יחידה, מדרגות 2026 (הערכה) ──
+  function purchaseTax(p){
+    if(p==null) return 0;
+    var T1 = 1978745, T2 = 2347040;   // מדרגות מעודכנות
+    if(p <= T1) return 0;
+    if(p <= T2) return (p - T1) * 0.035;
+    return (T2 - T1) * 0.035 + (p - T2) * 0.05;
+  }
+
+  function monthlyPayment(principal, rate, years){
+    var r = rate/12, n = years*12;
+    if(r === 0) return principal/n;
+    return principal * r / (1 - Math.pow(1+r, -n));
+  }
+
+  // ── חישובים לכל דירה ──
+  function calc(a){
+    var o = {};
+    o.ppsqm = (a.price && a.sqm) ? a.price / a.sqm : null;
+    o.tax = purchaseTax(a.price);
+    o.lawyer = a.price ? a.price * LAWYER_PCT : 0;
+    o.closing = a.price ? (o.tax + o.lawyer + MOVE_FIXED) : null;
+    o.total = a.price ? a.price + o.closing : null;
+    o.mortgage = a.price ? a.price * LEV : null;
+    o.down = a.price ? a.price * (1 - LEV) : null;
+    o.cashNeeded = a.price ? o.down + o.closing : null;
+    o.monthly = o.mortgage ? monthlyPayment(o.mortgage, MORTGAGE_RATE, MORTGAGE_YEARS) : null;
+    // שכ"ד לפי מ"ר, אבל חסום לפי מספר החדרים — בדירות גן השטח כולל אדמה
+    // ולא משקף שטח בנוי שאפשר להשכיר עליו
+    var rentSqm = (a.sqm && a.rooms) ? Math.min(a.sqm, a.rooms * 32 + 20) : a.sqm;
+    o.rentCapped = !!(a.sqm && rentSqm < a.sqm);
+    o.rent = (rentSqm && RENT_PSQM[a.city]) ? rentSqm * RENT_PSQM[a.city] : null;
+    o.yield = (o.rent && a.price) ? (o.rent * 12 / a.price) * 100 : null;
+    o.cashflow = (o.rent && o.monthly) ? o.rent - o.monthly : null;
+    o.affordable = o.cashNeeded != null ? o.cashNeeded <= EQUITY : null;
+    o.inBudget = a.price != null ? a.price <= BUDGET : null;
+    return o;
+  }
+
+  // ── ציון כדאיות 0–100 (משקולות מהמשימה היומית) ──
+  // מחיר למ"ר 30% · גודל 20% · התחדשות 30% · מימון 20%
+  function score(a, c){
+    var s = 0, w = 0;
+
+    if(c.ppsqm != null){
+      var p = 1 - (c.ppsqm - 14000) / (40000 - 14000);
+      s += Math.max(0, Math.min(1, p)) * 30; w += 30;
+    }
+    if(a.sqm != null){
+      var g = (a.sqm - 35) / (100 - 35);
+      s += Math.max(0, Math.min(1, g)) * 20; w += 20;
+    }
+    var r = a.renewal === 'verified' ? 1 : a.renewal === 'potential' ? 0.5 : 0;
+    s += r * 30; w += 30;
+
+    if(c.cashNeeded != null){
+      var f = 1 - (c.cashNeeded - 250000) / (EQUITY * 1.6 - 250000);
+      s += Math.max(0, Math.min(1, f)) * 20; w += 20;
+    }
+    if(w === 0) return null;
+    var base = s / w * 100;
+
+    // קנס על חריגה מהתקציב — דירה שאי אפשר לממן לא אמורה לעלות לראש
+    if(a.price != null && a.price > BUDGET){
+      var over = (a.price - BUDGET) / BUDGET;        // 0.10 = 10% מעל
+      base *= Math.max(0.35, 1 - over * 2.2);
+    }
+    return Math.round(base);
+  }
+
+  function scoreColor(s){
+    if(s == null) return 'var(--tx3)';
+    if(s >= 72) return 'var(--ok)';
+    if(s >= 55) return 'var(--warn)';
+    return 'var(--bad)';
+  }
+
+  // ── הכנת הנתונים ──
+  var ROWS = APTS.map(function(a){
+    var c = calc(a);
+    return { a:a, c:c, score:score(a,c) };
+  });
+
+  // ── מצב ──
+  var state = { city:'הכל', filters:{}, sort:'score' };
+
+  // ── KPI ──
+  function renderKPIs(){
+    var priced = ROWS.filter(function(r){ return r.a.price != null; });
+    var inBudget = priced.filter(function(r){ return r.c.inBudget; });
+    var withPsqm = priced.filter(function(r){ return r.c.ppsqm != null; });
+    var avgPsqm = withPsqm.length ? withPsqm.reduce(function(s,r){return s+r.c.ppsqm;},0)/withPsqm.length : null;
+    var best = withPsqm.slice().sort(function(x,y){ return x.c.ppsqm - y.c.ppsqm; })[0];
+    var renewals = ROWS.filter(function(r){ return r.a.renewal !== 'none'; });
+
+    var days = Math.ceil((new Date(D.deadline) - new Date()) / 86400000);
+
+    var k = [
+      { l:'דירות במעקב', v:ROWS.length, n: inBudget.length + ' בתוך התקציב', cls:'' },
+      { l:'מחיר ממוצע למ״ר', v: avgPsqm ? '₪'+fmt(avgPsqm) : '—', n:'על ' + withPsqm.length + ' דירות מתומחרות', cls:'info' },
+      { l:'הכי זול למ״ר', v: best ? '₪'+fmt(best.c.ppsqm) : '—', n: best ? best.a.address + ', ' + best.a.city : '', cls:'ok' },
+      { l:'התחדשות עירונית', v: renewals.length, n:'עם פוטנציאל או מאושר', cls:'ok' },
+      days > 0
+        ? { l:'ימים לדדליין', v:days, n:'יעד: ' + new Date(D.deadline).toLocaleDateString('he-IL'), cls: days < 60 ? 'warn' : '' }
+        : { l:'הזדמנויות חמות', v:ROWS.filter(function(r){return r.a.hot;}).length, n:'דורשות בדיקה מיידית', cls:'warn' }
+    ];
+
+    document.getElementById('kpis').innerHTML = k.map(function(x){
+      return '<div class="kpi '+x.cls+'"><div class="l">'+x.l+'</div><div class="v">'+x.v+'</div><div class="n">'+x.n+'</div></div>';
+    }).join('');
+  }
+
+  // ── צ'יפים של ערים ──
+  function renderCityChips(){
+    var cities = ['הכל'].concat(Array.from(new Set(APTS.map(function(a){return a.city;}))).sort());
+    document.getElementById('cityChips').innerHTML = cities.map(function(c){
+      var n = c === 'הכל' ? ROWS.length : ROWS.filter(function(r){return r.a.city===c;}).length;
+      return '<button class="chip" data-city="'+c+'" aria-pressed="'+(state.city===c)+'">'+c+' <span style="opacity:.6">'+n+'</span></button>';
+    }).join('');
+  }
+
+  // ── סינון + מיון ──
+  function getVisible(){
+    var out = ROWS.filter(function(r){
+      var a = r.a, c = r.c;
+      if(state.city !== 'הכל' && a.city !== state.city) return false;
+      if(state.filters.budget && !(a.price != null && a.price <= BUDGET)) return false;
+      if(state.filters.renewal && a.renewal === 'none') return false;
+      if(state.filters.priced && a.price == null) return false;
+      if(state.filters.hot && !a.hot) return false;
+      return true;
+    });
+
+    var nul = function(v){ return v == null ? Infinity : v; };
+    var s = state.sort;
+    out.sort(function(x,y){
+      if(s === 'score')     return (y.score||0) - (x.score||0);
+      if(s === 'ppsqm')     return nul(x.c.ppsqm) - nul(y.c.ppsqm);
+      if(s === 'price')     return nul(x.a.price) - nul(y.a.price);
+      if(s === 'priceDesc') return (y.a.price||0) - (x.a.price||0);
+      if(s === 'sqm')       return (y.a.sqm||0) - (x.a.sqm||0);
+      if(s === 'newest')    return String(y.a.firstSeen).localeCompare(String(x.a.firstSeen));
+      return 0;
+    });
+    return out;
+  }
+
+  // ── כרטיס ──
+  function cardHTML(r, i){
+    var a = r.a, c = r.c, s = r.score;
+
+    var tags = [];
+    if(a.renewal === 'verified') tags.push('<span class="tag renew">✓ פינוי-בינוי מאושר</span>');
+    if(a.renewal === 'potential') tags.push('<span class="tag renewp">◈ פוטנציאל התחדשות</span>');
+    (a.tags||[]).forEach(function(t){
+      var cls = /ירד ב/.test(t) ? 'drop' : /מעל תקציב/.test(t) ? 'over' : '';
+      tags.push('<span class="tag '+cls+'">'+t+'</span>');
+    });
+
+    var priceHTML = a.price != null
+      ? '<div class="price">'+money(a.price)+(c.ppsqm ? ' <small>· ₪'+fmt(c.ppsqm)+'/מ״ר</small>' : '')+'</div>'
+      : '<div class="noprice">מחיר לא פורסם</div>';
+
+    var fin = a.price != null ? (
+      '<details class="fin"><summary>פירוט מימון וכדאיות</summary><div class="finrows">'
+      + '<div class="frow"><span>מחיר הנכס</span><span>'+money(a.price)+'</span></div>'
+      + '<div class="frow"><span>מס רכישה</span><span>'+money(c.tax)+'</span></div>'
+      + '<div class="frow"><span>עו״ד + אגרות + מעבר</span><span>'+money(c.lawyer + MOVE_FIXED)+'</span></div>'
+      + '<div class="frow tot"><span>סה״כ עלות</span><span>'+money(c.total)+'</span></div>'
+      + '<div class="frow"><span>משכנתא (75%)</span><span>'+money(c.mortgage)+'</span></div>'
+      + '<div class="frow"><span>החזר חודשי (30ש׳, 5.2%)</span><span>'+money(c.monthly)+'</span></div>'
+      + '<div class="frow tot"><span>הון עצמי נדרש</span><span class="'+(c.affordable?'g':'r')+'">'+money(c.cashNeeded)+'</span></div>'
+      + (c.rent ? '<div class="frow"><span>שכ״ד מוערך'+(c.rentCapped?' *':'')+'</span><span>'+money(c.rent)+'/חו׳</span></div>' : '')
+      + (c.rentCapped ? '<div class="frow"><span style="font-size:11px">* השטח כולל גינה — חושב לפי שטח בנוי משוער</span><span></span></div>' : '')
+      + (c.yield ? '<div class="frow"><span>תשואה שנתית</span><span class="'+(c.yield>=3.5?'g':'')+'">'+c.yield.toFixed(1)+'%</span></div>' : '')
+      + (c.cashflow != null ? '<div class="frow"><span>תזרים חודשי</span><span class="'+(c.cashflow>=0?'g':'r')+'">'+(c.cashflow>=0?'+':'')+money(c.cashflow)+'</span></div>' : '')
+      + '</div></details>'
+    ) : '';
+
+    return ''
+    + '<article class="card'+(a.hot?' hot':'')+'">'
+      + '<div class="chead">'
+        + '<div class="rank">#'+(i+1)+'</div>'
+        + '<div class="addr">'+(a.hot?'🔥 ':'')+a.address+'</div>'
+        + '<div class="loc">'+a.city+(a.neighborhood && a.neighborhood!=='—' ? ' · '+a.neighborhood : '')+'</div>'
+        + priceHTML
+      + '</div>'
+      + '<div class="specs">'
+        + '<div class="spec"><div class="sv">'+(a.rooms??'—')+'</div><div class="sl">חדרים</div></div>'
+        + '<div class="spec'+(a.sqm>=80?' hl':'')+'"><div class="sv">'+(a.sqm??'—')+'</div><div class="sl">מ״ר</div></div>'
+        + '<div class="spec"><div class="sv">'+(a.floor===0?'ק':(a.floor??'—'))+'</div><div class="sl">קומה</div></div>'
+      + '</div>'
+      + '<div class="cbody">'
+        + '<div class="scorebar">'
+          + '<div class="sbtrack"><div class="sbfill" style="width:'+(s||0)+'%;background:'+scoreColor(s)+'"></div></div>'
+          + '<div class="sbnum" style="color:'+scoreColor(s)+'">'+(s??'—')+'</div>'
+        + '</div>'
+        + (tags.length ? '<div class="tags">'+tags.join('')+'</div>' : '')
+        + (a.renewalNote ? '<div class="rnote">'+a.renewalNote+'</div>' : '')
+        + (a.note ? '<div class="note">'+a.note+'</div>' : '')
+        + fin
+      + '</div>'
+      + '<div class="cfoot">'
+        + (a.url
+            ? '<a class="btn pri" href="'+a.url+'" target="_blank" rel="noopener">פתח מודעה ↗</a>'
+            : '<span class="btn dis">אין קישור ישיר</span>')
+        + '<span class="src">'+a.source+'</span>'
+      + '</div>'
+    + '</article>';
+  }
+
+  function render(){
+    var vis = getVisible();
+    document.getElementById('grid').innerHTML = vis.map(cardHTML).join('');
+    document.getElementById('empty').hidden = vis.length > 0;
+    document.getElementById('count').innerHTML = 'מציג <b>'+vis.length+'</b> מתוך '+ROWS.length;
+  }
+
+  // ── אירועים ──
+  document.getElementById('cityChips').addEventListener('click', function(e){
+    var b = e.target.closest('[data-city]'); if(!b) return;
+    state.city = b.dataset.city;
+    this.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', c===b); });
+    render();
+  });
+
+  document.getElementById('filterChips').addEventListener('click', function(e){
+    var b = e.target.closest('[data-f]'); if(!b) return;
+    var on = b.getAttribute('aria-pressed') === 'true';
+    b.setAttribute('aria-pressed', !on);
+    state.filters[b.dataset.f] = !on;
+    render();
+  });
+
+  document.getElementById('sortSel').addEventListener('change', function(){
+    state.sort = this.value; render();
+  });
+
+  // ── ערכת נושא ──
+  var tb = document.getElementById('themeBtn');
+  var saved = localStorage.getItem('ar-theme');
+  if(saved) document.documentElement.setAttribute('data-theme', saved);
+  tb.addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var isDark = cur ? cur === 'dark' : !window.matchMedia('(prefers-color-scheme: light)').matches;
+    var next = isDark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('ar-theme', next);
+  });
+
+  // ── אתחול ──
+  document.getElementById('budgetTxt').textContent = short(BUDGET) + ' ₪';
+  document.getElementById('updated').textContent =
+    new Date(D.updatedAt).toLocaleString('he-IL',{dateStyle:'long',timeStyle:'short'});
+  renderKPIs();
+  renderCityChips();
+  render();
+})();
+</script>
+</body>
+</html>
