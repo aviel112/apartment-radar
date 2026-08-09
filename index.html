@@ -195,6 +195,10 @@ input[type="search"]::placeholder{color:var(--tx3);font-weight:400}
 .btn.pri{background:var(--acc);color:#fff}
 .btn.pri:hover{background:var(--acc2)}
 .btn.dis{background:var(--card2);color:var(--tx3);cursor:not-allowed;border-color:var(--line)}
+.btn.undo{background:transparent;border-color:var(--line2);color:var(--tx2)}
+.btn.undo:hover{background:var(--ok);border-color:var(--ok);color:#fff}
+.card.st-out{opacity:.55}
+.card.st-out:hover{opacity:1}
 .src{font-size:11.5px;color:var(--tx3);white-space:nowrap;font-weight:700}
 
 .empty{text-align:center;padding:70px 20px;color:var(--tx3);font-size:15px}
@@ -236,6 +240,7 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
         </p>
       </div>
       <div class="hbtns">
+        <button class="iconbtn" id="purgeBtn" title="הפוך את הפסולות למחיקה קבועה" hidden>מחק לצמיתות</button>
         <button class="iconbtn" id="shareBtn" title="העתק קישור לתצוגה הנוכחית">שתף</button>
         <button class="iconbtn" id="themeBtn" title="החלף מצב תצוגה" aria-label="החלף מצב תצוגה">◐</button>
       </div>
@@ -264,6 +269,7 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
         <button class="chip" data-f="hot" aria-pressed="false">🔥 חמות</button>
         <button class="chip" data-f="fav" aria-pressed="false">⭐ מועדפות</button>
         <button class="chip" data-f="untouched" aria-pressed="false">לא טופלו</button>
+        <button class="chip" data-f="rejected" aria-pressed="false" hidden>🗑 פסולות</button>
       </div>
     </div>
     <div class="cgroup">
@@ -415,10 +421,12 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
     return {k:'low', t:'פחות מתאים'};
   }
 
-  var ROWS=APTS.map(function(a){
-    var c=calc(a),rel=relToCity(a,c);
-    return {a:a,c:c,rel:rel,score:score(a,c,rel)};
-  });
+  var REMOVED=D.removed||[];
+  var ROWS=APTS.filter(function(a){return REMOVED.indexOf(a.id)===-1;})
+    .map(function(a){
+      var c=calc(a),rel=relToCity(a,c);
+      return {a:a,c:c,rel:rel,score:score(a,c,rel)};
+    });
 
   var SKEY='ar-status-v1',STATUS={};
   try{STATUS=JSON.parse(localStorage.getItem(SKEY)||'{}');}catch(e){STATUS={};}
@@ -442,12 +450,17 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
     var deals=ROWS.filter(function(r){return r.rel!=null&&r.rel>=10;});
     var tops=ROWS.filter(function(r){return r.a.price!=null&&r.score!=null&&r.score>=70;});
     var ask=ROWS.filter(function(r){return r.a.price==null;});
+    var fresh=ROWS.filter(function(r){return r.c.isNew;});
+    var best=withP.slice().sort(function(x,y){return x.c.ppsqm-y.c.ppsqm;})[0];
     var k=[
       {l:'עסקאות מובילות',v:tops.length,n:'ציון 70 ומעלה — להתחיל מכאן',cls:'ok'},
       {l:'מתחת לממוצע העיר',v:deals.length,n:'ב-10% ומעלה מתחת למחיר האזור',cls:'ok'},
       {l:'התחדשות עירונית',v:ROWS.filter(function(r){return r.a.renewal!=='none';}).length,n:'פינוי-בינוי מאושר או בפוטנציאל',cls:'pur'},
-      {l:'צריך לברר מחיר',v:ask.length,n:'המחיר לא פורסם — שיחת טלפון',cls:'info'},
-      {l:'דירות במעקב',v:ROWS.length,n:inB.length+' בתקציב · ממוצע ₪'+(avg?fmt(avg):'—')+'/מ״ר',cls:''}
+      // מוצג רק כשיש דירות בלי מחיר — אחרת המשבצת מתחלפת בעסקה הזולה ביותר
+      ask.length
+        ? {l:'צריך לברר מחיר',v:ask.length,n:'המחיר לא פורסם — שיחת טלפון',cls:'info'}
+        : {l:'הזולה למ״ר',v:best?'₪'+fmt(best.c.ppsqm):'—',n:best?best.a.address+', '+best.a.city:'',cls:'info'},
+      {l:'דירות במעקב',v:ROWS.length,n:inB.length+' בתקציב · '+fresh.length+' חדשות · ממוצע ₪'+(avg?fmt(avg):'—')+'/מ״ר',cls:''}
     ];
     document.getElementById('kpis').innerHTML=k.map(function(x){
       return '<div class="kpi '+x.cls+'"><div class="l">'+x.l+'</div><div class="v">'+x.v+'</div><div class="n">'+x.n+'</div></div>';
@@ -481,6 +494,7 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
       if(f.hot&&!a.hot)return false;
       if(f.fav&&st!=='fav')return false;
       if(f.untouched&&st)return false;
+      if(f.rejected&&st!=='out')return false;
       if(q){
         var hay=[a.address,a.city,a.neighborhood,a.note,(a.tags||[]).join(' ')].join(' ').toLowerCase();
         if(hay.indexOf(q)===-1)return false;
@@ -611,8 +625,10 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
         +fin+statusHTML
       +'</div>'
       +'<div class="cfoot">'
-        +(a.url?'<a class="btn pri" href="'+esc(a.url)+'" target="_blank" rel="noopener">פתח את המודעה ↗</a>'
-               :'<span class="btn dis">אין מודעה מקוונת</span>')
+        +(st==='out'
+          ? '<button class="btn undo" data-undo="'+esc(a.id)+'">↩ החזר לרשימה</button>'
+          : (a.url?'<a class="btn pri" href="'+esc(a.url)+'" target="_blank" rel="noopener">פתח את המודעה ↗</a>'
+                 :'<span class="btn dis">אין מודעה מקוונת</span>'))
         +'<span class="src">'+esc(a.source)+'</span>'
       +'</div>'
     +'</article>';
@@ -676,12 +692,52 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
     var v=this.value;clearTimeout(qt);qt=setTimeout(function(){state.q=v;render();},160);
   });
   document.getElementById('grid').addEventListener('click',function(e){
+    var u=e.target.closest('[data-undo]');
+    if(u){
+      delete STATUS[u.dataset.undo];
+      saveStatus();refreshPurge();render();
+      toast('הוחזרה לרשימה');
+      return;
+    }
     var b=e.target.closest('.sbtn');if(!b)return;
     var id=b.dataset.id,s=b.dataset.s;
     if(STATUS[id]===s){delete STATUS[id];toast('הסימון הוסר');}
     else{STATUS[id]=s;toast(STATUS_LABELS[s]+' ✓');}
-    saveStatus();render();
+    saveStatus();refreshPurge();render();
   });
+  // ── הפיכת פסילות מקומיות למחיקה קבועה ──
+  // הפסילות חיות ב-localStorage ולכן רואים אותן רק בדפדפן הזה. הכפתור מייצר
+  // שורה מוכנה להדבקה ל-data.js — משם המשימה האוטומטית מכבדת אותה לתמיד.
+  var purgeBtn=document.getElementById('purgeBtn');
+  var rejChip=document.querySelector('[data-f="rejected"]');
+  function refreshPurge(){
+    var out=Object.keys(STATUS).filter(function(k){return STATUS[k]==='out';});
+    purgeBtn.hidden=out.length===0;
+    purgeBtn.textContent='מחק לצמיתות ('+out.length+')';
+    rejChip.hidden=out.length===0;
+    rejChip.innerHTML='🗑 פסולות <span style="opacity:.6">'+out.length+'</span>';
+    if(out.length===0&&state.filters.rejected){      // אין מה להציג — מכבים את הסינון
+      state.filters.rejected=false;
+      rejChip.setAttribute('aria-pressed','false');
+    }
+    return out;
+  }
+  purgeBtn.addEventListener('click',function(){
+    var out=Object.keys(STATUS).filter(function(k){return STATUS[k]==='out';});
+    if(!out.length)return;
+    var names=out.map(function(id){
+      var a=APTS.filter(function(x){return x.id===id;})[0];
+      return a?('• '+a.address+', '+a.city):id;
+    }).join('\n');
+    if(!confirm('להסיר לצמיתות '+out.length+' דירות?\n\n'+names+
+                '\n\nהעתק את השורה שתתקבל ושלח לי — אני אכניס אותה למאגר.')) return;
+    var line='removed: '+JSON.stringify(out)+',';
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(line).then(function(){toast('השורה הועתקה — שלח לי אותה');},
+                                               function(){prompt('העתק ושלח לי:',line);});
+    } else { prompt('העתק ושלח לי:',line); }
+  });
+
   document.getElementById('shareBtn').addEventListener('click',function(){
     var p=new URLSearchParams();
     if(state.city!=='הכל')p.set('city',state.city);
@@ -714,7 +770,7 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
     var b=document.querySelector('[data-f="'+f+'"]');
     if(b&&state.filters[f])b.setAttribute('aria-pressed','true');
   });
-  renderKPIs();renderBench();renderCityChips();render();
+  renderKPIs();renderBench();renderCityChips();refreshPurge();render();
 })();
 </script>
 </body>
