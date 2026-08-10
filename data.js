@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-08-09T21:19:00+03:00",
+  updatedAt: "2026-08-10T10:30:00+03:00",
   budget: 1450000,
   equity: 350000,
   leverage: 0.75,
@@ -368,6 +368,492 @@ window.APARTMENT_DATA = {
       tags: [],
       note: "היקרה למ״ר במאגר — לדלג",
       firstSeen: "2026-08-09"
+    },
+    // ——— יד2 בת ים (2026-08-10) ———
+    {
+      id: "by-dira-2h-k2",
+      address: "דירה", city: "בת ים", neighborhood: "—",
+      price: 1440000, rooms: 2, sqm: 48, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/e5bgnjla",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-daniel-lev-hair",
+      address: "דניאל", city: "בת ים", neighborhood: "לב העיר",
+      price: 1400000, rooms: 2, sqm: 62, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/rlgwmba3",
+      renewal: "none",
+      tags: ["ירד ב-100,000 ₪"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-rothschild-nitzana-25h",
+      address: "רוטשילד", city: "בת ים", neighborhood: "ניצנה",
+      price: 1380000, rooms: 2.5, sqm: 65, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/j6yj5zwa",
+      renewal: "potential", renewalNote: "ניצנה — אזור עם תנועת התחדשות",
+      tags: ["פוטנציאל התחדשות"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-daniel-57-lev-hair",
+      address: "דניאל 57", city: "בת ים", neighborhood: "לב העיר",
+      price: 1440000, rooms: 2.5, sqm: 73, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/hmq83sfd",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-bengurion-138-k4",
+      address: "דרך בן גוריון 138", city: "בת ים", neighborhood: "פארק הים",
+      price: 1190000, rooms: 2, sqm: 35, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/0rwy7rfx",
+      renewal: "none",
+      tags: ["ירד ב-100,000 ₪"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-balfour-hagvul",
+      address: "בלפור", city: "בת ים", neighborhood: "הגבול רוטשילד",
+      price: 1430000, rooms: 2, sqm: 48, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/54swtrao",
+      renewal: "potential", renewalNote: "הגבול-רוטשילד — אזור התחדשות",
+      tags: ["פוטנציאל התחדשות"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-dira-25h-k1",
+      address: "דירה", city: "בת ים", neighborhood: "—",
+      price: 1390000, rooms: 2.5, sqm: 65, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/tn9buw3l",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    // ——— יד2 רחובות (2026-08-10) ———
+    {
+      id: "rehovot-hahagana-25",
+      address: "ההגנה 25", city: "רחובות", neighborhood: "ג'/מרכז מזרח",
+      price: 1445000, rooms: 2.5, sqm: 45, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/lhjpjm7w",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "rehovot-hathiya-dania",
+      address: "התחייה", city: "רחובות", neighborhood: "דניה",
+      price: 1440000, rooms: 2, sqm: 45, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/davgh519",
+      renewal: "none",
+      tags: ["בלעדי"],
+      firstSeen: "2026-08-10"
+    },
+    // ——— יד2 פתח תקווה (2026-08-10) ———
+    {
+      id: "pt-ofir-ahdut",
+      address: "אופיר", city: "פתח תקווה", neighborhood: "אחדות",
+      price: 1390000, rooms: 2, sqm: 46, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/h6whmiv8",
+      renewal: "none",
+      tags: ["ירד ב-59,000 ₪"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "pt-rambam-lev-hamoshava",
+      address: "רמב\"ם", city: "פתח תקווה", neighborhood: "לב המושבה/מרכז",
+      price: 1399000, rooms: 2, sqm: 50, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/64rtjxyw",
+      renewal: "none",
+      tags: ["בלעדי"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "pt-hahagana-yehidat-diur",
+      address: "ההגנה", city: "פתח תקווה", neighborhood: "לב המושבה/מרכז",
+      price: 690000, rooms: 2, sqm: 28, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/f2530t31",
+      renewal: "none",
+      tags: ["יחידת דיור"],
+      firstSeen: "2026-08-10"
+    },
+    // ——— יד2 ראשון לציון (2026-08-10) ———
+    {
+      id: "rlz-hakarmel-14",
+      address: "הכרמל 14", city: "ראשון לציון", neighborhood: "רמב\"ם",
+      price: 1200000, rooms: 2, sqm: 53, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/dj7dowxr",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "rlz-alkalai-rambam",
+      address: "אלקלעי", city: "ראשון לציון", neighborhood: "רמב\"ם",
+      price: 1430000, rooms: 2.5, sqm: 55, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/tn2ln8nb",
+      renewal: "none",
+      tags: ["בלעדי"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "rlz-yehidat-diur",
+      address: "יחידת דיור", city: "ראשון לציון", neighborhood: "—",
+      price: 650000, rooms: 2, sqm: 30, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/dmdvrzgj",
+      renewal: "none",
+      tags: ["יחידת דיור"],
+      firstSeen: "2026-08-10"
+    },
+    // ——— יד2 בני ברק (2026-08-10) ———
+    {
+      id: "bb-abravanel-yesodot",
+      address: "אברבנאל", city: "בני ברק", neighborhood: "יסודות",
+      price: 1350000, rooms: 3, sqm: 65, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/7hn8mgze",
+      renewal: "none",
+      tags: ["גג/פנטהאוז"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-rav-matzliach-6",
+      address: "הרב מצליח 6", city: "בני ברק", neighborhood: "קרית הרצוג",
+      price: 1390000, rooms: 3, sqm: 62, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/3okmzuz8",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-rav-herzog-43",
+      address: "הרב הרצוג 43", city: "בני ברק", neighborhood: "הר שלום",
+      price: 1300000, rooms: 3, sqm: 55, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/aohuvaeu",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-yerushalaim-55",
+      address: "ירושלים 55", city: "בני ברק", neighborhood: "הפועל המזרחי ב'/שיכון ב'",
+      price: 1390000, rooms: 2.5, sqm: 45, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/oosidz6c",
+      renewal: "none",
+      tags: ["ירד ב-30,000 ₪"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-yitzhak-sade-22",
+      address: "יצחק שדה 22", city: "בני ברק", neighborhood: "שיכון ההסתדרות",
+      price: 1350000, rooms: 3, sqm: 52, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/4eae5tz2",
+      renewal: "none",
+      tags: ["בלעדי"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-rav-kook-har-shalom",
+      address: "הרב א.י. הכהן קוק", city: "בני ברק", neighborhood: "הר שלום",
+      price: 1320000, rooms: 2, sqm: 40, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/t0ghbuli",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-jabotinsky-2h",
+      address: "דרך זאב ז'בוטינסקי", city: "בני ברק", neighborhood: "—",
+      price: 1450000, rooms: 2, sqm: 39, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/18imf6b6",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-jabotinsky-24",
+      address: "דרך זאב ז'בוטינסקי 24", city: "בני ברק", neighborhood: "גבעת רוקח",
+      price: 1350000, rooms: 2, sqm: 28, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/19qk1852",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-rav-kook-25h",
+      address: "הרב א.י. הכהן קוק", city: "בני ברק", neighborhood: "—",
+      price: 1250000, rooms: 2.5, sqm: 45, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/0djc7dwj",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-dira-2h-k0",
+      address: "דירה", city: "בני ברק", neighborhood: "—",
+      price: 1400000, rooms: 2, sqm: 50, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/713nkiah",
+      renewal: "none",
+      tags: ["בלעדי"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-rabi-tarfon",
+      address: "רבי טרפון", city: "בני ברק", neighborhood: "—",
+      price: 1200000, rooms: 2, sqm: 35, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/idxigv19",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-rabi-akiva",
+      address: "רבי עקיבא", city: "בני ברק", neighborhood: "—",
+      price: 1320000, rooms: 2, sqm: 40, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/np9oi6e8",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-yerushalaim-shikun-d",
+      address: "ירושלים", city: "בני ברק", neighborhood: "הפועל המזרחי ד'/שיכון ד'",
+      price: 850000, rooms: 2, sqm: 35, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/3hvk5fas",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-pardes-katz",
+      address: "פרדס כץ", city: "בני ברק", neighborhood: "פרדס כץ",
+      price: 950000, rooms: 2, sqm: 40, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/7fdz1xw6",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    // ——— מדלן בת ים (2026-08-10) ———
+    {
+      id: "by-mdln-kibbutz-galuyot-amidar",
+      address: "קיבוץ גלויות", city: "בת ים", neighborhood: "עמידר/ניצנה",
+      price: 1350000, rooms: 2.5, sqm: 50, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/tG8MOcuDj6C",
+      renewal: "potential", renewalNote: "עמידר — אזור עם תנועת התחדשות",
+      tags: ["פוטנציאל התחדשות"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-mdln-bengurion-138-k5",
+      address: "בן-גוריון 138", city: "בת ים", neighborhood: "פארק הים",
+      price: 1260000, rooms: 2, sqm: 37, floor: 5,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/VUXotLqxFEE",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-mdln-bengurion-138-k13",
+      address: "בן-גוריון 138", city: "בת ים", neighborhood: "פארק הים",
+      price: 1450000, rooms: 2, sqm: 43, floor: 13,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/sPHtGl5MPu6",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-mdln-neviim-drom-maarav",
+      address: "הנביאים", city: "בת ים", neighborhood: "דרום מערב",
+      price: 1430000, rooms: 2.5, sqm: 65, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/ZeF2URHDbH7",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-mdln-bengurion-138-k8",
+      address: "בן-גוריון 138", city: "בת ים", neighborhood: "פארק הים",
+      price: 1190000, rooms: 1.5, sqm: 30, floor: 8,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/XB74Y288Jex",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-mdln-bengurion-park-k5b",
+      address: "בן-גוריון", city: "בת ים", neighborhood: "פארק הים",
+      price: 1260000, rooms: 2, sqm: 37, floor: 5,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/83r0jAdhli0",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-mdln-balfour-35",
+      address: "בלפור 35", city: "בת ים", neighborhood: "צפון מערב",
+      price: 1395000, rooms: 2, sqm: 48, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/oH8M9EXfpEF",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-mdln-balfour-merkaz",
+      address: "בלפור", city: "בת ים", neighborhood: "מרכז העיר",
+      price: 1440000, rooms: 2, sqm: 48, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/ooDh3XzVDj7",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-mdln-daniel-24",
+      address: "דניאל 24", city: "בת ים", neighborhood: "מרכז העיר",
+      price: 1360000, rooms: 2, sqm: 50, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/I9VyeZwpYYC",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-mdln-hagvaot-ramat-yosef",
+      address: "הגבעות", city: "בת ים", neighborhood: "רמת יוסף",
+      price: 1450000, rooms: 2, sqm: 50, floor: 3,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/fupBpwegS3I",
+      renewal: "none",
+      tags: ["ירד מ-1,490,000"],
+      firstSeen: "2026-08-10"
+    },
+    // ——— מדלן חולון (2026-08-10) ———
+    {
+      id: "holon-mdln-yotvata-jessi",
+      address: "יוטבתה", city: "חולון", neighborhood: "ג'סי כהן",
+      price: 1360000, rooms: 2, sqm: 45, floor: 3,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/Ka7JjNn83WB",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "holon-mdln-echad-bemai-kw",
+      address: "אחד במאי", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1080000, rooms: 1, sqm: 20, floor: 1,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/obS0EwM67UP",
+      renewal: "potential", renewalNote: "קרית עבודה — אזור עם תנועת התחדשות",
+      tags: ["פוטנציאל התחדשות"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "holon-mdln-shankar-68",
+      address: "שנקר 68", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1270000, rooms: 2, sqm: 48, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/htbXuYKGxEe",
+      renewal: "potential", renewalNote: "קרית עבודה — אזור עם תנועת התחדשות",
+      tags: ["פוטנציאל התחדשות"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "holon-mdln-bilu-kw",
+      address: "ביל\"ו", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1390000, rooms: 2, sqm: 45, floor: 4,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/N6yuVNvNP4i",
+      renewal: "potential", renewalNote: "קרית עבודה — אזור עם תנועת התחדשות",
+      tags: ["פוטנציאל התחדשות"],
+      firstSeen: "2026-08-10"
+    },
+    // ——— מדלן בני ברק (2026-08-10) ———
+    {
+      id: "bb-mdln-rabi-akiva-20",
+      address: "רבי עקיבא 20", city: "בני ברק", neighborhood: "הר שלום",
+      price: 1320000, rooms: 2, sqm: 40, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/SpO98umj7A3",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-mdln-bengurion-giora",
+      address: "בן גוריון", city: "בני ברק", neighborhood: "גיורא",
+      price: 1365000, rooms: 2, sqm: 38, floor: 4,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/vpQC5rsncht",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-mdln-bengurion-11",
+      address: "בן גוריון 11", city: "בני ברק", neighborhood: "השכונה הותיקה",
+      price: 1430000, rooms: 2, sqm: 38, floor: 1,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/14EJLkJyCL6",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-mdln-bengurion-vatika",
+      address: "בן גוריון", city: "בני ברק", neighborhood: "השכונה הותיקה",
+      price: 1350000, rooms: 2, sqm: 38, floor: 4,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/fIV3GBOebbd",
+      renewal: "none",
+      tags: ["ירד מ-1,395,000"],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-mdln-rabi-tarfon",
+      address: "רבי טרפון", city: "בני ברק", neighborhood: "הר שלום",
+      price: 1200000, rooms: 2, sqm: 35, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/P1FsNm5jmKn",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-mdln-rav-kook-24",
+      address: "הרב קוק 24", city: "בני ברק", neighborhood: "הר שלום",
+      price: 1250000, rooms: 2.5, sqm: 45, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/Ai7mVc5JASv",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-mdln-yitzhak-sade-22",
+      address: "יצחק שדה 22", city: "בני ברק", neighborhood: "שכון ההסתדרות",
+      price: 1350000, rooms: 3, sqm: 52, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/ERAlqTjvRht",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-mdln-shimon-hatzadik",
+      address: "שמעון הצדיק", city: "בני ברק", neighborhood: "רמת אהרון",
+      price: 1400000, rooms: 2, sqm: 50, floor: null,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/FthtedA6xQa",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    {
+      id: "bb-mdln-jabotinsky-24",
+      address: "ז'בוטינסקי 24", city: "בני ברק", neighborhood: "גבעת רוקח",
+      price: 1350000, rooms: 2, sqm: 28, floor: 1,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/0HwCnLjFZjx",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
+    },
+    // ——— מדלן רמת גן (2026-08-10) ———
+    {
+      id: "rg-mdln-tzanchanim",
+      address: "שיכון צנחנים", city: "רמת גן", neighborhood: "—",
+      price: 1200000, rooms: 2, sqm: 57, floor: 5,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/OgkIda748E3",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-10"
     }
   ]
 };
