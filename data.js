@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-08-10T10:30:00+03:00",
+  updatedAt: "2026-08-11T09:45:00+03:00",
   budget: 1450000,
   equity: 350000,
   leverage: 0.75,
@@ -854,6 +854,168 @@ window.APARTMENT_DATA = {
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-10"
+    },
+    {
+      id: "by-w0kj07nt",
+      address: "בת ים", city: "בת ים", neighborhood: "",
+      price: 1350000, rooms: 2, sqm: 38, floor: 9,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/w0kj07nt",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "by-ddl7okai",
+      address: "דרך בן גוריון, בת ים", city: "בת ים", neighborhood: "דרום חדש / פארק הים",
+      price: 1350000, rooms: 2, sqm: 31, floor: 8,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/ddl7okai",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "by-rqs0ztb2",
+      address: "דרך בן גוריון 138, בת ים", city: "בת ים", neighborhood: "דרום חדש / פארק הים",
+      price: 1450000, rooms: 2, sqm: 43, floor: 13,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/rqs0ztb2",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "by-33q75z08",
+      address: "קרן קיימת לישראל, בת ים", city: "בת ים", neighborhood: "ניצנה",
+      price: 1450000, rooms: 2, sqm: 60, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/33q75z08",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "by-1ufobo66",
+      address: "אצ\"ל 11, בת ים", city: "בת ים", neighborhood: "דרום מערב ותיק",
+      price: 1350000, rooms: 3, sqm: 57, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/1ufobo66",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "by-46nyj8xt",
+      address: "בר יהודה, בת ים", city: "בת ים", neighborhood: "דרום מערב ותיק",
+      price: 1399999, rooms: 3, sqm: 57, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/46nyj8xt",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "by-554q62p6",
+      address: "דוד רזיאל, בת ים", city: "בת ים", neighborhood: "רמת הנשיא",
+      price: 1450000, rooms: 2, sqm: 35, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/554q62p6",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "holon-8f6w2f06",
+      address: "עין גדי, חולון", city: "חולון", neighborhood: "ג'סי כהן",
+      price: 1440000, rooms: 2, sqm: 42, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/8f6w2f06",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "holon-bd38v72v",
+      address: "מרכז / קרית עבודה, חולון", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1270000, rooms: 2, sqm: 40, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/bd38v72v",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "holon-m1nuhaw9",
+      address: "שמואל הנגיד, חולון", city: "חולון", neighborhood: "גרין ועם",
+      price: 1340000, rooms: 2, sqm: 45, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/m1nuhaw9",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "holon-kwhabiwz",
+      address: "בר כוכבא, חולון", city: "חולון", neighborhood: "רסקו ב'",
+      price: 1399000, rooms: 2, sqm: 42, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/kwhabiwz",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "rehovot-9nb02u39",
+      address: "עזרא 23, רחובות", city: "רחובות", neighborhood: "מרכז מזרח העיר",
+      price: 1400000, rooms: 2.5, sqm: 50, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/9nb02u39",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "pt-ovje5j8f",
+      address: "פתח תקווה", city: "פתח תקווה", neighborhood: "",
+      price: 799000, rooms: 2, sqm: 25, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/ovje5j8f",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "holon-mdl-KoHblmGmZkD",
+      address: "קרית עבודה, חולון", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1270000, rooms: 2, sqm: 40, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/KoHblmGmZkD",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "holon-mdl-ZzJXqAUUxUg",
+      address: "אחד במאי, חולון", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1270000, rooms: 2, sqm: 40, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/ZzJXqAUUxUg",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "holon-mdl-s5ZcaiiihnI",
+      address: "עין גדי, חולון", city: "חולון", neighborhood: "ג'סי כהן",
+      price: 1440000, rooms: 2, sqm: 42, floor: 4,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/s5ZcaiiihnI",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "holon-mdl-uaKYTeiKFsO",
+      address: "אהרונוביץ 70, חולון", city: "חולון", neighborhood: "שיכון ותיקים",
+      price: 1450000, rooms: 3, sqm: 55, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/uaKYTeiKFsO",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
+    },
+    {
+      id: "rehovot-mdl-OLC1L7wMPFS",
+      address: "התחיה 2, רחובות", city: "רחובות", neighborhood: "דניה",
+      price: 1440000, rooms: 2, sqm: 45, floor: 3,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/OLC1L7wMPFS",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-11"
     }
   ]
 };
