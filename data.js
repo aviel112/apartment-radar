@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-08-12T22:00:00+03:00",
+  updatedAt: "2026-08-12T23:00:00+03:00",
   budget: 1450000,
   equity: 350000,
   leverage: 0.75,
@@ -1271,6 +1271,102 @@ window.APARTMENT_DATA = {
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/davgh519",
       renewal: "none",
       tags: ["בלעדי"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "herzliya-xxoqwobo",
+      address: "סוקולוב, הרצליה", city: "הרצליה", neighborhood: "מרכז",
+      price: 1400000, rooms: 3, sqm: 75, floor: 5,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/xxoqwobo",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-mdln-tG8MOcuDj6C",
+      address: "קיבוץ גלויות, בת ים", city: "בת ים", neighborhood: "עמידר / ניצנה",
+      price: 1350000, rooms: 2.5, sqm: 50, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/tG8MOcuDj6C",
+      renewal: "none",
+      tags: ["בלעדי"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-mdln-VUXotLqxFEE",
+      address: "בן גוריון 138, בת ים", city: "בת ים", neighborhood: "פארק הים",
+      price: 1260000, rooms: 2, sqm: 37, floor: 5,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/VUXotLqxFEE",
+      renewal: "none",
+      tags: ["בלעדי"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-mdln-oH8M9EXfpEF",
+      address: "בלפור 35, בת ים", city: "בת ים", neighborhood: "צפון מערב",
+      price: 1395000, rooms: 2, sqm: 48, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/oH8M9EXfpEF",
+      renewal: "potential",
+      tags: [],
+      note: "בלפור — מתחם בלפור-העצמאות פינוי-בינוי",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-mdln-I9VyeZwpYYC",
+      address: "דניאל 24, בת ים", city: "בת ים", neighborhood: "מרכז העיר",
+      price: 1360000, rooms: 2, sqm: 50, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/I9VyeZwpYYC",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-mdln-fupBpwegS3I",
+      address: "הגבעות, בת ים", city: "בת ים", neighborhood: "רמת יוסף",
+      price: 1450000, rooms: 2, sqm: 50, floor: 3,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/fupBpwegS3I",
+      renewal: "none",
+      tags: ["ירד 40K"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-mdln-Ka7JjNn83WB",
+      address: "יוטבתה, בת ים", city: "בת ים", neighborhood: "ג'סי כהן",
+      price: 1360000, rooms: 2, sqm: 45, floor: 3,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/Ka7JjNn83WB",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "holon-mdln-htbXuYKGxEe",
+      address: "שנקר 68, חולון", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1270000, rooms: 2, sqm: 48, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/htbXuYKGxEe",
+      renewal: "potential",
+      tags: [],
+      note: "קרית עבודה — אזור התחדשות",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "holon-mdln-N6yuVNvNP4i",
+      address: "ביל״ו, חולון", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1390000, rooms: 2, sqm: 45, floor: 4,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/N6yuVNvNP4i",
+      renewal: "potential",
+      tags: ["בלעדי"],
+      note: "קרית עבודה — אזור התחדשות",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "holon-fb-1624460959258048",
+      address: "חנקין, חולון", city: "חולון", neighborhood: "חולון",
+      price: 1250000, rooms: 2, sqm: null, floor: 1,
+      source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/1624460959258048/",
+      renewal: "verified",
+      renewalNote: "בתוכנית פינוי בינוי — מושכרת, משופצת",
+      tags: ["פינוי-בינוי"],
+      note: "פייסבוק: חנקין חולון, 2 חד׳, ק1, משופצת, מושכרת, בפינוי בינוי",
+      hot: true,
       firstSeen: "2026-08-12"
     }
   ]
