@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-08-11T09:45:00+03:00",
+  updatedAt: "2026-08-12T10:00:00+03:00",
   budget: 1450000,
   equity: 350000,
   leverage: 0.75,
@@ -1016,6 +1016,52 @@ window.APARTMENT_DATA = {
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-11"
+    },
+    {
+      id: "by-li9wrtr6",
+      address: "בלפור, בת ים", city: "בת ים", neighborhood: "דרום מערב ותיק",
+      price: 1350000, rooms: 2.5, sqm: 58, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/li9wrtr6",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-0jmhjdus",
+      address: "כובשי החרמון, בת ים", city: "בת ים", neighborhood: "רמת הנשיא",
+      price: 1415000, rooms: 2.5, sqm: 65, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/0jmhjdus",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-8as4m23t",
+      address: "גוש עציון, בת ים", city: "בת ים", neighborhood: "עמידר",
+      price: 1440000, rooms: 2, sqm: 50, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/8as4m23t",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-6ji7wli2",
+      address: "רוטשילד, בת ים", city: "בת ים", neighborhood: "בת ים",
+      price: 1390000, rooms: 2.5, sqm: 65, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/6ji7wli2",
+      renewal: "none",
+      tags: ["ירד 60K"],
+      note: "ירד מ-1,450,000 ל-1,390,000",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "rlz-aj7mf1p6",
+      address: "שלמה נתן, ראשון לציון", city: "ראשון לציון", neighborhood: "רמת אליהו",
+      price: 1420000, rooms: 3, sqm: 58, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/aj7mf1p6",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
     }
   ]
 };
