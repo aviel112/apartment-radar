@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-08-12T10:00:00+03:00",
+  updatedAt: "2026-08-12T22:00:00+03:00",
   budget: 1450000,
   equity: 350000,
   leverage: 0.75,
@@ -1061,6 +1061,216 @@ window.APARTMENT_DATA = {
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/aj7mf1p6",
       renewal: "none",
       tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-7ybtj9nu",
+      address: "ירושלים, בת ים", city: "בת ים", neighborhood: "לב העיר",
+      price: 1390000, rooms: 3, sqm: 70, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/7ybtj9nu",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-84tmz7t7",
+      address: "בלפור 100, בת ים", city: "בת ים", neighborhood: "דרום מערב ותיק",
+      price: 1420000, rooms: 2, sqm: 58, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/84tmz7t7",
+      renewal: "potential",
+      tags: ["ירד 100K"],
+      note: "בלפור — אזור הגבול/רוטשילד, פוטנציאל התחדשות",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-cjzsjc6w",
+      address: "דניאל 46, בת ים", city: "בת ים", neighborhood: "לב העיר",
+      price: 1370000, rooms: 2, sqm: 35, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/cjzsjc6w",
+      renewal: "none",
+      tags: [],
+      note: "קטנה — 35 מ״ר",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-u2yipkpc",
+      address: "דרך בן גוריון 138, בת ים", city: "בת ים", neighborhood: "דרום חדש / פארק הים",
+      price: 1350000, rooms: 2, sqm: 40, floor: 8,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/u2yipkpc",
+      renewal: "none",
+      tags: ["חניה","נוף לים"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-rd3hrtk7",
+      address: "דרך בן גוריון, בת ים", city: "בת ים", neighborhood: "בת ים",
+      price: 1220000, rooms: 2, sqm: 38, floor: 11,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/rd3hrtk7",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-px3b0bwz",
+      address: "בלפור, בת ים", city: "בת ים", neighborhood: "בת ים",
+      price: 1280000, rooms: 2, sqm: 33, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/px3b0bwz",
+      renewal: "potential",
+      tags: ["בלעדי"],
+      note: "בלפור — פוטנציאל התחדשות מתחם בלפור-העצמאות",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-hmq83sfd",
+      address: "דניאל 57, בת ים", city: "בת ים", neighborhood: "לב העיר",
+      price: 1440000, rooms: 2.5, sqm: 73, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/hmq83sfd",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-vwos67vk",
+      address: "קרן קיימת לישראל, בת ים", city: "בת ים", neighborhood: "בת ים",
+      price: 1399000, rooms: 2, sqm: 43, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/vwos67vk",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-joheu1ew",
+      address: "רוטשילד, בת ים", city: "בת ים", neighborhood: "רוטשילד",
+      price: 1390000, rooms: 2.5, sqm: 60, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/joheu1ew",
+      renewal: "potential",
+      tags: [],
+      note: "רוטשילד — לבדוק אם במתחם ICR (תב״ע מאושרת)",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-j6yj5zwa",
+      address: "רוטשילד, בת ים", city: "בת ים", neighborhood: "ניצנה",
+      price: 1370000, rooms: 2.5, sqm: 60, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/j6yj5zwa",
+      renewal: "potential",
+      tags: [],
+      note: "רוטשילד/ניצנה — לבדוק אם במתחם ICR",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-71bho55f",
+      address: "דירה, בת ים", city: "בת ים", neighborhood: "בת ים",
+      price: 1450000, rooms: 2.5, sqm: 65, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/71bho55f",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "by-rlgwmba3",
+      address: "דניאל, בת ים", city: "בת ים", neighborhood: "לב העיר",
+      price: 1400000, rooms: 2, sqm: 62, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/rlgwmba3",
+      renewal: "none",
+      tags: ["ירד 100K"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "holon-awfduik1",
+      address: "בן ציון ישראלי 4, חולון", city: "חולון", neighborhood: "נאות רחל",
+      price: 1000650, rooms: 2.5, sqm: 60, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/awfduik1",
+      renewal: "none",
+      tags: ["מתחת למיליון"],
+      note: "מחיר מצוין — 60 מ״ר ב-1M",
+      hot: true,
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "holon-ltnupy13",
+      address: "אחד במאי, חולון", city: "חולון", neighborhood: "נאות רחל",
+      price: 1270000, rooms: 2, sqm: 40, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/ltnupy13",
+      renewal: "none",
+      tags: ["בלעדי"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "holon-dvi4ksgi",
+      address: "ביל״ו, חולון", city: "חולון", neighborhood: "מרכז / קרית עבודה",
+      price: 1390000, rooms: 2, sqm: 45, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/dvi4ksgi",
+      renewal: "potential",
+      tags: ["בלעדי"],
+      note: "קרית עבודה — אזור התחדשות",
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "holon-t6p6vn64",
+      address: "הפורצים, חולון", city: "חולון", neighborhood: "תל גיבורים",
+      price: 1400000, rooms: 3, sqm: 60, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/t6p6vn64",
+      renewal: "none",
+      tags: ["ירד 190K"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "rg-ibkt22z5",
+      address: "חרושת 3, רמת גן", city: "רמת גן", neighborhood: "נחלת גנים",
+      price: 975000, rooms: 3, sqm: 60, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/ibkt22z5",
+      renewal: "none",
+      tags: ["חניה","ממ״ד","מתחת למיליון"],
+      note: "975K על 3 חד׳ 60 מ״ר עם חניה וממ״ד — לבדוק",
+      hot: true,
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "bb-3hvk5fas",
+      address: "ירושלים, בני ברק", city: "בני ברק", neighborhood: "שיכון ד'",
+      price: 850000, rooms: 2, sqm: 35, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/3hvk5fas",
+      renewal: "none",
+      tags: ["מתחת למיליון"],
+      note: "850K — המחיר הנמוך במאגר, לבדוק מצב",
+      hot: true,
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "bb-7fdz1xw6",
+      address: "פרדס כץ, בני ברק", city: "בני ברק", neighborhood: "פרדס כץ",
+      price: 950000, rooms: 2, sqm: 40, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/7fdz1xw6",
+      renewal: "none",
+      tags: ["מתחת למיליון"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "bb-7hn8mgze",
+      address: "אברבנאל, בני ברק", city: "בני ברק", neighborhood: "יסודות",
+      price: 1350000, rooms: 3, sqm: 65, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/7hn8mgze",
+      renewal: "none",
+      tags: ["פנטהאוז"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "pt-h6whmiv8",
+      address: "אופיר, פתח תקווה", city: "פתח תקווה", neighborhood: "אחדות",
+      price: 1390000, rooms: 2, sqm: 46, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/h6whmiv8",
+      renewal: "none",
+      tags: ["ירד 59K"],
+      firstSeen: "2026-08-12"
+    },
+    {
+      id: "rehovot-davgh519",
+      address: "התחייה, רחובות", city: "רחובות", neighborhood: "דניה",
+      price: 1440000, rooms: 2, sqm: 45, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/davgh519",
+      renewal: "none",
+      tags: ["בלעדי"],
       firstSeen: "2026-08-12"
     }
   ]
