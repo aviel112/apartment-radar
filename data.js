@@ -748,7 +748,7 @@ window.APARTMENT_DATA = {
     {
       id: "holon-mdln-shankar-68",
       address: "שנקר 68", city: "חולון", neighborhood: "קרית עבודה",
-      price: 1270000, rooms: 2, sqm: 48, floor: 2,
+      price: 1250000, rooms: 2, sqm: 48, floor: 2,
       source: "מדלן", url: "https://www.madlan.co.il/listings/htbXuYKGxEe",
       renewal: "potential", renewalNote: "קרית עבודה — אזור עם תנועת התחדשות",
       tags: ["פוטנציאל התחדשות"],
@@ -1538,6 +1538,107 @@ window.APARTMENT_DATA = {
       address: "האלה, בני עי״ש", city: "רחובות", neighborhood: "בני עי״ש",
       price: 1250000, rooms: 3, sqm: null, floor: null,
       source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/841245108923475/",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-14"
+    },
+    // ——— מדלן חולון (2026-08-14) ———
+    {
+      id: "holon-mdln-hamorer-3",
+      address: "המעורר 3, חולון", city: "חולון", neighborhood: "נאות רחל",
+      price: 1230000, rooms: 1.5, sqm: 35, floor: 0,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: ["קומת קרקע"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "holon-mdln-kapach-21",
+      address: "הרב קפאח 21, חולון", city: "חולון", neighborhood: "גרין ועם",
+      price: 1130000, rooms: 2, sqm: 32, floor: -1,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: ["מרתף"],
+      firstSeen: "2026-08-14"
+    },
+    // ——— מדלן רמת גן (2026-08-14) ———
+    {
+      id: "rg-mdln-akiva-20",
+      address: "רבי עקיבא 20, רמת גן", city: "רמת גן", neighborhood: "הר שלום",
+      price: 1320000, rooms: 2, sqm: 40, floor: 0,
+      source: "מדלן", url: null,
+      renewal: "potential", renewalNote: "הר שלום — שכונה עם פוטנציאל התחדשות",
+      tags: ["קומת קרקע","פוטנציאל התחדשות"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "rg-mdln-bg-11",
+      address: "בן גוריון 11, רמת גן", city: "רמת גן", neighborhood: "השכונה הותיקה",
+      price: 1430000, rooms: 2, sqm: 38, floor: 1,
+      source: "מדלן", url: null,
+      renewal: "potential", renewalNote: "השכונה הותיקה — התחדשות עירונית פעילה",
+      tags: ["פוטנציאל התחדשות"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "rg-mdln-bg-vatika-q4",
+      address: "בן גוריון, רמת גן", city: "רמת גן", neighborhood: "השכונה הותיקה",
+      price: 1350000, rooms: 2, sqm: 38, floor: 4,
+      source: "מדלן", url: null,
+      renewal: "potential", renewalNote: "השכונה הותיקה — התחדשות עירונית פעילה",
+      tags: ["ירד 45K","פוטנציאל התחדשות"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "rg-mdln-bg-giora",
+      address: "בן גוריון, גיורא, רמת גן", city: "רמת גן", neighborhood: "גיורא",
+      price: 1365000, rooms: 2, sqm: 38, floor: 4,
+      source: "מדלן", url: null,
+      renewal: "potential", renewalNote: "גיורא — שכונה ותיקה עם פוטנציאל התחדשות",
+      tags: ["פוטנציאל התחדשות"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "rg-mdln-tarfon",
+      address: "רבי טרפון, רמת גן", city: "רמת גן", neighborhood: "הר שלום",
+      price: 1200000, rooms: 2, sqm: 35, floor: 0,
+      source: "מדלן", url: null,
+      renewal: "potential", renewalNote: "הר שלום — שכונה עם פוטנציאל התחדשות",
+      tags: ["קומת קרקע","פוטנציאל התחדשות"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "rg-mdln-kook-24",
+      address: "הרב קוק 24, רמת גן", city: "רמת גן", neighborhood: "הר שלום",
+      price: 1250000, rooms: 2.5, sqm: 45, floor: 2,
+      source: "מדלן", url: null,
+      renewal: "potential", renewalNote: "הר שלום — שכונה עם פוטנציאל התחדשות",
+      tags: ["פוטנציאל התחדשות"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "rg-mdln-sade-22",
+      address: "יצחק שדה 22, רמת גן", city: "רמת גן", neighborhood: "שכון ההסתדרות",
+      price: 1350000, rooms: 3, sqm: 52, floor: 0,
+      source: "מדלן", url: null,
+      renewal: "potential", renewalNote: "שכון ההסתדרות — אזור התחדשות עירונית",
+      tags: ["קומת קרקע","פוטנציאל התחדשות"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "rg-mdln-shimon-hatzadik",
+      address: "שמעון הצדיק, רמת גן", city: "רמת גן", neighborhood: "רמת אהרון",
+      price: 1400000, rooms: 2, sqm: 50, floor: null,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "rg-mdln-zhabotinsky-24",
+      address: "ז'בוטינסקי 24, רמת גן", city: "רמת גן", neighborhood: "גבעת רוקח",
+      price: 1350000, rooms: 2, sqm: 28, floor: 1,
+      source: "מדלן", url: null,
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-14"
