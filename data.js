@@ -1338,16 +1338,6 @@ window.APARTMENT_DATA = {
       firstSeen: "2026-08-12"
     },
     {
-      id: "holon-mdln-htbXuYKGxEe",
-      address: "שנקר 68, חולון", city: "חולון", neighborhood: "קרית עבודה",
-      price: 1270000, rooms: 2, sqm: 48, floor: 2,
-      source: "מדלן", url: "https://www.madlan.co.il/listings/htbXuYKGxEe",
-      renewal: "potential",
-      tags: [],
-      note: "קרית עבודה — אזור התחדשות",
-      firstSeen: "2026-08-12"
-    },
-    {
       id: "holon-mdln-N6yuVNvNP4i",
       address: "ביל״ו, חולון", city: "חולון", neighborhood: "קרית עבודה",
       price: 1390000, rooms: 2, sqm: 45, floor: 4,
@@ -1532,6 +1522,24 @@ window.APARTMENT_DATA = {
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/h6whmiv8",
       renewal: "none",
       tags: ["ירד 59K"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "ramle-fb-pinui-binui",
+      address: "רמלה — פינוי בינוי", city: "רמלה", neighborhood: "",
+      price: 1290000, rooms: null, sqm: null, floor: null,
+      source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/1616838196903853/",
+      renewal: "verified", renewalNote: "פינוי בינוי — לפי מודעת המוכר",
+      tags: ["פינוי-בינוי"],
+      firstSeen: "2026-08-14"
+    },
+    {
+      id: "rehovot-fb-haela-bnei-aish",
+      address: "האלה, בני עי״ש", city: "רחובות", neighborhood: "בני עי״ש",
+      price: 1250000, rooms: 3, sqm: null, floor: null,
+      source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/841245108923475/",
+      renewal: "none",
+      tags: [],
       firstSeen: "2026-08-14"
     }
   ]
