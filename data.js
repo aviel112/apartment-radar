@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-08-14T10:00:00+03:00",
+  updatedAt: "2026-08-15T14:00:00+03:00",
   budget: 1450000,
   equity: 350000,
   leverage: 0.75,
@@ -1642,6 +1642,51 @@ window.APARTMENT_DATA = {
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-14"
+    },
+    {
+      id: "by-y2-matityahu-ganem",
+      address: "מתתיהו גנם, בת ים", city: "בת ים", neighborhood: "ניצנה",
+      price: 1399000, rooms: 2, sqm: 43, floor: 3,
+      source: "יד2", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-y2-kovshei-hermon",
+      address: "כובשי החרמון, בת ים", city: "בת ים", neighborhood: "רמת הנשיא",
+      price: 1415000, rooms: 2.5, sqm: 65, floor: 4,
+      source: "יד2", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-y2-gush-etzion",
+      address: "גוש עציון, בת ים", city: "בת ים", neighborhood: "עמידר",
+      price: 1440000, rooms: 2, sqm: 50, floor: 1,
+      source: "יד2", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-y2-daniel-57",
+      address: "דניאל 57, בת ים", city: "בת ים", neighborhood: "לב העיר",
+      price: 1440000, rooms: 2.5, sqm: 73, floor: 4,
+      source: "יד2", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-y2-bar-ilan",
+      address: "שדרות בר אילן, בת ים", city: "בת ים", neighborhood: "דרום מערב ותיק",
+      price: 1450000, rooms: 2.5, sqm: 57, floor: 4,
+      source: "יד2", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
     }
   ]
 };
