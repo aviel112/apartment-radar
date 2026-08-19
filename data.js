@@ -1687,6 +1687,132 @@ window.APARTMENT_DATA = {
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-hashmonaim-46",
+      address: "החשמונאים 46, בת ים", city: "בת ים", neighborhood: "שיכון ותיקים",
+      price: 1450000, rooms: 2.5, sqm: 70, floor: 4,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-givati-dm-1",
+      address: "גבעתי, בת ים", city: "בת ים", neighborhood: "דרום מערב",
+      price: 1480000, rooms: 2.5, sqm: 60, floor: 4,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-bar-ilan-sv",
+      address: "בר אילן, בת ים", city: "בת ים", neighborhood: "שיכון ותיקים",
+      price: 1490000, rooms: 2.5, sqm: 67, floor: 1,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-givati-dm-2",
+      address: "גבעתי, בת ים", city: "בת ים", neighborhood: "דרום מערב",
+      price: 1490000, rooms: 3, sqm: 70, floor: 3,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-gefen-9",
+      address: "הגפן 9, בת ים", city: "בת ים", neighborhood: "עמידר / ניצנה",
+      price: 1499000, rooms: 3, sqm: 56, floor: 3,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-katznelson-68",
+      address: "כצנלסון 68, בת ים", city: "בת ים", neighborhood: "שיכון ותיקים",
+      price: 1490000, rooms: 2.5, sqm: 65, floor: 4,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-beit-vegan",
+      address: "בית וגן, בת ים", city: "בת ים", neighborhood: "בית וגן",
+      price: 1450000, rooms: 2.5, sqm: 55, floor: 2,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-yerushalayim-an",
+      address: "ירושלים, בת ים", city: "בת ים", neighborhood: "עמידר / ניצנה",
+      price: 1490000, rooms: 2.5, sqm: 60, floor: 3,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-nitzana-9",
+      address: "ניצנה 9, בת ים", city: "בת ים", neighborhood: "עמידר / ניצנה",
+      price: 1500000, rooms: 2, sqm: 50, floor: 2,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-yoseftal-68",
+      address: "יוספטל 68, בת ים", city: "בת ים", neighborhood: "דרום מערב",
+      price: 1490000, rooms: 2, sqm: 60, floor: 7,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-balfour-63",
+      address: "בלפור 63, בת ים", city: "בת ים", neighborhood: "צפון מערב",
+      price: 1500000, rooms: 2.5, sqm: 50, floor: 0,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: ["קומת קרקע"],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-bar-ilan-31",
+      address: "בר אילן 31, בת ים", city: "בת ים", neighborhood: "דרום מערב",
+      price: 1490000, rooms: 2, sqm: 64, floor: 4,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: ["ירד 180K"],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "by-mdln-dm-dropped",
+      address: "דרום מערב, בת ים", city: "בת ים", neighborhood: "דרום מערב",
+      price: 1470000, rooms: 2.5, sqm: 57, floor: 4,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: ["ירד 80K"],
+      firstSeen: "2026-08-15"
+    },
+    {
+      id: "holon-mdln-sold-14",
+      address: "הנרייטה סולד 14, חולון", city: "חולון", neighborhood: "גרין ועם",
+      price: 1499000, rooms: 2.5, sqm: 45, floor: 3,
+      source: "מדלן", url: null,
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-15"
     }
   ]
 };
