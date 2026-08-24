@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-08-15T14:00:00+03:00",
+  updatedAt: "2026-08-24T21:30:00+03:00",
   budget: 1450000,
   equity: 350000,
   leverage: 0.75,
@@ -666,10 +666,10 @@ window.APARTMENT_DATA = {
     {
       id: "by-mdln-neviim-drom-maarav",
       address: "הנביאים", city: "בת ים", neighborhood: "דרום מערב",
-      price: 1430000, rooms: 2.5, sqm: 65, floor: 2,
+      price: 1390000, rooms: 2.5, sqm: 65, floor: 2,
       source: "מדלן", url: "https://www.madlan.co.il/listings/ZeF2URHDbH7",
       renewal: "none",
-      tags: [],
+      tags: ["ירד ב-40,000 ₪"],
       firstSeen: "2026-08-10"
     },
     {
@@ -1692,7 +1692,7 @@ window.APARTMENT_DATA = {
       id: "by-mdln-hashmonaim-46",
       address: "החשמונאים 46, בת ים", city: "בת ים", neighborhood: "שיכון ותיקים",
       price: 1450000, rooms: 2.5, sqm: 70, floor: 4,
-      source: "מדלן", url: null,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/aUF3Y31kLBj",
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-15"
@@ -1746,7 +1746,7 @@ window.APARTMENT_DATA = {
       id: "by-mdln-beit-vegan",
       address: "בית וגן, בת ים", city: "בת ים", neighborhood: "בית וגן",
       price: 1450000, rooms: 2.5, sqm: 55, floor: 2,
-      source: "מדלן", url: null,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/5MkLrY9bMY7",
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-15"
@@ -1813,6 +1813,63 @@ window.APARTMENT_DATA = {
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-15"
+    },
+    // ——— מדלן — סבב 2026-08-24 (יד2 נחסם ע"י captcha, לא נסרק) ———
+    {
+      id: "bb-mdln-boruchov-9",
+      address: "בורוכוב 9, בני ברק", city: "בני ברק", neighborhood: "פרדס כץ ויסודות",
+      price: 1450000, rooms: 3, sqm: 45, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/jasFzyoYxd1",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-24"
+    },
+    {
+      id: "by-mdln-geonim-jessy",
+      address: "הגאונים, בת ים", city: "בת ים", neighborhood: "ג'סי כהן",
+      price: 1430000, rooms: 2, sqm: 43, floor: 7,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/E9aO2Ted6Tk",
+      renewal: "none",
+      tags: [],
+      note: "ג'סי כהן מתויגת בבת ים במדלן — לבדוק שהעיר נכונה",
+      firstSeen: "2026-08-24"
+    },
+    {
+      id: "holon-mdln-hankin-55",
+      address: "חנקין 55, חולון", city: "חולון", neighborhood: "רסקו א",
+      price: 1220000, rooms: 2, sqm: 50, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/k8HmL1tpRNi",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-24"
+    },
+    {
+      id: "pt-mdln-hovevei-tzion-32",
+      address: "חובבי ציון 32, פתח תקווה", city: "פתח תקווה", neighborhood: "מרכז העיר",
+      price: 799000, rooms: 2, sqm: 25, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/2T9KhvoA1QD",
+      renewal: "none",
+      tags: ["מתחת למיליון"],
+      hot: true,
+      firstSeen: "2026-08-24"
+    },
+    {
+      id: "by-mdln-eli-cohen-6",
+      address: "אלי כהן 6, בת ים", city: "בת ים", neighborhood: "רמת הנשיא",
+      price: 1449999, rooms: 2.5, sqm: null, floor: null,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/3wdU4d7WjWi",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-24"
+    },
+    {
+      id: "by-mdln-bengurion-138-fl13b",
+      address: "בן-גוריון 138, בת ים", city: "בת ים", neighborhood: "פארק הים",
+      price: 1450000, rooms: 2, sqm: 43, floor: 13,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/sPHtGl5MPu6",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-24"
     }
   ]
 };
