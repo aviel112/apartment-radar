@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-08-24T21:30:00+03:00",
+  updatedAt: "2026-08-26T09:30:00+03:00",
   budget: 1450000,
   equity: 350000,
   leverage: 0.75,
@@ -1870,6 +1870,57 @@ window.APARTMENT_DATA = {
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-24"
+    },
+    // ——— סבב 2026-08-26 09:30 (יד2 נחסם ע"י captcha אחרי עיר ראשונה, מדלן+פייסבוק תקינים) ———
+    {
+      id: "rehovot-mdl-sharayim-5",
+      address: "שעריים, רחובות", city: "רחובות", neighborhood: "שעריים",
+      price: 1000000, rooms: 5, sqm: 139, floor: 5,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/hNPhrd9lMxE",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-08-26"
+    },
+    {
+      id: "rehovot-mdl-bengurion-penthouse",
+      address: "בן גוריון, אבן גבירול, רחובות", city: "רחובות", neighborhood: "אבן גבירול",
+      price: 1000000, rooms: 5, sqm: 170, floor: 19,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/DfJc8ZO542A",
+      renewal: "none",
+      tags: ["מחיר חשוד — לבדוק (פנטהאוז 170 מ״ר ב-1M)"],
+      note: "מחיר נמוך מאוד לפנטהאוז 170 מ״ר — יתכן מכירת חלק/שיתוף. לבדוק לפני פנייה",
+      firstSeen: "2026-08-26"
+    },
+    {
+      id: "giv-mdln-krinitzi-60",
+      address: "קריניצי 60, גבעתיים", city: "גבעתיים", neighborhood: "מרכז העיר ב'",
+      price: 850000, rooms: 1, sqm: 25, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/IPzsO9sBneR",
+      renewal: "none",
+      tags: ["חדר אחד","קומת קרקע"],
+      note: "יחידת חדר אחד — קטנה מהטווח הרגיל, לבדוק אם רלוונטי",
+      firstSeen: "2026-08-26"
+    },
+    {
+      id: "lod-fb-habashor-7",
+      address: "הבשור 7, לוד", city: "לוד", neighborhood: "",
+      price: 1350000, rooms: 3, sqm: 60, floor: 1,
+      source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/2218846225576247",
+      renewal: "none",
+      tags: ["ממ\"ד","חניה בטאבו"],
+      note: "המודעה פורסמה בטעות תחת קטגוריית השכרה (\"לחודש\") אבל התיאור הוא של מכירה — לוודא מול המוכר לפני פנייה",
+      firstSeen: "2026-08-26"
+    },
+    {
+      id: "ramle-fb-emile-zola",
+      address: "אמיל זולא, רמלה", city: "רמלה", neighborhood: "",
+      price: 990000, rooms: 3, sqm: 60, floor: 2,
+      source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/1218467913651222",
+      renewal: "potential", renewalNote: "המוכר מציין פינוי-בינוי — לא מאומת מול moch.maps.arcgis.com בסבב הזה",
+      tags: ["פוטנציאל התחדשות","ירד מ-1,150,000","משופצת"],
+      hot: true,
+      note: "מתחת למיליון, משופצת, המוכרת טוענת פינוי-בינוי — לבדוק ולתפוס מהר אם רציני",
+      firstSeen: "2026-08-26"
     }
   ]
 };
