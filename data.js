@@ -1928,7 +1928,7 @@ window.APARTMENT_DATA = {
       id: "rlz-y2-rozental-9",
       address: "חיה רוזנטל-חביליו 9, ראשון לציון", city: "ראשון לציון", neighborhood: "נוריות",
       price: 1500000, rooms: 3, sqm: 93, floor: 13,
-      source: "יד2", url: null,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/pw8dni7u",
       renewal: "none",
       tags: ["קומה גבוהה"],
       firstSeen: "2026-08-31"
@@ -1937,7 +1937,7 @@ window.APARTMENT_DATA = {
       id: "rlz-y2-siterman-12",
       address: "מיכאל סיטרמן 12, ראשון לציון", city: "ראשון לציון", neighborhood: "נחלת יהודה",
       price: 1200000, rooms: 3, sqm: 78, floor: 6,
-      source: "יד2", url: null,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/j3637xta",
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-31"
@@ -1946,7 +1946,7 @@ window.APARTMENT_DATA = {
       id: "rlz-y2-ramat-eliahu-45",
       address: "רמת אליהו, ראשון לציון", city: "ראשון לציון", neighborhood: "רמת אליהו",
       price: 1390000, rooms: 2.5, sqm: 45, floor: 2,
-      source: "יד2", url: null,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/4v5zzk2l",
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-31"
@@ -1955,7 +1955,7 @@ window.APARTMENT_DATA = {
       id: "rlz-y2-rambam-80",
       address: "רמב\"ם, ראשון לציון", city: "ראשון לציון", neighborhood: "רמב\"ם",
       price: 1570000, rooms: 3, sqm: 80, floor: 2,
-      source: "יד2", url: null,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/hy5u11iz",
       renewal: "none",
       tags: ["ירד 30K"],
       firstSeen: "2026-08-31"
@@ -1964,7 +1964,7 @@ window.APARTMENT_DATA = {
       id: "rlz-y2-betzalel-9",
       address: "סמטת בצלאל 9, ראשון לציון", city: "ראשון לציון", neighborhood: "רמב\"ם",
       price: 1590000, rooms: 3, sqm: 81, floor: 4,
-      source: "יד2", url: null,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/cp9kdiu3",
       renewal: "none",
       tags: ["ירד 200K"],
       firstSeen: "2026-08-31"
@@ -1973,7 +1973,7 @@ window.APARTMENT_DATA = {
       id: "rlz-mdln-olei-hagardom",
       address: "עולי הגרדום, ראשון לציון", city: "ראשון לציון", neighborhood: "רמז",
       price: 1490000, rooms: 2, sqm: 50, floor: 1,
-      source: "מדלן", url: null,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/iar6p1ig",
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-31"
@@ -1981,8 +1981,8 @@ window.APARTMENT_DATA = {
     {
       id: "rlz-mdln-shalom-ash-26",
       address: "שלום אש 26, ראשון לציון", city: "ראשון לציון", neighborhood: "רמת אליהו",
-      price: 1500000, rooms: 3, sqm: 58, floor: 1,
-      source: "מדלן", url: null,
+      price: 1500000, rooms: 3, sqm: 58, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/myhr7kfq",
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-31"
