@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-01T20:10:00+03:00",
+  updatedAt: "2026-09-01T20:38:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -2261,6 +2261,56 @@ window.APARTMENT_DATA = {
       renewal: "potential", renewalNote: "המוכר מציין פינוי-בינוי ברחוב חנקין, חולון (סמוך לקרית עבודה).",
       tags: ["פינוי-בינוי"],
       hot: true,
+      firstSeen: "2026-09-01"
+    },
+    {
+      id: "holon-y2-3wej9tiy",
+      address: "הגאונים", city: "חולון", neighborhood: "ג'סי כהן",
+      price: 1430000, rooms: 2, sqm: null, floor: null,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/3wej9tiy",
+      renewal: "none",
+      tags: ["בלעדי","ירד ב-60,000 ₪"],
+      note: "בלעדי עולם הנדל\"ן. רחוב הגאונים — כמה מודעות באותו אזור בטווח המחיר.",
+      firstSeen: "2026-09-01"
+    },
+    {
+      id: "by-y2-nurit-hirsch-5",
+      address: "נורית הירש 5", city: "בת ים", neighborhood: "דרום חדש / פארק הים",
+      price: 780000, rooms: 3, sqm: 90, floor: 5,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/h6hxa64e",
+      renewal: "none",
+      tags: ["מחיר חריג"],
+      note: "780K ל-3 חד' 90 מ\"ר באזור פארק הים — נמוך משמעותית מהשוק. לבדוק אם זו מכירת חלק בנכס / זכויות / דיירות מוגנת.",
+      firstSeen: "2026-09-01"
+    },
+    {
+      id: "by-y2-eli-cohen-6-y2",
+      address: "אלי כהן 6", city: "בת ים", neighborhood: "רמת הנשיא",
+      price: 1450000, rooms: 2.5, sqm: null, floor: null,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/if1ud2hn",
+      renewal: "none",
+      tags: ["ירד ב-100,000 ₪","שיא מרכז"],
+      note: "אותה כתובת כמו by-mdln-eli-cohen-6 (מדלן) — ככל הנראה אותו נכס, מודעה שנייה.",
+      firstSeen: "2026-09-01"
+    },
+    {
+      id: "by-y2-hashmonaim-28",
+      address: "החשמונאים 28", city: "בת ים", neighborhood: "לב העיר",
+      price: 1450000, rooms: 2.5, sqm: null, floor: null,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/qiys61uo",
+      renewal: "none",
+      tags: ["ירד ב-70,000 ₪","Home Way"],
+      note: "קרוב ל-by-mdln-hashmonaim-46 (מדלן) — ייתכן אותו בניין/נכס.",
+      firstSeen: "2026-09-01"
+    },
+    {
+      id: "bb-mdln-trumpeldor-20",
+      address: "טרומפלדור 20", city: "בני ברק", neighborhood: "פרדס כץ ויסודות",
+      price: 1250000, rooms: 8, sqm: 100, floor: 1,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/ucRHgDGRRr4",
+      renewal: "none",
+      tags: ["פוטנציאל חלוקה"],
+      note: "8 חד' / 100 מ\"ר בק1 ב-1.25M — דירה גדולה ישנה, פוטנציאל לחלוקה ל-2 יח'. פרדס כץ.",
       firstSeen: "2026-09-01"
     }
   ]
