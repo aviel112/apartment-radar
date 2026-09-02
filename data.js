@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-01T20:38:00+03:00",
+  updatedAt: "2026-09-02T09:52:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -1691,10 +1691,10 @@ window.APARTMENT_DATA = {
     {
       id: "by-mdln-hashmonaim-46",
       address: "החשמונאים 46, בת ים", city: "בת ים", neighborhood: "שיכון ותיקים",
-      price: 1450000, rooms: 2.5, sqm: 70, floor: 4,
+      price: 1425000, rooms: 2.5, sqm: 70, floor: 4,
       source: "מדלן", url: "https://www.madlan.co.il/listings/aUF3Y31kLBj",
       renewal: "none",
-      tags: [],
+      tags: ["ירד ב-25,000 ₪"],
       firstSeen: "2026-08-15"
     },
     {
@@ -2229,10 +2229,10 @@ window.APARTMENT_DATA = {
     {
       id: "holon-mdln-4z0DDfWEwzM",
       address: "זלמן ארן 27", city: "חולון", neighborhood: "נאות רחל",
-      price: 1290000, rooms: 2, sqm: 46, floor: 1,
+      price: 1270000, rooms: 2, sqm: 46, floor: 1,
       source: "מדלן", url: "https://www.madlan.co.il/listings/4z0DDfWEwzM",
       renewal: "none",
-      tags: ["חדש"],
+      tags: ["חדש","ירד ב-20,000 ₪"],
       firstSeen: "2026-09-01"
     },
     {
@@ -2312,6 +2312,132 @@ window.APARTMENT_DATA = {
       tags: ["פוטנציאל חלוקה"],
       note: "8 חד' / 100 מ\"ר בק1 ב-1.25M — דירה גדולה ישנה, פוטנציאל לחלוקה ל-2 יח'. פרדס כץ.",
       firstSeen: "2026-09-01"
+    },
+    {
+      id: "by-54swtrao",
+      address: "בלפור", city: "בת ים", neighborhood: "הגבול רוטשילד",
+      price: 1395000, rooms: 2, sqm: 48, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/54swtrao",
+      renewal: "potential", renewalNote: "אזור הגבול-רוטשילד בבת ים — מתחם פינוי-בינוי פעיל בסביבה. לא אומת מול arcgis.",
+      tags: ["ירד ב-35,000 ₪","ISRA-HOME"],
+      note: "2 חד' 48 מ\"ר ק2, רחוב בלפור. אזור התחדשות פוטנציאלי.",
+      hot: false,
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "by-lyahdo7n",
+      address: "בת ים (כתובת לא צוינה)", city: "בת ים", neighborhood: "—",
+      price: 1420000, rooms: 3, sqm: 65, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/lyahdo7n",
+      renewal: "none",
+      tags: ["Home Way","קרוב לים"],
+      note: "3 חד' 65 מ\"ר ק4. הכתובת המדויקת לא פורסמה במודעה.",
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "by-e5bgnjla",
+      address: "בת ים (כתובת לא צוינה)", city: "בת ים", neighborhood: "—",
+      price: 1440000, rooms: 2, sqm: 48, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/e5bgnjla",
+      renewal: "none",
+      tags: ["אינפיניטי נדל\"ן"],
+      note: "2 חד' 48 מ\"ר ק2. הכתובת המדויקת לא פורסמה.",
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "by-dy8yw151",
+      address: "דרך בן גוריון 138", city: "בת ים", neighborhood: "דרום חדש / פארק הים",
+      price: 1250000, rooms: 2, sqm: 40, floor: 5,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/dy8yw151",
+      renewal: "none",
+      tags: ["נוף לים"],
+      note: "בניין BG138 — כבר מתועדות עשרות יח' שם. ק5 40 מ\"ר. ייתכן חופף ל-by-mdln-bengurion-138-k5.",
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "by-vae4eius",
+      address: "דרך בן גוריון 138", city: "בת ים", neighborhood: "דרום חדש / פארק הים",
+      price: 1250000, rooms: 2, sqm: 38, floor: 8,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/vae4eius",
+      renewal: "none",
+      tags: ["דירות דוד"],
+      note: "בניין BG138. ק8 38 מ\"ר.",
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "by-o8v2coo7",
+      address: "דרך מנחם בגין", city: "בת ים", neighborhood: "דרום חדש / פארק הים",
+      price: 880000, rooms: 4, sqm: 111, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/o8v2coo7",
+      renewal: "none",
+      tags: ["קבוצת רכישה","זהירות"],
+      note: "\"קב' רכישה / זכות לנכס\" — לא דירה גמורה. 4 חד' 111 מ\"ר קרקע ב-880K. קשה למינוף משכנתא רגיל.",
+      hot: false,
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "by-mdln-ooDh3XzVDj7",
+      address: "בלפור", city: "בת ים", neighborhood: "מרכז העיר",
+      price: 1440000, rooms: 2, sqm: 48, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/ooDh3XzVDj7",
+      renewal: "potential", renewalNote: "אזור בלפור/הגבול-רוטשילד — התחדשות עירונית פעילה בבת ים. לא אומת.",
+      tags: [],
+      note: "2 חד' 48 מ\"ר ק2 ברחוב בלפור. ייתכן אותו נכס כמו by-54swtrao (יד2, 1,395,000) — מחיר שונה בין הלוחות.",
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "holon-mdln-E9aO2Ted6Tk",
+      address: "הגאונים", city: "חולון", neighborhood: "ג'סי כהן",
+      price: 1430000, rooms: 2, sqm: 43, floor: 7,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/E9aO2Ted6Tk",
+      renewal: "none",
+      tags: ["בלעדי"],
+      note: "2 חד' 43 מ\"ר ק7 ברחוב הגאונים, ג'סי כהן — אותו רחוב כמו holon-y2-3wej9tiy / holon-gk2y2a8q.",
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "holon-mdln-j2QFCcpN7lK",
+      address: "חומה ומגדל 44", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1080000, rooms: 1.5, sqm: 23, floor: 1,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/j2QFCcpN7lK",
+      renewal: "none",
+      tags: ["בלעדי","יחידה קטנה"],
+      note: "1.5 חד' 23 מ\"ר בלבד — יחידת דיור קטנה. קרית עבודה.",
+      hot: false,
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "holon-mdln-obS0EwM67UP",
+      address: "אחד במאי", city: "חולון", neighborhood: "קרית עבודה",
+      price: 1080000, rooms: 1, sqm: 20, floor: 1,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/obS0EwM67UP",
+      renewal: "none",
+      tags: ["בלעדי","יחידה קטנה"],
+      note: "חדר אחד 20 מ\"ר — יחידה זעירה ב-1.08M. קרית עבודה.",
+      hot: false,
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "rehovot-lv4q3gi2",
+      address: "רחובות (קבוצת רכישה)", city: "רחובות", neighborhood: "—",
+      price: 900000, rooms: 4, sqm: 125, floor: 0,
+      source: "יד2", url: null,
+      renewal: "none",
+      tags: ["קבוצת רכישה","זהירות"],
+      note: "\"קב' רכישה / זכות לנכס\" — לא דירה גמורה. 4 חד' 125 מ\"ר ב-900K. מזהה יד2: lv4q3gi2 (לא נלכד URL מלא).",
+      hot: false,
+      firstSeen: "2026-09-02"
+    },
+    {
+      id: "herzliya-r5wk0vfv",
+      address: "הרצליה (קבוצת רכישה)", city: "הרצליה", neighborhood: "—",
+      price: 1306400, rooms: 4, sqm: 142, floor: 0,
+      source: "יד2", url: null,
+      renewal: "none",
+      tags: ["קבוצת רכישה","זהירות","רי/מקס הוד והדר"],
+      note: "\"קב' רכישה / זכות לנכס\" — לא דירה גמורה. 4 חד' 142 מ\"ר ב-1.306M. מזהה יד2: r5wk0vfv (לא נלכד URL מלא).",
+      hot: false,
+      firstSeen: "2026-09-02"
     }
   ]
 };
