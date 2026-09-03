@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-02T09:52:00+03:00",
+  updatedAt: "2026-09-03T09:55:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -1744,11 +1744,12 @@ window.APARTMENT_DATA = {
     },
     {
       id: "by-mdln-beit-vegan",
-      address: "בית וגן, בת ים", city: "בת ים", neighborhood: "בית וגן",
-      price: 1450000, rooms: 2.5, sqm: 55, floor: 2,
+      address: "בית וגן", city: "ראשון לציון", neighborhood: "בית וגן",
+      price: 1399000, rooms: 2.5, sqm: 55, floor: 2,
       source: "מדלן", url: "https://www.madlan.co.il/listings/5MkLrY9bMY7",
       renewal: "none",
-      tags: [],
+      tags: ["ירד ב-51,000 ₪"],
+      note: "עודכן 03/09 — שכונת בית וגן היא בראשון לציון (תוקן מבת ים).",
       firstSeen: "2026-08-15"
     },
     {
@@ -2438,6 +2439,39 @@ window.APARTMENT_DATA = {
       note: "\"קב' רכישה / זכות לנכס\" — לא דירה גמורה. 4 חד' 142 מ\"ר ב-1.306M. מזהה יד2: r5wk0vfv (לא נלכד URL מלא).",
       hot: false,
       firstSeen: "2026-09-02"
+    },
+    {
+      id: "rishon-mdln-hameorer-3",
+      address: "המעורר 3", city: "ראשון לציון", neighborhood: "נאות רחל",
+      price: 1190000, rooms: 1.5, sqm: 35, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/WHpkRtRQoVg",
+      renewal: "none",
+      tags: ["קומת קרקע"],
+      note: "1.5 חד' קטנה בקומת קרקע — כניסה נמוכה למחיר בראשון.",
+      hot: false,
+      firstSeen: "2026-09-03"
+    },
+    {
+      id: "holon-mdln-hahistadrut-rasco-b",
+      address: "ההסתדרות", city: "חולון", neighborhood: "רסקו ב'",
+      price: 1390000, rooms: 2, sqm: 42, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/E4IxrOlVGVk",
+      renewal: "none",
+      tags: ["קומת קרקע"],
+      hot: false,
+      firstSeen: "2026-09-03"
+    },
+    {
+      id: "holon-mdln-hasidei-haumot-dekel",
+      address: "חסידי האומות", city: "חולון", neighborhood: "דקר",
+      price: 1190000, rooms: null, sqm: 24, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/ipSCibAop2j",
+      renewal: "potential",
+      renewalNote: "שכונת דקר בחולון מסומנת כאזור פיתוח תחבורתי (נתיבי איילון, רכבת, רק\"ל, מטרו עתידי) — פוטנציאל התחדשות, לא אומת מול moch.maps.arcgis.com.",
+      tags: ["קומת קרקע","דירה קטנה"],
+      note: "24 מ\"ר בלבד — לבדוק אם זו יחידת דיור / חדר.",
+      hot: false,
+      firstSeen: "2026-09-03"
     }
   ]
 };
