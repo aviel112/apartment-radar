@@ -41,7 +41,7 @@ body{font-family:'Heebo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 
 /* ─── HEADER ─── */
 header{background:linear-gradient(165deg,var(--bg2),var(--bg));border-bottom:1px solid var(--line);
-  padding:30px 0 24px;margin-bottom:24px}
+  padding:22px 0 18px;margin-bottom:18px}
 .hrow{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
 h1{font-size:clamp(23px,5vw,34px);font-weight:900;letter-spacing:-.025em;display:flex;align-items:center;gap:11px}
 h1 .dot{width:12px;height:12px;border-radius:50%;background:var(--acc);
@@ -56,12 +56,12 @@ h1 .dot{width:12px;height:12px;border-radius:50%;background:var(--acc);
   display:grid;place-items:center;transition:.16s;font-family:inherit;font-weight:600}
 .iconbtn:hover{border-color:var(--acc);color:var(--acc)}
 
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:22px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:11px;margin-top:16px}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
-  padding:15px 17px;position:relative;overflow:hidden}
+  padding:12px 15px;position:relative;overflow:hidden}
 .kpi::before{content:'';position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px;background:var(--acc)}
 .kpi .l{font-size:12px;color:var(--tx3);font-weight:600;letter-spacing:.02em}
-.kpi .v{font-size:27px;font-weight:900;letter-spacing:-.03em;margin-top:2px;line-height:1.1}
+.kpi .v{font-size:24px;font-weight:900;letter-spacing:-.03em;margin-top:1px;line-height:1.1}
 .kpi .n{font-size:12.5px;color:var(--tx2);margin-top:2px;line-height:1.4}
 .kpi.ok::before{background:var(--ok)}.kpi.warn::before{background:var(--warn)}
 .kpi.info::before{background:var(--info)}.kpi.pur::before{background:var(--pur)}
@@ -76,7 +76,23 @@ h1 .dot{width:12px;height:12px;border-radius:50%;background:var(--acc);
 
 /* ─── CONTROLS ─── */
 .controls{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
-  padding:16px;margin:20px 0;display:flex;gap:17px;flex-wrap:wrap;align-items:flex-end}
+  padding:16px;margin:20px 0;display:flex;gap:17px;flex-wrap:wrap;align-items:flex-end;
+  position:sticky;top:0;z-index:40;
+  transition:padding .18s ease,gap .18s ease,border-radius .18s ease,box-shadow .18s ease}
+
+/* מצב מוצמד — נדבק לראש המסך ומתכווץ לשורה אחת */
+.controls.stuck{padding:10px 14px;gap:11px;border-radius:0 0 var(--r) var(--r);
+  box-shadow:0 10px 26px -12px rgba(0,0,0,.55);border-top-color:transparent;
+  background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(9px)}
+.controls.stuck .cgroup>label{display:none}
+.controls.stuck .cgroup{gap:0}
+.controls.stuck .chip{padding:5px 12px;font-size:12.5px}
+.controls.stuck select,.controls.stuck input[type="search"]{padding:6px 11px;font-size:13px}
+.controls.stuck .count{padding-bottom:0;align-self:center}
+@media (max-width:640px){
+  .controls.stuck .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;max-width:100%}
+  .controls.stuck .chips::-webkit-scrollbar{display:none}
+}
 .cgroup{display:flex;flex-direction:column;gap:8px;min-width:0}
 .cgroup>label{font-size:12px;color:var(--tx3);font-weight:600}
 .chips{display:flex;gap:7px;flex-wrap:wrap}
@@ -205,6 +221,16 @@ input[type="search"]::placeholder{color:var(--tx3);font-weight:400}
 footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
   color:var(--tx3);font-size:13px;text-align:center;line-height:1.8}
 
+/* ─── חזרה לראש ─── */
+.totop{position:fixed;inset-block-end:22px;inset-inline-end:22px;width:46px;height:46px;
+  border-radius:50%;background:var(--card);border:1px solid var(--line2);color:var(--tx);
+  font-size:19px;cursor:pointer;display:grid;place-items:center;z-index:60;
+  box-shadow:var(--shadow);font-family:inherit;
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .2s ease,transform .2s ease,visibility .2s,border-color .16s,color .16s}
+.totop.show{opacity:1;visibility:visible;transform:translateY(0)}
+.totop:hover{border-color:var(--acc);color:var(--acc)}
+
 .toast{position:fixed;inset-block-end:22px;inset-inline-start:50%;transform:translateX(50%) translateY(90px);
   background:var(--acc);color:#fff;padding:12px 22px;border-radius:12px;font-size:14.5px;font-weight:800;
   box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.2,.9,.3,1.2);z-index:99;pointer-events:none}
@@ -219,7 +245,7 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
   .price{font-size:27px}
 }
 @media print{
-  .controls,.hbtns,.cfoot,.statusrow,.toast,.fin{display:none}
+  .controls,.hbtns,.cfoot,.statusrow,.toast,.fin,.totop{display:none}
   body{background:#fff;color:#000;padding:0}
   .card{break-inside:avoid;border:1px solid #bbb;box-shadow:none}
   .tier{break-after:avoid}
@@ -304,6 +330,7 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
   </footer>
 </div>
 
+<button class="totop" id="toTop" title="חזרה לראש הרשימה" aria-label="חזרה לראש הרשימה">↑</button>
 <div class="toast" id="toast"></div>
 
 <script src="data.js"></script>
@@ -770,6 +797,23 @@ footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
     var b=document.querySelector('[data-f="'+f+'"]');
     if(b&&state.filters[f])b.setAttribute('aria-pressed','true');
   });
+  // סרגל סינון מוצמד + כפתור חזרה לראש
+  var ctrls=document.querySelector('.controls'),toTop=document.getElementById('toTop'),ticking=false;
+  function onScroll(){
+    var stuck=ctrls.getBoundingClientRect().top<=0.5;
+    ctrls.classList.toggle('stuck',stuck);
+    toTop.classList.toggle('show',window.scrollY>700);
+    ticking=false;
+  }
+  addEventListener('scroll',function(){
+    if(!ticking){ticking=true;requestAnimationFrame(onScroll);}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+  });
+  onScroll();
+
   renderKPIs();renderBench();renderCityChips();refreshPurge();render();
 })();
 </script>
