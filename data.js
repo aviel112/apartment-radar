@@ -3,7 +3,7 @@
 // כלל: רק דירות עם מחיר מפורסם. דירה בלי מחיר לא נכנסת למאגר.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-03T22:10:00+03:00",
+  updatedAt: "2026-09-11T09:55:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -611,10 +611,10 @@ window.APARTMENT_DATA = {
     {
       id: "bb-rabi-akiva",
       address: "רבי עקיבא", city: "בני ברק", neighborhood: "—",
-      price: 1320000, rooms: 2, sqm: 40, floor: 0,
+      price: 1190000, rooms: 2, sqm: 40, floor: 0,
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/np9oi6e8",
       renewal: "none",
-      tags: [],
+      tags: ["ירד ב-130,000 ₪"],
       firstSeen: "2026-08-10"
     },
     {
@@ -767,10 +767,10 @@ window.APARTMENT_DATA = {
     {
       id: "bb-mdln-rabi-akiva-20",
       address: "רבי עקיבא 20", city: "בני ברק", neighborhood: "הר שלום",
-      price: 1320000, rooms: 2, sqm: 40, floor: 0,
+      price: 1190000, rooms: 2, sqm: 40, floor: 0,
       source: "מדלן", url: "https://www.madlan.co.il/listings/SpO98umj7A3",
       renewal: "none",
-      tags: [],
+      tags: ["ירד ב-130,000 ₪"],
       firstSeen: "2026-08-10"
     },
     {
@@ -812,10 +812,10 @@ window.APARTMENT_DATA = {
     {
       id: "bb-mdln-rav-kook-24",
       address: "הרב קוק 24", city: "בני ברק", neighborhood: "הר שלום",
-      price: 1250000, rooms: 2.5, sqm: 45, floor: 2,
+      price: 1190000, rooms: 2.5, sqm: 45, floor: 2,
       source: "מדלן", url: "https://www.madlan.co.il/listings/Ai7mVc5JASv",
       renewal: "none",
-      tags: [],
+      tags: ["ירד ב-60,000 ₪"],
       firstSeen: "2026-08-10"
     },
     {
@@ -1085,10 +1085,10 @@ window.APARTMENT_DATA = {
     {
       id: "by-cjzsjc6w",
       address: "דניאל 46, בת ים", city: "בת ים", neighborhood: "לב העיר",
-      price: 1370000, rooms: 2, sqm: 35, floor: 3,
+      price: 1330000, rooms: 2, sqm: 35, floor: 3,
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/cjzsjc6w",
       renewal: "none",
-      tags: [],
+      tags: ["ירד ב-40,000 ₪"],
       note: "קטנה — 35 מ״ר",
       firstSeen: "2026-08-12"
     },
@@ -1240,10 +1240,10 @@ window.APARTMENT_DATA = {
     {
       id: "bb-7fdz1xw6",
       address: "פרדס כץ, בני ברק", city: "בני ברק", neighborhood: "פרדס כץ",
-      price: 890000, rooms: 2, sqm: 40, floor: 1,
+      price: 820000, rooms: 2, sqm: 40, floor: 1,
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/7fdz1xw6",
       renewal: "none",
-      tags: ["ירד ב-60,000 ₪", "מתחת למיליון"],
+      tags: ["ירד ב-70,000 ₪", "מתחת למיליון"],
       firstSeen: "2026-08-12"
     },
     {
@@ -1454,10 +1454,10 @@ window.APARTMENT_DATA = {
     {
       id: "bb-7fdz1xw6",
       address: "פרדס כץ, בני ברק", city: "בני ברק", neighborhood: "פרדס כץ",
-      price: 890000, rooms: 2, sqm: 40, floor: 1,
+      price: 820000, rooms: 2, sqm: 40, floor: 1,
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/7fdz1xw6",
       renewal: "none",
-      tags: ["ירד ב-60,000 ₪", "מתחת למיליון"],
+      tags: ["ירד ב-70,000 ₪", "מתחת למיליון"],
       firstSeen: "2026-08-14"
     },
     {
@@ -2472,6 +2472,122 @@ window.APARTMENT_DATA = {
       note: "24 מ\"ר בלבד — לבדוק אם זו יחידת דיור / חדר.",
       hot: false,
       firstSeen: "2026-09-03"
+    },
+    {
+      id: "bb-4my3wacu",
+      address: "רבי עקיבא 36", city: "בני ברק", neighborhood: "הר שלום",
+      price: 1180000, rooms: 2, sqm: 52, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/4my3wacu",
+      renewal: "none",
+      tags: ["דירת גן"],
+      hot: false,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "bb-l6bgh4z8",
+      address: "דרך זאב ז'בוטינסקי 59", city: "בני ברק", neighborhood: "פרדס כץ",
+      price: 1300000, rooms: 2.5, sqm: 50, floor: 4,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/l6bgh4z8",
+      renewal: "none",
+      tags: [],
+      hot: false,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "bb-vsmvtvii",
+      address: "אבן שפרוט", city: "בני ברק", neighborhood: "גבעת סוקולוב",
+      price: 850000, rooms: 2, sqm: 30, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/vsmvtvii",
+      renewal: "none",
+      tags: ["מתחת למיליון","דירה קטנה"],
+      note: "30 מ\"ר בלבד — לבדוק אם זו יחידת דיור.",
+      hot: false,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "bb-goxgu9n3",
+      address: "ירושלים", city: "בני ברק", neighborhood: "גבעת רוקח",
+      price: 850000, rooms: 2, sqm: 35, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/goxgu9n3",
+      renewal: "none",
+      tags: ["יחידת דיור","מתחת למיליון"],
+      note: "רשום כיחידת דיור — לוודא רישום בטאבו לפני משכנתא.",
+      hot: false,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "by-9daee4ns",
+      address: "ירושלים 55", city: "בת ים", neighborhood: "—",
+      price: 1450000, rooms: 3, sqm: 68, floor: 0,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/9daee4ns",
+      renewal: "none",
+      tags: ["ירד ב-80,000 ₪","בהזדמנות"],
+      note: "3 חד' 68 מ\"ר בקומת קרקע — מחיר למ\"ר מהטובים בבת ים בטווח הזה.",
+      hot: true,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "by-ee15laj0",
+      address: "דרך בן גוריון 138", city: "בת ים", neighborhood: "דרום חדש / פארק הים",
+      price: 1290000, rooms: 2, sqm: 31, floor: 13,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/ee15laj0",
+      renewal: "none",
+      tags: ["דירה קטנה","מגדל"],
+      note: "31 מ\"ר בקומה 13 — יקר למ\"ר, אבל מיקום פארק הים.",
+      hot: false,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "by-flcoq1e3",
+      address: "הלפר", city: "בת ים", neighborhood: "—",
+      price: 1385000, rooms: 2, sqm: 49, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/flcoq1e3",
+      renewal: "none",
+      tags: [],
+      hot: false,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "by-fb-1366470128202664",
+      address: "דניאל", city: "בת ים", neighborhood: "לב העיר",
+      price: 1440000, rooms: null, sqm: null, floor: null,
+      source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/1366470128202664/",
+      renewal: "none",
+      tags: ["פייסבוק"],
+      note: "מודעת מרקטפלייס — אין פירוט חדרים/מ\"ר בכרטיס. לברר מול המפרסם.",
+      hot: false,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "rehovot-jyj9cnx2",
+      address: "ההגנה", city: "רחובות", neighborhood: "אבני חן",
+      price: 1410000, rooms: 2.5, sqm: 47, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/jyj9cnx2",
+      renewal: "none",
+      tags: [],
+      hot: false,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "rehovot-fn8el3o7",
+      address: "ההגנה", city: "רחובות", neighborhood: "ג' / מרכז מזרח העיר",
+      price: 1370000, rooms: 2.5, sqm: 55, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/fn8el3o7",
+      renewal: "none",
+      tags: [],
+      hot: false,
+      firstSeen: "2026-09-11"
+    },
+    {
+      id: "ramle-fb-1647867846838812",
+      address: "רמלה (לא צוינה כתובת)", city: "רמלה", neighborhood: "—",
+      price: 1150000, rooms: null, sqm: null, floor: null,
+      source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/1647867846838812/",
+      renewal: "none",
+      tags: ["פייסבוק"],
+      note: "פורסם כ\"דירת מציאה\" בלי פרטים — לברר חדרים, מ\"ר וכתובת מדויקת.",
+      hot: false,
+      firstSeen: "2026-09-11"
     }
   ]
 };
