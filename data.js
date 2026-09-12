@@ -4,7 +4,7 @@
 // מפתח הזהות של דירה = מזהה המודעה בסוף ה-URL. לפניו בודקים כפילות, לא לפי כתובת.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-12T12:00:00+03:00",
+  updatedAt: "2026-09-12T12:01:12+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -1732,11 +1732,11 @@ window.APARTMENT_DATA = {
     {
       id: "by-fb-1366470128202664",
       address: "דניאל", city: "בת ים", neighborhood: "לב העיר",
-      price: 1440000, rooms: null, sqm: null, floor: null,
+      price: 1440000, rooms: 2.5, sqm: 65, floor: null,
       source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/1366470128202664/",
       renewal: "none",
       tags: ["פייסבוק"],
-      note: "מודעת מרקטפלייס — אין פירוט חדרים/מ\"ר בכרטיס. לברר מול המפרסם.",
+      note: "2.5 חדרים 65 מ\"ר לפי כרטיס המודעה. ייתכן קרוב ל-by-daniel-lev-hair / by-daniel-57-lev-hair (יד2) — אותו רחוב",
       firstSeen: "2026-09-11"
     },
     {
@@ -1921,6 +1921,16 @@ window.APARTMENT_DATA = {
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/xqgxuu5e",
       renewal: "none",
       tags: ["קומה אחרונה"],
+      firstSeen: "2026-09-12"
+    },
+    {
+      id: "holon-mdln-hugoarnest-16",
+      address: "הוגו ארנסט 16", city: "חולון", neighborhood: "שיכון ותיקים",
+      price: 385000, rooms: 4.5, sqm: 54, floor: 0,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/otirh61Mkfh",
+      renewal: "none",
+      tags: ["בית פרטי"],
+      note: "בית פרטי במחיר נמוך מאוד — ייתכן חלק מנכס/מכירה חלקית, לבדוק לפני התרגשות",
       firstSeen: "2026-09-12"
     }
   ]
