@@ -5,7 +5,7 @@
 // לא נכנסות: יחידות דיור עד 35 מ"ר, קבוצות רכישה/זכות לנכס, ומחיר מעל התקרה.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-12T12:48:00+03:00",
+  updatedAt: "2026-09-12T19:45:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -1731,6 +1731,71 @@ window.APARTMENT_DATA = {
       renewal: "none",
       tags: ["בית פרטי"],
       note: "בית פרטי במחיר נמוך מאוד — ייתכן חלק מנכס/מכירה חלקית, לבדוק לפני התרגשות",
+      firstSeen: "2026-09-12"
+    },
+    {
+      id: "rishon-orna-porat",
+      address: "אורנה פורת", city: "ראשון לציון", neighborhood: "—",
+      price: 111111, rooms: 4, sqm: 120, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/7w7iej8q",
+      renewal: "none",
+      tags: ["מחיר חשוד - לבדוק"],
+      note: "מחיר נמוך משמעותית ביחס לגודל (120 מ״ר) — כנראה לא המחיר האמיתי, ליצור קשר לבירור",
+      hot: true,
+      firstSeen: "2026-09-12"
+    },
+    {
+      id: "rishon-heil-hraglim",
+      address: "חיל הרגלים", city: "ראשון לציון", neighborhood: "—",
+      price: 419000, rooms: 4, sqm: 190, floor: 7,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/f2w3cz3z",
+      renewal: "none",
+      tags: ["פנטהאוז", "מחיר חשוד - לבדוק"],
+      note: "פנטהאוז 190 מ״ר במחיר נמוך באופן חריג — לבדוק אם תקין",
+      hot: true,
+      firstSeen: "2026-09-12"
+    },
+    {
+      id: "rishon-ramat-eliyahu-45",
+      address: "רמת אליהו", city: "ראשון לציון", neighborhood: "רמת אליהו",
+      price: 1390000, rooms: 2.5, sqm: 45, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/1nmysmla",
+      renewal: "none",
+      tags: [],
+      hot: true,
+      firstSeen: "2026-09-12"
+    },
+    {
+      id: "rg-mdln-bezharno-10",
+      address: "האחים בז'רנו 10", city: "רמת גן", neighborhood: "הבורסה",
+      price: 111111, rooms: 3.5, sqm: 100, floor: 4,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/44c3UrEMARX",
+      renewal: "none",
+      tags: ["מחיר חשוד - לבדוק"],
+      note: "מחיר נמוך משמעותית — כנראה לא המחיר האמיתי, לבדוק",
+      hot: true,
+      firstSeen: "2026-09-12"
+    },
+    {
+      id: "rg-mdln-krinitzi-house",
+      address: "קרית קריניצי", city: "רמת גן", neighborhood: "—",
+      price: 111111, rooms: 10, sqm: 380, floor: null,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/dyoyukVTp6P",
+      renewal: "none",
+      tags: ["בית פרטי", "מחיר חשוד - לבדוק"],
+      note: "בית פרטי 380 מ״ר ב-111,111 ₪ — מחיר לא הגיוני, כנראה טעות/פיתיון, לבדוק",
+      hot: true,
+      firstSeen: "2026-09-12"
+    },
+    {
+      id: "lod-fb-alshavili-5",
+      address: "אבישי אלשוילי 5", city: "לוד", neighborhood: "—",
+      price: 1170000, rooms: 3, sqm: null, floor: 2,
+      source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/1049764524524808/",
+      renewal: "potential", renewalNote: "המוכר מציין שנחתם הסכם פינוי-בינוי לבניין — לא אומת מול moch.maps.arcgis.com",
+      tags: ["ללא תיווך", "משופצת"],
+      note: "3 חדרים משופצים מהיסוד, קומה 2 מתוך 4, אינסטלציה וביוב נפרדים מהבניין",
+      hot: true,
       firstSeen: "2026-09-12"
     }
   ]
