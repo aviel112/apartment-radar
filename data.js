@@ -5,7 +5,7 @@
 // לא נכנסות: יחידות דיור עד 35 מ"ר, קבוצות רכישה/זכות לנכס, ומחיר מעל התקרה.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-14T09:30:00+03:00",
+  updatedAt: "2026-09-14T19:30:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -1483,13 +1483,13 @@ window.APARTMENT_DATA = {
       firstSeen: "2026-09-02"
     },
     {
-      id: "rishon-mdln-hameorer-3",
-      address: "המעורר 3", city: "ראשון לציון", neighborhood: "נאות רחל",
+      id: "holon-mdln-hameorer-3",
+      address: "המעורר 3", city: "חולון", neighborhood: "נאות רחל",
       price: 1190000, rooms: 1.5, sqm: 35, floor: 0,
       source: "מדלן", url: "https://www.madlan.co.il/listings/WHpkRtRQoVg",
       renewal: "none",
       tags: ["קומת קרקע"],
-      note: "1.5 חד' קטנה בקומת קרקע — כניסה נמוכה למחיר בראשון.",
+      note: "1.5 חד' קטנה בקומת קרקע — כניסה נמוכה למחיר. תוקן ב-14.9: העיר הייתה מתויגת בטעות \"ראשון לציון\", בפועל חולון (נאות רחל).",
       firstSeen: "2026-09-03"
     },
     {
@@ -1807,6 +1807,26 @@ window.APARTMENT_DATA = {
       note: "3 חדרים משופצים מהיסוד, קומה 2 מתוך 4, אינסטלציה וביוב נפרדים מהבניין",
       hot: true,
       firstSeen: "2026-09-12"
+    },
+    {
+      id: "gs-u9tpikfc",
+      address: "ז'בוטינסקי 50", city: "גבעת שמואל", neighborhood: "רמת אילן",
+      price: 1315000, rooms: 2, sqm: 40, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/u9tpikfc",
+      renewal: "none",
+      tags: [],
+      note: "אותו רחוב כמו gs-r9ymuyl8 / gs-ut5ee4no / gs-6czy8ll5 — כמה מודעות בבניין ז'בוטינסקי 50.",
+      firstSeen: "2026-09-14"
+    },
+    {
+      id: "by-fb-2259808151452180",
+      address: "בת ים (לא צוינה כתובת)", city: "בת ים", neighborhood: "—",
+      price: 1070000, rooms: null, sqm: null, floor: null,
+      source: "פייסבוק", url: "https://www.facebook.com/marketplace/item/2259808151452180/",
+      renewal: "none",
+      tags: ["בלעדית"],
+      note: "פורסמה כ\"למכירה בבלעדיות\" בלי פרטי חדרים/מ\"ר/כתובת — לברר מול המוכר.",
+      firstSeen: "2026-09-14"
     }
   ]
 };
