@@ -5,7 +5,7 @@
 // לא נכנסות: יחידות דיור עד 35 מ"ר, קבוצות רכישה/זכות לנכס, ומחיר מעל התקרה.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-12T19:45:00+03:00",
+  updatedAt: "2026-09-14T09:30:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -1128,6 +1128,16 @@ window.APARTMENT_DATA = {
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-31"
+    },
+    {
+      id: "rlz-y2-zalman-shneor",
+      address: "שדרות זלמן שניאור, ראשון לציון", city: "ראשון לציון", neighborhood: "רמת אליהו",
+      price: 1450000, rooms: 2, sqm: 50, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/uovlzrou",
+      renewal: "potential",
+      renewalNote: "המודעה מציינת \"בניין חתום פינוי בינוי\" — לא מאומת מול moch.maps.arcgis.com",
+      tags: ["ירד ב-49,000 ₪"],
+      firstSeen: "2026-09-14"
     },
     {
       id: "rlz-y2-betzalel-9",
