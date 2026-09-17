@@ -1691,10 +1691,9 @@ window.APARTMENT_DATA = {
       address: "הרב דוד נדב", city: "רחובות", neighborhood: "קרית משה",
       price: 1425000, rooms: 3, sqm: 65, floor: 4,
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/r2qh8n19",
-      renewal: "verified", renewalNote: "המודעה מציינת שקרית משה הוגדרה בוותמ\"ל כשכונה לפינוי-בינוי.",
-      tags: ["פינוי-בינוי","קומה אחרונה"],
-      note: "שכונת פינוי-בינוי מוכרזת לפי הוותמ\"ל — הכי מעניינת מבין החדשות. לאמת מול moch.maps.arcgis.com.",
-      hot: true,
+      renewal: "none", renewalNote: "נבדק מול moch.maps.arcgis.com ב-17.9 — אין שום מתחם מוכרז באזור. טענת המוכר על הוותמ\"ל לא מגובה במפה הרשמית.",
+      tags: ["קומה אחרונה"],
+      note: "אביאל ביקר בשטח (16.9) והתרשם ששלב ראשוני מאוד אם בכלל — תואם לבדיקת המפה: אין תכנית רשומה, לכל היותר שיחות לא רשמיות.",
       firstSeen: "2026-09-12"
     },
     {
