@@ -5,7 +5,7 @@
 // לא נכנסות: יחידות דיור עד 35 מ"ר, קבוצות רכישה/זכות לנכס, ומחיר מעל התקרה.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-14T19:30:00+03:00",
+  updatedAt: "2026-09-20T19:30:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -1074,10 +1074,10 @@ window.APARTMENT_DATA = {
     {
       id: "by-mdln-geonim-jessy",
       address: "הגאונים", city: "חולון", neighborhood: "ג'סי כהן",
-      price: 1430000, rooms: 2, sqm: 43, floor: 7,
+      price: 1395000, rooms: 2, sqm: 43, floor: 7,
       source: "מדלן", url: "https://www.madlan.co.il/listings/E9aO2Ted6Tk",
       renewal: "none",
-      tags: ["בלעדי"],
+      tags: ["בלעדי", "ירד ב-35,000 ₪"],
       note: "2 חד' 43 מ\"ר ק7 ברחוב הגאונים, ג'סי כהן — אותו רחוב כמו holon-y2-3wej9tiy / holon-gk2y2a8q.",
       firstSeen: "2026-08-24"
     },
@@ -1151,10 +1151,10 @@ window.APARTMENT_DATA = {
     {
       id: "rlz-mdln-olei-hagardom",
       address: "עולי הגרדום, ראשון לציון", city: "ראשון לציון", neighborhood: "רמז",
-      price: 1490000, rooms: 2, sqm: 50, floor: 1,
+      price: 1450000, rooms: 2, sqm: 50, floor: 1,
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/iar6p1ig",
       renewal: "none",
-      tags: [],
+      tags: ["ירד ב-40,000 ₪"],
       firstSeen: "2026-08-31"
     },
     {
@@ -1425,10 +1425,10 @@ window.APARTMENT_DATA = {
     {
       id: "holon-y2-3wej9tiy",
       address: "הגאונים", city: "חולון", neighborhood: "ג'סי כהן",
-      price: 1430000, rooms: 2, sqm: null, floor: null,
+      price: 1395000, rooms: 2, sqm: 43, floor: 7,
       source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/3wej9tiy",
       renewal: "none",
-      tags: ["בלעדי","ירד ב-60,000 ₪"],
+      tags: ["בלעדי","ירד ב-35,000 ₪"],
       note: "בלעדי עולם הנדל\"ן. רחוב הגאונים — כמה מודעות באותו אזור בטווח המחיר.",
       firstSeen: "2026-09-01"
     },
@@ -1826,6 +1826,69 @@ window.APARTMENT_DATA = {
       tags: ["בלעדית"],
       note: "פורסמה כ\"למכירה בבלעדיות\" בלי פרטי חדרים/מ\"ר/כתובת — לברר מול המוכר.",
       firstSeen: "2026-09-14"
+    },
+    {
+      id: "rlz-y2-e0u8nyuh",
+      address: "שדרות זלמן שניאור", city: "ראשון לציון", neighborhood: "רמת אליהו",
+      price: 1430000, rooms: 2, sqm: 50, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/e0u8nyuh",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-09-20"
+    },
+    {
+      id: "holon-y2-62m6zqu6",
+      address: "הלוחמים", city: "חולון", neighborhood: "גרין ועם",
+      price: 1450000, rooms: 3, sqm: 64, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/62m6zqu6",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-09-20"
+    },
+    {
+      id: "holon-y2-gdbu5i6z",
+      address: "אילת 20", city: "חולון", neighborhood: "נאות רחל",
+      price: 1440000, rooms: 3, sqm: 70, floor: 3,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/gdbu5i6z",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-09-20"
+    },
+    {
+      id: "bb-y2-b24m9cco",
+      address: "הרב יצחק שמידמן", city: "בני ברק", neighborhood: "הר שלום",
+      price: 1390000, rooms: 3, sqm: 65, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/center-and-sharon/b24m9cco",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-09-20"
+    },
+    {
+      id: "by-y2-blmdh4e4",
+      address: "בלפור", city: "בת ים", neighborhood: "דרום מערב ותיק",
+      price: 1420000, rooms: 2, sqm: 55, floor: 1,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/blmdh4e4",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-09-20"
+    },
+    {
+      id: "by-y2-i3y6yrwi",
+      address: "הנביאים", city: "בת ים", neighborhood: "הנביאים",
+      price: 1370000, rooms: 3, sqm: 65, floor: 2,
+      source: "יד2", url: "https://www.yad2.co.il/realestate/item/tel-aviv-area/i3y6yrwi",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-09-20"
+    },
+    {
+      id: "holon-mdln-hankin-55",
+      address: "חנקין 55", city: "חולון", neighborhood: "רסקו א",
+      price: 1240000, rooms: 2, sqm: 48, floor: 2,
+      source: "מדלן", url: "https://www.madlan.co.il/listings/LHs2dWdcOfy",
+      renewal: "none",
+      tags: [],
+      firstSeen: "2026-09-20"
     }
   ]
 };
