@@ -5,7 +5,7 @@
 // לא נכנסות: יחידות דיור עד 35 מ"ר, קבוצות רכישה/זכות לנכס, ומחיר מעל התקרה.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-29T07:23:00+03:00",
+  updatedAt: "2026-09-29T07:32:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -31,7 +31,15 @@ window.APARTMENT_DATA = {
     "4wuqbw6e",
     "7w7iej8q",
     "44c3UrEMARX",
-    "dyoyukVTp6P"
+    "dyoyukVTp6P",
+    "isdgw5tx",
+    "3mn3da3h",
+    "5nipn47i",
+    "lv4q3gi2",
+    "r5wk0vfv",
+    "bkdun8zl",
+    "77gehdl8",
+    "SpO98umj7A3"
   ],
   apartments: [
     {
@@ -898,23 +906,6 @@ window.APARTMENT_DATA = {
         "בלעדי"
       ],
       note: "קרית עבודה — אזור התחדשות",
-      firstSeen: "2026-08-10"
-    },
-    {
-      id: "bb-mdln-rabi-akiva-20",
-      address: "רבי עקיבא 20",
-      city: "בני ברק",
-      neighborhood: "הר שלום",
-      price: 1190000,
-      rooms: 2,
-      sqm: 40,
-      floor: 0,
-      source: "מדלן",
-      url: "https://www.madlan.co.il/listings/SpO98umj7A3",
-      renewal: "none",
-      tags: [
-        "ירד ב-130,000 ₪"
-      ],
       firstSeen: "2026-08-10"
     },
     {
@@ -2006,7 +1997,8 @@ window.APARTMENT_DATA = {
       tags: [
         "ירד ב-40,000 ₪"
       ],
-      firstSeen: "2026-08-31"
+      firstSeen: "2026-08-31",
+      note: "גם במדלן: QzyCiWjLMQL באותו מחיר"
     },
     {
       id: "rlz-mdln-shalom-ash-26",
@@ -3270,6 +3262,536 @@ window.APARTMENT_DATA = {
       ],
       hot: false,
       firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-hl6rk5bcclf",
+      address: "בן צבי 43",
+      city: "רמלה",
+      neighborhood: "וייצמן",
+      price: 1275000,
+      rooms: 2.5,
+      sqm: 40,
+      floor: 0,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/HL6Rk5BcclF",
+      renewal: "none",
+      tags: [
+        "2.5 חדרים",
+        "קרקע"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-xjvmmz2hmru",
+      address: "אברהם הלל 12",
+      city: "רמלה",
+      neighborhood: "משכנות",
+      price: 1450000,
+      rooms: 3,
+      sqm: 62,
+      floor: 4,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/xjvMMZ2hMrU",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-qqr7jrusyov",
+      address: "הצנחנים",
+      city: "רמלה",
+      neighborhood: "גיורא",
+      price: 1350000,
+      rooms: 2.5,
+      sqm: 45,
+      floor: 3,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/qqr7jRUSYOV",
+      renewal: "none",
+      tags: [
+        "2.5 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-vcu1ysvmcbs",
+      address: "הצנחנים",
+      city: "רמלה",
+      neighborhood: "גיורא",
+      price: 1289000,
+      rooms: 2,
+      sqm: 48,
+      floor: 0,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/Vcu1ySvMCBS",
+      renewal: "none",
+      tags: [
+        "2 חדרים",
+        "קרקע"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-deak8zrfa2n",
+      address: "צה\"ל",
+      city: "רמלה",
+      neighborhood: "אשכול",
+      price: 1350000,
+      rooms: 3,
+      sqm: 65,
+      floor: 2,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/DEaK8zRFA2N",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-ayupmipbnfy",
+      address: "צה\"ל 6",
+      city: "רמלה",
+      neighborhood: "גיורא",
+      price: 1220000,
+      rooms: 2,
+      sqm: 46,
+      floor: 2,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/aYUpmiPBnfy",
+      renewal: "none",
+      tags: [
+        "2 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-tqfdrbocldb",
+      address: "שבזי 16",
+      city: "רמלה",
+      neighborhood: "אשכול",
+      price: 1395000,
+      rooms: 3,
+      sqm: 70,
+      floor: 2,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/tqFDRBOcLdB",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-kcc8g9tx1cv",
+      address: "וילנה 9",
+      city: "רמלה",
+      neighborhood: "משכנות",
+      price: 1300000,
+      rooms: 3,
+      sqm: 57,
+      floor: 1,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/KCc8g9tx1cv",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: true,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-wufsfsrpeda",
+      address: "שבזי 14",
+      city: "רמלה",
+      neighborhood: "משכנות",
+      price: 1390000,
+      rooms: 3.5,
+      sqm: 68,
+      floor: 4,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/wufsfsrPedA",
+      renewal: "none",
+      tags: [
+        "3.5 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-bhjzrlujzmv",
+      address: "משה שרת 3",
+      city: "רמלה",
+      neighborhood: "גיורא",
+      price: 1390000,
+      rooms: 3,
+      sqm: 65,
+      floor: 4,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/bhJZrLuJZmV",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-ss2aoh8kvwb",
+      address: "בורוכוב 11",
+      city: "רמלה",
+      neighborhood: "נווה דוד",
+      price: 1350000,
+      rooms: 3,
+      sqm: 65,
+      floor: 3,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/sS2Aoh8kVwB",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-tyggtixmugp",
+      address: "אברהם הלל 1",
+      city: "רמלה",
+      neighborhood: "וייצמן",
+      price: 1365000,
+      rooms: 3,
+      sqm: 60,
+      floor: 3,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/tYgGTIXMUGP",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-4xrhwgb5hxm",
+      address: "הצנחנים 10",
+      city: "רמלה",
+      neighborhood: "גיורא",
+      price: 1375000,
+      rooms: 2,
+      sqm: 50,
+      floor: 3,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/4xrHwGB5hXM",
+      renewal: "none",
+      tags: [
+        "2 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-dsyaeyfnrq2",
+      address: "השריון",
+      city: "רמלה",
+      neighborhood: "גיורא",
+      price: 1289000,
+      rooms: 2,
+      sqm: 50,
+      floor: 0,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/dSYAEYFnRQ2",
+      renewal: "none",
+      tags: [
+        "2 חדרים",
+        "קרקע"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-kgt1rx6a8hl",
+      address: "אהרון בוגנים 1",
+      city: "רמלה",
+      neighborhood: "רמת דן וגבעת הדר",
+      price: 1330000,
+      rooms: 3,
+      sqm: 52,
+      floor: 1,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/kgT1rx6A8hl",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-drdbgkxahyu",
+      address: "צה\"ל 7",
+      city: "רמלה",
+      neighborhood: "משכנות",
+      price: 1320000,
+      rooms: 3,
+      sqm: 65,
+      floor: 3,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/dRdBgkxAhYU",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-kjlqu0mt70i",
+      address: "וילנה",
+      city: "רמלה",
+      neighborhood: "משכנות",
+      price: 1450000,
+      rooms: 3,
+      sqm: 68,
+      floor: 3,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/KJlqu0mT70i",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-xlcyc91okxo",
+      address: "צה\"ל 13",
+      city: "רמלה",
+      neighborhood: "אשכול",
+      price: 1440000,
+      rooms: 3,
+      sqm: 66,
+      floor: 2,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/xLCyC91oKXo",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-pwzfodm58ot",
+      address: "אברהם הלל",
+      city: "רמלה",
+      neighborhood: "וייצמן",
+      price: 1190000,
+      rooms: 2,
+      sqm: 42,
+      floor: 0,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/PwzfoDM58oT",
+      renewal: "none",
+      tags: [
+        "2 חדרים",
+        "קרקע"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-q74zykgvfbv",
+      address: "הצנחנים 10",
+      city: "רמלה",
+      neighborhood: "גיורא",
+      price: 1290000,
+      rooms: 3,
+      sqm: 55,
+      floor: 2,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/q74ZykGVFbV",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: true,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-bu7okjsgej0",
+      address: "לוי אשכול",
+      city: "רמלה",
+      neighborhood: "אשכול",
+      price: 1390000,
+      rooms: 3,
+      sqm: 62,
+      floor: 0,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/BU7okJSgeJ0",
+      renewal: "none",
+      tags: [
+        "3 חדרים",
+        "קרקע"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-jhzh9fevtid",
+      address: "בן צבי",
+      city: "רמלה",
+      neighborhood: "וייצמן",
+      price: 1290000,
+      rooms: 2,
+      sqm: 42,
+      floor: 0,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/Jhzh9FevTid",
+      renewal: "none",
+      tags: [
+        "2 חדרים",
+        "קרקע"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-zpck020vf4m",
+      address: "הצנחנים 19",
+      city: "רמלה",
+      neighborhood: "גיורא",
+      price: 1450000,
+      rooms: 3,
+      sqm: 75,
+      floor: 2,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/zPcK020VF4m",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-lzpgntjc9vr",
+      address: "אהרון בוגנים 1",
+      city: "רמלה",
+      neighborhood: "רמת דן וגבעת הדר",
+      price: 1130000,
+      rooms: 2,
+      sqm: 45,
+      floor: 6,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/LZpGntJc9vr",
+      renewal: "none",
+      tags: [
+        "2 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29",
+      note: "מודעה נוספת באותם נתונים ב-1,190,000 ₪ (k4bejd2JofY) — כנראה אותה דירה אחרי הורדת מחיר"
+    },
+    {
+      id: "ramla-mdln-dpesjyjljlx",
+      address: "צה\"ל 6",
+      city: "רמלה",
+      neighborhood: "גיורא",
+      price: 1290000,
+      rooms: 2,
+      sqm: 46,
+      floor: 3,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/dPeSJYjLJLX",
+      renewal: "none",
+      tags: [
+        "2 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-cg6eetx1kht",
+      address: "אברהם הלל 14",
+      city: "רמלה",
+      neighborhood: "משכנות",
+      price: 1250000,
+      rooms: 2,
+      sqm: 58,
+      floor: 1,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/Cg6EetX1Kht",
+      renewal: "none",
+      tags: [
+        "2 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-izyvzdsua78",
+      address: "צה\"ל 7",
+      city: "רמלה",
+      neighborhood: "משכנות",
+      price: 1390000,
+      rooms: 3,
+      sqm: 70,
+      floor: 3,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/IZyVZDsUA78",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-pb4et5b6bbr",
+      address: "אברהם הלל 1",
+      city: "רמלה",
+      neighborhood: "וייצמן",
+      price: 1250000,
+      rooms: 2,
+      sqm: 58,
+      floor: 2,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/pB4eT5B6bBr",
+      renewal: "none",
+      tags: [
+        "2 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
+    },
+    {
+      id: "ramla-mdln-ulikkxukgn0",
+      address: "וילנה 4",
+      city: "רמלה",
+      neighborhood: "משכנות",
+      price: 1350000,
+      rooms: 3,
+      sqm: 64,
+      floor: 2,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/UlikKxuKgn0",
+      renewal: "none",
+      tags: [
+        "3 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29",
+      note: "אותה דירה פורסמה פעמיים במדלן (גם ZgKZKXrkSZD)"
     }
   ]
 };
