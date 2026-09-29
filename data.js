@@ -5,7 +5,7 @@
 // לא נכנסות: יחידות דיור עד 35 מ"ר, קבוצות רכישה/זכות לנכס, ומחיר מעל התקרה.
 
 window.APARTMENT_DATA = {
-  updatedAt: "2026-09-28T12:07:00+03:00",
+  updatedAt: "2026-09-29T07:23:00+03:00",
   budget: 1600000,
   equity: 350000,
   leverage: 0.75,
@@ -28,7 +28,10 @@ window.APARTMENT_DATA = {
     "vsmvtvii",
     "goxgu9n3",
     "ee15laj0",
-    "4wuqbw6e"
+    "4wuqbw6e",
+    "7w7iej8q",
+    "44c3UrEMARX",
+    "dyoyukVTp6P"
   ],
   apartments: [
     {
@@ -2903,25 +2906,6 @@ window.APARTMENT_DATA = {
       firstSeen: "2026-09-12"
     },
     {
-      id: "rishon-orna-porat",
-      address: "אורנה פורת",
-      city: "ראשון לציון",
-      neighborhood: "—",
-      price: 111111,
-      rooms: 4,
-      sqm: 120,
-      floor: 1,
-      source: "יד2",
-      url: "https://www.yad2.co.il/realestate/item/center-and-sharon/7w7iej8q",
-      renewal: "none",
-      tags: [
-        "מחיר חשוד - לבדוק"
-      ],
-      note: "מחיר נמוך משמעותית ביחס לגודל (120 מ״ר) — כנראה לא המחיר האמיתי, ליצור קשר לבירור",
-      hot: true,
-      firstSeen: "2026-09-12"
-    },
-    {
       id: "rishon-heil-hraglim",
       address: "חיל הרגלים",
       city: "ראשון לציון",
@@ -2956,45 +2940,6 @@ window.APARTMENT_DATA = {
       tags: [
         "עלה ב-100,000 ₪"
       ],
-      hot: true,
-      firstSeen: "2026-09-12"
-    },
-    {
-      id: "rg-mdln-bezharno-10",
-      address: "האחים בז'רנו 10",
-      city: "רמת גן",
-      neighborhood: "הבורסה",
-      price: 111111,
-      rooms: 3.5,
-      sqm: 100,
-      floor: 4,
-      source: "מדלן",
-      url: "https://www.madlan.co.il/listings/44c3UrEMARX",
-      renewal: "none",
-      tags: [
-        "מחיר חשוד - לבדוק"
-      ],
-      note: "מחיר נמוך משמעותית — כנראה לא המחיר האמיתי, לבדוק",
-      hot: true,
-      firstSeen: "2026-09-12"
-    },
-    {
-      id: "rg-mdln-krinitzi-house",
-      address: "קרית קריניצי",
-      city: "רמת גן",
-      neighborhood: "—",
-      price: 111111,
-      rooms: 10,
-      sqm: 380,
-      floor: null,
-      source: "מדלן",
-      url: "https://www.madlan.co.il/listings/dyoyukVTp6P",
-      renewal: "none",
-      tags: [
-        "בית פרטי",
-        "מחיר חשוד - לבדוק"
-      ],
-      note: "בית פרטי 380 מ״ר ב-111,111 ₪ — מחיר לא הגיוני, כנראה טעות/פיתיון, לבדוק",
       hot: true,
       firstSeen: "2026-09-12"
     },
@@ -3307,6 +3252,24 @@ window.APARTMENT_DATA = {
       note: "נראה כמו חנקין 55 שהייתה במדלן (LHs2dWdcOfy, 1,240,000) — שם המודעה נמחקה, בפייסבוק עדיין חיה",
       hot: false,
       firstSeen: "2026-09-28"
+    },
+    {
+      id: "by-mdln-fizxhq6drkg",
+      address: "מרכז העיר (בלי רחוב במודעה)",
+      city: "בת ים",
+      neighborhood: "מרכז העיר",
+      price: 1430000,
+      rooms: 2.5,
+      sqm: 49,
+      floor: null,
+      source: "מדלן",
+      url: "https://www.madlan.co.il/listings/FIzxHQ6DrKG",
+      renewal: "none",
+      tags: [
+        "2.5 חדרים"
+      ],
+      hot: false,
+      firstSeen: "2026-09-29"
     }
   ]
 };
