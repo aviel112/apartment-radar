@@ -527,7 +527,7 @@ window.APARTMENT_DATA = {
       sqm: 90,
       floor: 3,
       source: "מדלן",
-      url: null,
+      url: "https://www.madlan.co.il/listings/lJz4dOcSxqA",
       renewal: "none",
       tags: [],
       firstSeen: "2026-08-31"
